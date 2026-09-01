@@ -26,14 +26,14 @@ Se trabajará con un enfoque técnico, progresivo y verificable para que cada es
 
 El módulo consta de 133h, de las cuales, 81 horas se imparten en el centro. Para facilitar la planificación semanal de 4 horas, las unidades de trabajo (UT) se organizan en bloques múltiplos de 4 horas y se reserva 1 hora de ajuste.
 
-| Unidad | Contenido | Horas |
-|---|---|---:|
-| UT1 | Entorno de implantación web | 20 |
-| UT2 | Programación web en servidor | 24 |
-| UT3 | Programación web con acceso a BD | 12 |
-| UT4 | Implantación de CMS | 8 |
-| UT5 | Administración de CMS | 8 |
-| UT6 | Modificación de CMS | 8 |
+| Unidad | Contenido | Horas | Semanas |
+|---|---|---:|---|
+| UT1 | Entorno de implantación web | 20 | Del 9 sept. al 11 oct. |
+| UT2 | Programación web en servidor | 24 | Del 12 oct. al 22 nov. |
+| UT3 | Programación web con acceso a BD | 12 | Del 23 nov. al 13 dic. |
+| UT4 | Implantación de CMS | 8 | Del 14 dic. al 17 ene. |
+| UT5 | Administración de CMS | 8 | Del 18 ene. al 31 ene. |
+| UT6 | Modificación de CMS | 8 | Del 1 feb. al 14 feb. |
 | Ajuste | cierre, evaluación, incidencias o repaso | 1 |
 | **Total** |  | **81** |
 
