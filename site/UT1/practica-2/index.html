@@ -1,0 +1,2151 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y practicas del modulo Implantacion de Aplicaciones Web">
+      
+      
+      
+        <link rel="canonical" href="https://TU_USUARIO.github.io/iaw-alumnos/UT1/practica-2/">
+      
+      
+        <link rel="prev" href="../practica-1/">
+      
+      
+        <link rel="next" href="../../UT2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 2 - IAW - ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-2-entorno-web-reproducible-guiado-con-docker-compose" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="IAW - ASIR" class="md-header__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IAW - ASIR" class="md-nav__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IAW - ASIR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1. Entorno de implantacion web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1. Entorno de implantacion web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-vas-a-construir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué vas a construir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-que-demuestra-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Qué demuestra esta práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Qué demuestra esta práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-del-ra1-trabajados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios del RA1 trabajados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-punto-de-partida-obligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Punto de partida obligatorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Restricciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-que-se-espera-de-ti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Qué se espera de ti
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-tareas-obligatorias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Tareas obligatorias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Tareas obligatorias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parte-1-analizar-el-punto-de-partida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 1. Analizar el punto de partida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-2-completar-composeyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 2. Completar compose.yaml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-3-investigar-y-crear-phpdockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 3. Investigar y crear php/Dockerfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-4-completar-nginxdefaultconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 4. Completar nginx/default.conf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-5-completar-sqlinitsql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 5. Completar sql/init.sql
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-6-completar-appindexphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 6. Completar app/index.php
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-7-preparar-envexample-y-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 7. Preparar .env.example y .env
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-8-levantar-y-comprobar-el-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 8. Levantar y comprobar el stack
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-evidencias-minimas-que-debes-obtener" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Evidencias mínimas que debes obtener
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-que-debe-incluir-tu-readmemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Qué debe incluir tu README.md
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-errores-tipicos-a-evitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Errores típicos a evitar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Errores típicos a evitar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usar-localhost-entre-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usar localhost entre contenedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitarte-a-copiar-sin-verificar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitarte a copiar sin verificar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-mirar-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No mirar logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentar-solo-el-resultado-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentar solo el resultado final
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-como-se-evaluara-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Cómo se evaluará esta práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-checklist-rapido-del-alumno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Checklist rápido del alumno
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT2. Programacion web en servidor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT2. Programacion web en servidor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT4. Implantacion de CMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT4. Implantacion de CMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automatizacion-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automatizacion con Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-vas-a-construir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué vas a construir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-que-demuestra-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Qué demuestra esta práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Qué demuestra esta práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-del-ra1-trabajados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios del RA1 trabajados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-punto-de-partida-obligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Punto de partida obligatorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Restricciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-que-se-espera-de-ti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Qué se espera de ti
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-tareas-obligatorias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Tareas obligatorias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Tareas obligatorias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parte-1-analizar-el-punto-de-partida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 1. Analizar el punto de partida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-2-completar-composeyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 2. Completar compose.yaml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-3-investigar-y-crear-phpdockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 3. Investigar y crear php/Dockerfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-4-completar-nginxdefaultconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 4. Completar nginx/default.conf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-5-completar-sqlinitsql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 5. Completar sql/init.sql
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-6-completar-appindexphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 6. Completar app/index.php
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-7-preparar-envexample-y-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 7. Preparar .env.example y .env
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-8-levantar-y-comprobar-el-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 8. Levantar y comprobar el stack
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-evidencias-minimas-que-debes-obtener" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Evidencias mínimas que debes obtener
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-que-debe-incluir-tu-readmemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Qué debe incluir tu README.md
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-errores-tipicos-a-evitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Errores típicos a evitar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Errores típicos a evitar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usar-localhost-entre-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usar localhost entre contenedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitarte-a-copiar-sin-verificar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitarte a copiar sin verificar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-mirar-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No mirar logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentar-solo-el-resultado-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentar solo el resultado final
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-como-se-evaluara-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Cómo se evaluará esta práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-checklist-rapido-del-alumno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Checklist rápido del alumno
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practica-2-entorno-web-reproducible-guiado-con-docker-compose">Práctica 2 · Entorno web reproducible guiado con <code>Docker Compose</code><a class="headerlink" href="#practica-2-entorno-web-reproducible-guiado-con-docker-compose" title="Permanent link">&para;</a></h1>
+<h2 id="1-que-vas-a-construir">1. Qué vas a construir<a class="headerlink" href="#1-que-vas-a-construir" title="Permanent link">&para;</a></h2>
+<p>En esta práctica vas a completar el proyecto <code>ut1-entorno-web</code> preparado en la práctica 1 para convertirlo en un entorno web reproducible con tres servicios coordinados:</p>
+<ul>
+<li><code>nginx</code></li>
+<li><code>php</code></li>
+<li><code>db</code></li>
+</ul>
+<p>Tendrás que:</p>
+<ul>
+<li>interpretar qué necesita cada servicio;</li>
+<li>buscar información técnica cuando te falte una pieza;</li>
+<li>completar los archivos por tu cuenta;</li>
+<li>comprobar si tus decisiones funcionan de verdad.</li>
+</ul>
+<p>El resultado final debe permitir abrir una página en el navegador que confirme estas tres ideas:</p>
+<ol>
+<li>PHP se está ejecutando correctamente.</li>
+<li>La aplicación puede conectar con MariaDB.</li>
+<li>La base de datos contiene un registro inicial cargado desde un script SQL.</li>
+</ol>
+<hr />
+<h2 id="2-que-demuestra-esta-practica">2. Qué demuestra esta práctica<a class="headerlink" href="#2-que-demuestra-esta-practica" title="Permanent link">&para;</a></h2>
+<p>Con esta práctica debes demostrar que sabes:</p>
+<ul>
+<li>montar un stack multicontenedor con <code>Docker Compose</code>;</li>
+<li>distinguir el papel de <code>nginx</code>, <code>php</code> y <code>db</code>;</li>
+<li>localizar y añadir la pieza necesaria para que PHP pueda acceder a MariaDB;</li>
+<li>completar una configuración a partir de requisitos técnicos;</li>
+<li>revisar logs y usar evidencia técnica para corregir errores;</li>
+<li>levantar, comprobar, parar y volver a levantar el entorno;</li>
+<li>documentar qué has hecho y qué información has necesitado consultar.</li>
+</ul>
+<h3 id="criterios-del-ra1-trabajados">Criterios del RA1 trabajados<a class="headerlink" href="#criterios-del-ra1-trabajados" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>CE1</strong>. Software necesario para el funcionamiento.  </li>
+<li><strong>CE2</strong>. Tecnologías empleadas.  </li>
+<li><strong>CE3</strong>. Instalación y configuración de servidor web y base de datos.  </li>
+<li><strong>CE4</strong>. Posibilidades de procesamiento en cliente y servidor.  </li>
+<li><strong>CE5</strong>. Componentes necesarios para el procesamiento en servidor.  </li>
+<li><strong>CE6</strong>. Configuración del acceso a bases de datos.  </li>
+<li><strong>CE7</strong>. Seguridad mínima en accesos.  </li>
+<li><strong>CE8</strong>. Plataformas integradas orientadas a prueba y desarrollo.  </li>
+<li><strong>CE9</strong>. Documentación de procedimientos.</li>
+</ul>
+<hr />
+<h2 id="3-punto-de-partida-obligatorio">3. Punto de partida obligatorio<a class="headerlink" href="#3-punto-de-partida-obligatorio" title="Permanent link">&para;</a></h2>
+<p>Debes continuar desde la carpeta <code>ut1-entorno-web</code> creada en la práctica 1.</p>
+<p>La estructura mínima que debes dejar al final es esta:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ut1-entorno-web/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── .env.example
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── README.md
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── app/
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   └── index.php
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── compose.yaml
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── nginx/
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│   └── default.conf
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── php/
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│   └── Dockerfile
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>└── sql/
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    └── init.sql
+</code></pre></div>
+<p>No tienes que inventar una estructura alternativa. En esta práctica el reto está en <strong>completar bien</strong> el entorno, no en rediseñarlo todo.</p>
+<hr />
+<h2 id="4-restricciones">4. Restricciones<a class="headerlink" href="#4-restricciones" title="Permanent link">&para;</a></h2>
+<p>Debes respetar estas condiciones:</p>
+<ul>
+<li>el servicio web se llamará <code>nginx</code>;</li>
+<li>el servicio PHP se llamará <code>php</code>;</li>
+<li>el servicio de base de datos se llamará <code>db</code>;</li>
+<li>la web deberá responder en <code>http://localhost:8080</code>;</li>
+<li>la base de datos del caso se llamará <code>ut1db</code>;</li>
+<li>el usuario de la base de datos será <code>ut1user</code>;</li>
+<li>la aplicación debe conectarse usando variables de entorno;</li>
+<li>el script SQL debe crear una tabla llamada <code>prueba</code> e insertar un mensaje inicial.</li>
+</ul>
+<hr />
+<h2 id="5-que-se-espera-de-ti">5. Qué se espera de ti<a class="headerlink" href="#5-que-se-espera-de-ti" title="Permanent link">&para;</a></h2>
+<p>En esta práctica <strong>se espera</strong> que consultes información técnica. No es una señal de debilidad, sino parte del trabajo normal de implantación.</p>
+<p>Debes buscar, como mínimo, información sobre:</p>
+<ul>
+<li>qué imagen base te conviene usar para el servicio PHP;</li>
+<li>qué extensión o módulo necesita PHP para conectarse con MariaDB mediante PDO;</li>
+<li>qué directiva de Nginx reenvía la ejecución de archivos PHP al servicio adecuado;</li>
+<li>qué comandos de Docker Compose te sirven para levantar, revisar y parar el stack.</li>
+</ul>
+<p>En el <code>README.md</code> final tendrás que anotar al menos <strong>dos fuentes consultadas</strong> y explicar en una línea para qué te han servido.</p>
+<hr />
+<h2 id="6-tareas-obligatorias">6. Tareas obligatorias<a class="headerlink" href="#6-tareas-obligatorias" title="Permanent link">&para;</a></h2>
+<h3 id="parte-1-analizar-el-punto-de-partida">Parte 1. Analizar el punto de partida<a class="headerlink" href="#parte-1-analizar-el-punto-de-partida" title="Permanent link">&para;</a></h3>
+<p>Antes de escribir nada, revisa tu proyecto y completa esta tabla dentro del <code>README.md</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Qué función crees que tendrá</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>compose.yaml</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nginx/default.conf</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>app/index.php</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>.env.example</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sql/init.sql</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parte-2-completar-composeyaml">Parte 2. Completar <code>compose.yaml</code><a class="headerlink" href="#parte-2-completar-composeyaml" title="Permanent link">&para;</a></h3>
+<p>Debes construir un <code>compose.yaml</code> funcional que cumpla estos requisitos:</p>
+<ul>
+<li>define los servicios <code>nginx</code>, <code>php</code> y <code>db</code>;</li>
+<li>publica el puerto <code>8080</code> del host hacia el servicio web;</li>
+<li>monta la carpeta <code>app/</code> dentro del servicio web y del servicio PHP;</li>
+<li>hace que Nginx use el archivo <code>nginx/default.conf</code> del proyecto;</li>
+<li>hace que el servicio PHP reciba por variables de entorno los datos de conexión;</li>
+<li>hace que MariaDB inicialice la base de datos usando <code>sql/init.sql</code>;</li>
+<li>usa un volumen para persistir los datos de MariaDB.</li>
+</ul>
+<p>No copies un <code>compose.yaml</code> completo de esta práctica desde otro documento. Puedes apoyarte en tus apuntes y en documentación, pero debes completarlo tú mismo.</p>
+<h3 id="parte-3-investigar-y-crear-phpdockerfile">Parte 3. Investigar y crear <code>php/Dockerfile</code><a class="headerlink" href="#parte-3-investigar-y-crear-phpdockerfile" title="Permanent link">&para;</a></h3>
+<p>El servicio PHP debe ser capaz de ejecutar código PHP y de conectar con MariaDB desde PDO.</p>
+<p>Tu tarea es:</p>
+<ol>
+<li>elegir una imagen base adecuada para PHP-FPM;</li>
+<li>investigar qué extensión necesitas para PDO con MariaDB/MySQL;</li>
+<li>dejar un <code>Dockerfile</code> mínimo que resuelva esa necesidad.</li>
+</ol>
+<p>Pista: no basta con poner una imagen oficial de PHP si esa imagen no trae activa la extensión que necesitas.</p>
+<h3 id="parte-4-completar-nginxdefaultconf">Parte 4. Completar <code>nginx/default.conf</code><a class="headerlink" href="#parte-4-completar-nginxdefaultconf" title="Permanent link">&para;</a></h3>
+<p>Debes dejar una configuración funcional de Nginx que cumpla esto:</p>
+<ul>
+<li>atiende por el puerto 80 dentro del contenedor;</li>
+<li>usa <code>/var/www/html</code> como raíz del proyecto;</li>
+<li>sirve <code>index.php</code> como documento principal;</li>
+<li>intenta servir recursos estáticos cuando existan;</li>
+<li>reenvía los archivos <code>.php</code> al servicio <code>php</code>.</li>
+</ul>
+<p>Puedes partir de este esqueleto y completarlo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="s">____</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">____</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kn">root</span><span class="w"> </span><span class="s">____</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kn">index</span><span class="w"> </span><span class="s">____</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="kn">try_files</span><span class="w"> </span><span class="s">____</span><span class="w"> </span><span class="s">____</span><span class="w"> </span><span class="s">____</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">\.php$</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="kn">include</span><span class="w"> </span><span class="s">____</span><span class="p">;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="kn">fastcgi_pass</span><span class="w"> </span><span class="s">____</span><span class="p">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="kn">fastcgi_param</span><span class="w"> </span><span class="s">____</span><span class="p">;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="parte-5-completar-sqlinitsql">Parte 5. Completar <code>sql/init.sql</code><a class="headerlink" href="#parte-5-completar-sqlinitsql" title="Permanent link">&para;</a></h3>
+<p>Debes crear un script SQL que:</p>
+<ul>
+<li>cree una tabla llamada <code>prueba</code> si no existe;</li>
+<li>use una clave primaria autoincremental llamada <code>id</code>;</li>
+<li>tenga una columna <code>mensaje</code> de texto corto VARCHAR(100);</li>
+<li>inserte exactamente un registro con el texto:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Entorno inicial creado correctamente
+</code></pre></div>
+<h3 id="parte-6-completar-appindexphp">Parte 6. Completar <code>app/index.php</code><a class="headerlink" href="#parte-6-completar-appindexphp" title="Permanent link">&para;</a></h3>
+<p>Debes crear una página PHP que:</p>
+<ul>
+<li>lea <code>DB_HOST</code>, <code>DB_NAME</code>, <code>DB_USER</code> y <code>DB_PASSWORD</code> desde variables de entorno;</li>
+<li>intente conectar con MariaDB usando PDO;</li>
+<li>consulte cuántos registros hay en la tabla <code>prueba</code>;</li>
+<li>muestre mensajes distintos según la conexión funcione o falle.</li>
+</ul>
+<p>La página debe mostrar estas tres ideas finales, aunque el texto exacto puede variar ligeramente si mantiene el mismo sentido:</p>
+<ul>
+<li>PHP se está ejecutando correctamente.</li>
+<li>La conexión con la base de datos está bien o mal.</li>
+<li>El número de registros iniciales disponibles en <code>prueba</code>.</li>
+</ul>
+<p>Puedes partir de este esqueleto y completarlo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nv">$host</span> <span class="o">=</span> <span class="nb">getenv</span><span class="p">(</span><span class="s1">'DB_HOST'</span><span class="p">)</span> <span class="o">?:</span> <span class="s1">'____'</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nv">$dbname</span> <span class="o">=</span> <span class="nb">getenv</span><span class="p">(</span><span class="s1">'DB_NAME'</span><span class="p">)</span> <span class="o">?:</span> <span class="s1">'____'</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nv">$user</span> <span class="o">=</span> <span class="nb">getenv</span><span class="p">(</span><span class="s1">'DB_USER'</span><span class="p">)</span> <span class="o">?:</span> <span class="s1">'____'</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nv">$password</span> <span class="o">=</span> <span class="nb">getenv</span><span class="p">(</span><span class="s1">'DB_PASSWORD'</span><span class="p">)</span> <span class="o">?:</span> <span class="s1">'____'</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="nv">$estadoConexion</span> <span class="o">=</span> <span class="s1">'____'</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="nv">$estadoRegistros</span> <span class="o">=</span> <span class="s1">'____'</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">"mysql:host=</span><span class="si">$host</span><span class="s2">;dbname=</span><span class="si">$dbname</span><span class="s2">;charset=utf8mb4"</span><span class="p">,</span> <span class="nv">$user</span><span class="p">,</span> <span class="nv">$password</span><span class="p">);</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="nv">$total</span> <span class="o">=</span> <span class="p">(</span><span class="nx">int</span><span class="p">)</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">'____'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">fetchColumn</span><span class="p">();</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="nv">$estadoConexion</span> <span class="o">=</span> <span class="s1">'____'</span><span class="p">;</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="nv">$estadoRegistros</span> <span class="o">=</span> <span class="s1">'____'</span> <span class="o">.</span> <span class="nv">$total</span><span class="p">;</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Throwable</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="nv">$estadoConexion</span> <span class="o">=</span> <span class="s1">'____'</span><span class="p">;</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="nv">$estadoRegistros</span> <span class="o">=</span> <span class="s1">'____'</span><span class="p">;</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="p">}</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="cp">?&gt;</span>
+</code></pre></div>
+<h3 id="parte-7-preparar-envexample-y-env">Parte 7. Preparar <code>.env.example</code> y <code>.env</code><a class="headerlink" href="#parte-7-preparar-envexample-y-env" title="Permanent link">&para;</a></h3>
+<p>Debes definir en <code>.env.example</code> las variables de entorno:</p>
+<ul>
+<li>nombre de base de datos;</li>
+<li>usuario;</li>
+<li>contraseña;</li>
+<li>contraseña de <code>root</code>;</li>
+<li>host de la base de datos.</li>
+</ul>
+<p>Después crea <code>.env</code> a partir de ese archivo para poder arrancar el proyecto.</p>
+<h3 id="parte-8-levantar-y-comprobar-el-stack">Parte 8. Levantar y comprobar el stack<a class="headerlink" href="#parte-8-levantar-y-comprobar-el-stack" title="Permanent link">&para;</a></h3>
+<p>Debes decidir y ejecutar, al menos, los comandos necesarios para:</p>
+<ul>
+<li>construir o reconstruir el servicio PHP si hace falta;</li>
+<li>arrancar el stack;</li>
+<li>comprobar qué servicios están activos;</li>
+<li>ver logs cuando algo falle;</li>
+<li>parar el stack;</li>
+<li>volver a levantarlo para comprobar reproducibilidad.</li>
+</ul>
+<p>En el <code>README.md</code> debes anotar los comandos exactos que finalmente has usado.</p>
+<hr />
+<h2 id="7-evidencias-minimas-que-debes-obtener">7. Evidencias mínimas que debes obtener<a class="headerlink" href="#7-evidencias-minimas-que-debes-obtener" title="Permanent link">&para;</a></h2>
+<p>Antes de dar la práctica por terminada, debes poder demostrar todo esto:</p>
+<ol>
+<li><code>docker compose ps</code> muestra los tres servicios en funcionamiento.</li>
+<li><code>http://localhost:8080</code> responde en el navegador.</li>
+<li>La página confirma que PHP se ejecuta.</li>
+<li>La página confirma que la conexión con la base de datos funciona.</li>
+<li>La página muestra que existe 1 registro inicial en la tabla <code>prueba</code>.</li>
+<li>Sabes decir qué archivo tocarías si fallara:</li>
+<li>la conexión con la base de datos;</li>
+<li>el reenvío de PHP;</li>
+<li>la inicialización SQL.</li>
+</ol>
+<hr />
+<h2 id="8-que-debe-incluir-tu-readmemd">8. Qué debe incluir tu <code>README.md</code><a class="headerlink" href="#8-que-debe-incluir-tu-readmemd" title="Permanent link">&para;</a></h2>
+<p>Además de lo que ya arrastras de la práctica 1, debes ampliar el <code>README.md</code> con estos apartados:</p>
+<ul>
+<li>requisitos previos;</li>
+<li>estructura final del proyecto;</li>
+<li>comandos usados para arrancar, revisar y parar el stack;</li>
+<li>explicación breve del papel de <code>nginx</code>, <code>php</code> y <code>db</code>;</li>
+<li>dos fuentes consultadas y para qué te han servido;</li>
+<li>un problema real encontrado y cómo lo has resuelto.</li>
+</ul>
+<hr />
+<h2 id="9-entrega">9. Entrega<a class="headerlink" href="#9-entrega" title="Permanent link">&para;</a></h2>
+<p>Debes subir los cambios al mismo repositorio de GitHub creado en la práctica 1.</p>
+<p>La entrega mínima debe incluir:</p>
+<ul>
+<li>el proyecto <code>ut1-entorno-web</code> actualizado;</li>
+<li>los archivos completados por ti;</li>
+<li>el <code>README.md</code> ampliado;</li>
+<li>al menos un commit adicional explicativo sobre la práctica 2.</li>
+</ul>
+<hr />
+<h2 id="10-errores-tipicos-a-evitar">10. Errores típicos a evitar<a class="headerlink" href="#10-errores-tipicos-a-evitar" title="Permanent link">&para;</a></h2>
+<h3 id="usar-localhost-entre-contenedores">Usar <code>localhost</code> entre contenedores<a class="headerlink" href="#usar-localhost-entre-contenedores" title="Permanent link">&para;</a></h3>
+<p>Dentro del stack, PHP no debe conectarse a MariaDB usando <code>localhost</code>, sino el nombre del servicio <code>db</code>.</p>
+<h3 id="limitarte-a-copiar-sin-verificar">Limitarte a copiar sin verificar<a class="headerlink" href="#limitarte-a-copiar-sin-verificar" title="Permanent link">&para;</a></h3>
+<p>Aunque consultes documentación o ejemplos, si no compruebas qué hace cada línea, no podrás corregir el entorno cuando falle.</p>
+<h3 id="no-mirar-logs">No mirar logs<a class="headerlink" href="#no-mirar-logs" title="Permanent link">&para;</a></h3>
+<p>Si el stack no arranca o la web no responde, la reacción esperable es revisar <code>docker compose logs</code>, no probar cambios al azar.</p>
+<h3 id="documentar-solo-el-resultado-final">Documentar solo el resultado final<a class="headerlink" href="#documentar-solo-el-resultado-final" title="Permanent link">&para;</a></h3>
+<p>En implantación web también cuenta dejar rastro de qué problema hubo y cómo se resolvió.</p>
+<hr />
+<h2 id="11-como-se-evaluara-esta-practica">11. Cómo se evaluará esta práctica<a class="headerlink" href="#11-como-se-evaluara-esta-practica" title="Permanent link">&para;</a></h2>
+<p>El profesor valorará especialmente estas evidencias:</p>
+<ol>
+<li>que el stack funciona de verdad;</li>
+<li>que sabes explicar por qué has completado así cada archivo clave;</li>
+<li>que has consultado información útil y la has integrado con criterio;</li>
+<li>que sabes localizar el origen de un error básico;</li>
+<li>que tu documentación permite reconstruir el proceso seguido.</li>
+</ol>
+<p>No se busca que memorices una receta, sino que seas capaz de montar un entorno guiado con comprensión técnica.</p>
+<hr />
+<h2 id="12-checklist-rapido-del-alumno">12. Checklist rápido del alumno<a class="headerlink" href="#12-checklist-rapido-del-alumno" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He completado <code>compose.yaml</code> sin copiar una solución cerrada línea por línea.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He investigado qué necesita PHP para conectar con MariaDB.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He creado <code>php/Dockerfile</code> con criterio.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He completado <code>nginx/default.conf</code> y entiendo qué hace.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He creado <code>sql/init.sql</code> con la tabla y el registro pedido.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He completado <code>app/index.php</code> y sé explicar su flujo.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He arrancado el stack y he revisado logs cuando ha hecho falta.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Mi <code>README.md</code> documenta comandos, fuentes y problemas resueltos.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He subido los cambios al repositorio de GitHub.</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

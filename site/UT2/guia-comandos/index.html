@@ -1,0 +1,2749 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y practicas del modulo Implantacion de Aplicaciones Web">
+      
+      
+      
+        <link rel="canonical" href="https://TU_USUARIO.github.io/iaw-alumnos/UT2/guia-comandos/">
+      
+      
+        <link rel="prev" href="../apuntes/">
+      
+      
+        <link rel="next" href="../practica-1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Guia rapida de comandos - IAW - ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-de-comandos-php-en-la-ut2" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="IAW - ASIR" class="md-header__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guia rapida de comandos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IAW - ASIR" class="md-nav__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IAW - ASIR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1. Entorno de implantacion web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1. Entorno de implantacion web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT2. Programacion web en servidor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT2. Programacion web en servidor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-comprobar-que-php-esta-disponible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Comprobar que PHP está disponible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Comprobar que PHP está disponible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve-en-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve en esta UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-observar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué debes observar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-validar-sintaxis-de-un-archivo-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Validar sintaxis de un archivo PHP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Validar sintaxis de un archivo PHP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usarlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo usarlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-levantar-el-servidor-embebido-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Levantar el servidor embebido de PHP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Levantar el servidor embebido de PHP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-tiene-sentido-en-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo tiene sentido en esta UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-abrir-el-proyecto-en-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Abrir el proyecto en VS Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Abrir el proyecto en VS Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mostrar-la-estructura-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mostrar la estructura de archivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Mostrar la estructura de archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-levantar-el-entorno-de-la-ut1-con-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Levantar el entorno de la UT1 con contenedores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Levantar el entorno de la UT1 con contenedores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve-en-esta-ut_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve en esta UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ver-logs-del-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ver logs del contenedor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Ver logs del contenedor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-problemas-ayuda-a-detectar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué problemas ayuda a detectar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-entrar-en-un-contenedor-para-revisar-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Entrar en un contenedor para revisar archivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Entrar en un contenedor para revisar archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-revisar-errores-de-php-en-pantalla-durante-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Revisar errores de PHP en pantalla durante desarrollo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Revisar errores de PHP en pantalla durante desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importante_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-localizar-errores-de-cabeceras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Localizar errores de cabeceras
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Localizar errores de cabeceras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#significado-habitual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Significado habitual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-revisar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué revisar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-probar-rapidamente-una-redireccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Probar rápidamente una redirección
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Probar rápidamente una redirección">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-comprobar-que-llega-por-get-o-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Comprobar qué llega por GET o POST
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Comprobar qué llega por GET o POST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usarlo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo usarlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-comprobar-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Comprobar sesiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Comprobar sesiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-permite-ver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué permite ver
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-borrar-una-sesion-correctamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Borrar una sesión correctamente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Borrar una sesión correctamente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usarlo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo usarlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-generar-un-hash-de-contrasena-rapido-para-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Generar un hash de contraseña rápido para pruebas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Generar un hash de contraseña rápido para pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-comprobar-puertos-escuchando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Comprobar puertos escuchando
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Comprobar puertos escuchando">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-tiene-sentido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo tiene sentido
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-que-revisar-cuando-la-pagina-sale-en-blanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Qué revisar cuando “la página sale en blanco”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Qué revisar cuando “la página sale en blanco”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist rápido
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-flujo-minimo-recomendado-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Flujo mínimo recomendado de trabajo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-recomendaciones-de-depuracion-en-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Recomendaciones de depuración en esta UT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-recordatorio-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Recordatorio final
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT4. Implantacion de CMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT4. Implantacion de CMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automatizacion-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automatizacion con Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-comprobar-que-php-esta-disponible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Comprobar que PHP está disponible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Comprobar que PHP está disponible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve-en-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve en esta UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-observar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué debes observar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-validar-sintaxis-de-un-archivo-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Validar sintaxis de un archivo PHP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Validar sintaxis de un archivo PHP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usarlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo usarlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-levantar-el-servidor-embebido-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Levantar el servidor embebido de PHP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Levantar el servidor embebido de PHP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-tiene-sentido-en-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo tiene sentido en esta UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-abrir-el-proyecto-en-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Abrir el proyecto en VS Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Abrir el proyecto en VS Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mostrar-la-estructura-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mostrar la estructura de archivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Mostrar la estructura de archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-levantar-el-entorno-de-la-ut1-con-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Levantar el entorno de la UT1 con contenedores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Levantar el entorno de la UT1 con contenedores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve-en-esta-ut_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve en esta UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ver-logs-del-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ver logs del contenedor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Ver logs del contenedor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-problemas-ayuda-a-detectar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué problemas ayuda a detectar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-entrar-en-un-contenedor-para-revisar-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Entrar en un contenedor para revisar archivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Entrar en un contenedor para revisar archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-revisar-errores-de-php-en-pantalla-durante-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Revisar errores de PHP en pantalla durante desarrollo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Revisar errores de PHP en pantalla durante desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importante_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-localizar-errores-de-cabeceras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Localizar errores de cabeceras
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Localizar errores de cabeceras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#significado-habitual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Significado habitual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-revisar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué revisar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-probar-rapidamente-una-redireccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Probar rápidamente una redirección
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Probar rápidamente una redirección">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-comprobar-que-llega-por-get-o-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Comprobar qué llega por GET o POST
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Comprobar qué llega por GET o POST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usarlo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo usarlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-comprobar-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Comprobar sesiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Comprobar sesiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-permite-ver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué permite ver
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-borrar-una-sesion-correctamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Borrar una sesión correctamente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Borrar una sesión correctamente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usarlo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo usarlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-generar-un-hash-de-contrasena-rapido-para-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Generar un hash de contraseña rápido para pruebas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Generar un hash de contraseña rápido para pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-comprobar-puertos-escuchando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Comprobar puertos escuchando
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Comprobar puertos escuchando">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-tiene-sentido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo tiene sentido
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-que-revisar-cuando-la-pagina-sale-en-blanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Qué revisar cuando “la página sale en blanco”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Qué revisar cuando “la página sale en blanco”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist rápido
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-flujo-minimo-recomendado-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Flujo mínimo recomendado de trabajo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-recomendaciones-de-depuracion-en-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Recomendaciones de depuración en esta UT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-recordatorio-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Recordatorio final
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-de-comandos-php-en-la-ut2">Guía de comandos · PHP en la UT2<a class="headerlink" href="#guia-de-comandos-php-en-la-ut2" title="Permanent link">&para;</a></h1>
+<p>Esta guía recoge los comandos mínimos que conviene tener a mano durante la unidad.<br />
+No pretende sustituir a los apuntes: sirve como chuleta rápida para trabajar con el entorno de la UT1 y depurar problemas habituales.</p>
+<hr />
+<h2 id="1-comprobar-que-php-esta-disponible">1. Comprobar que PHP está disponible<a class="headerlink" href="#1-comprobar-que-php-esta-disponible" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>php<span class="w"> </span>-v
+</code></pre></div>
+<h3 id="que-hace">Qué hace<a class="headerlink" href="#que-hace" title="Permanent link">&para;</a></h3>
+<p>Muestra la versión de PHP instalada o disponible en el contenedor/entorno.</p>
+<h3 id="para-que-sirve-en-esta-ut">Para qué sirve en esta UT<a class="headerlink" href="#para-que-sirve-en-esta-ut" title="Permanent link">&para;</a></h3>
+<p>Permite verificar que el entorno realmente puede ejecutar scripts PHP.</p>
+<h3 id="que-debes-observar">Qué debes observar<a class="headerlink" href="#que-debes-observar" title="Permanent link">&para;</a></h3>
+<ul>
+<li>que el comando responde;</li>
+<li>que no aparece “command not found”;</li>
+<li>que estás usando el PHP del entorno previsto.</li>
+</ul>
+<hr />
+<h2 id="2-validar-sintaxis-de-un-archivo-php">2. Validar sintaxis de un archivo PHP<a class="headerlink" href="#2-validar-sintaxis-de-un-archivo-php" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>php<span class="w"> </span>-l<span class="w"> </span>archivo.php
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>php<span class="w"> </span>-l<span class="w"> </span>index.php
+</code></pre></div>
+<h3 id="que-hace_1">Qué hace<a class="headerlink" href="#que-hace_1" title="Permanent link">&para;</a></h3>
+<p>Comprueba la sintaxis del archivo sin ejecutarlo.</p>
+<h3 id="cuando-usarlo">Cuándo usarlo<a class="headerlink" href="#cuando-usarlo" title="Permanent link">&para;</a></h3>
+<p>Cuando un script falla y sospechas de:
+- llaves sin cerrar;
+- paréntesis mal puestos;
+- <code>;</code> olvidados;
+- comillas desparejadas.</p>
+<hr />
+<h2 id="3-levantar-el-servidor-embebido-de-php">3. Levantar el servidor embebido de PHP<a class="headerlink" href="#3-levantar-el-servidor-embebido-de-php" title="Permanent link">&para;</a></h2>
+<p>Si estás trabajando fuera de Apache y quieres probar una carpeta rápida:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>php<span class="w"> </span>-S<span class="w"> </span>localhost:8000
+</code></pre></div>
+<p>Si el punto de entrada está en una subcarpeta <code>public/</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>php<span class="w"> </span>-S<span class="w"> </span>localhost:8000<span class="w"> </span>-t<span class="w"> </span>public
+</code></pre></div>
+<h3 id="que-hace_2">Qué hace<a class="headerlink" href="#que-hace_2" title="Permanent link">&para;</a></h3>
+<p>Inicia un servidor de desarrollo sencillo para pruebas locales.</p>
+<h3 id="cuando-tiene-sentido-en-esta-ut">Cuándo tiene sentido en esta UT<a class="headerlink" href="#cuando-tiene-sentido-en-esta-ut" title="Permanent link">&para;</a></h3>
+<ul>
+<li>para ejercicios pequeños;</li>
+<li>para aislar una práctica;</li>
+<li>para comprobar formularios, sesiones y navegación entre páginas.</li>
+</ul>
+<h3 id="importante">Importante<a class="headerlink" href="#importante" title="Permanent link">&para;</a></h3>
+<p>No es un servidor de producción.<br />
+Es útil para <strong>desarrollo y pruebas</strong>, no para desplegar una aplicación real en Internet.</p>
+<hr />
+<h2 id="4-abrir-el-proyecto-en-vs-code">4. Abrir el proyecto en VS Code<a class="headerlink" href="#4-abrir-el-proyecto-en-vs-code" title="Permanent link">&para;</a></h2>
+<p>Desde la carpeta del proyecto:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>code<span class="w"> </span>.
+</code></pre></div>
+<h3 id="que-hace_3">Qué hace<a class="headerlink" href="#que-hace_3" title="Permanent link">&para;</a></h3>
+<p>Abre la carpeta actual en VS Code.</p>
+<h3 id="para-que-sirve">Para qué sirve<a class="headerlink" href="#para-que-sirve" title="Permanent link">&para;</a></h3>
+<p>Facilita trabajar con varios archivos PHP, HTML y recursos asociados.</p>
+<hr />
+<h2 id="5-mostrar-la-estructura-de-archivos">5. Mostrar la estructura de archivos<a class="headerlink" href="#5-mostrar-la-estructura-de-archivos" title="Permanent link">&para;</a></h2>
+<p>En sistemas Linux:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>tree
+</code></pre></div>
+<p>Si no está disponible:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>find<span class="w"> </span>.<span class="w"> </span>-maxdepth<span class="w"> </span><span class="m">2</span><span class="w"> </span>-type<span class="w"> </span>f
+</code></pre></div>
+<h3 id="para-que-sirve_1">Para qué sirve<a class="headerlink" href="#para-que-sirve_1" title="Permanent link">&para;</a></h3>
+<p>Ayuda a revisar si la práctica tiene la estructura correcta.</p>
+<p>Ejemplo de proyecto sencillo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>practica-2/
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>├── index.php
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>├── login.php
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>├── panel.php
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>├── logout.php
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>└── includes/
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    └── funciones.php
+</code></pre></div>
+<hr />
+<h2 id="6-levantar-el-entorno-de-la-ut1-con-contenedores">6. Levantar el entorno de la UT1 con contenedores<a class="headerlink" href="#6-levantar-el-entorno-de-la-ut1-con-contenedores" title="Permanent link">&para;</a></h2>
+<p>Si en la UT1 se dejó preparado un <code>docker-compose.yml</code> o un <code>compose.yml</code>, lo habitual será:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<p>Para detenerlo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
+</code></pre></div>
+<p>Para reconstruir si ha habido cambios importantes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</code></pre></div>
+<h3 id="para-que-sirve-en-esta-ut_1">Para qué sirve en esta UT<a class="headerlink" href="#para-que-sirve-en-esta-ut_1" title="Permanent link">&para;</a></h3>
+<p>Permite ejecutar PHP dentro de un entorno reproducible y estable, especialmente útil si el alumnado no tiene PHP instalado de forma nativa.</p>
+<hr />
+<h2 id="7-ver-logs-del-contenedor">7. Ver logs del contenedor<a class="headerlink" href="#7-ver-logs-del-contenedor" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs
+</code></pre></div>
+<p>Para seguirlos en tiempo real:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f
+</code></pre></div>
+<p>Para un servicio concreto, por ejemplo <code>web</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>web
+</code></pre></div>
+<h3 id="que-problemas-ayuda-a-detectar">Qué problemas ayuda a detectar<a class="headerlink" href="#que-problemas-ayuda-a-detectar" title="Permanent link">&para;</a></h3>
+<ul>
+<li>error al arrancar el contenedor;</li>
+<li>puerto ocupado;</li>
+<li>fallo de configuración;</li>
+<li>script que genera errores visibles en el log.</li>
+</ul>
+<hr />
+<h2 id="8-entrar-en-un-contenedor-para-revisar-archivos">8. Entrar en un contenedor para revisar archivos<a class="headerlink" href="#8-entrar-en-un-contenedor-para-revisar-archivos" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>web<span class="w"> </span>sh
+</code></pre></div>
+<p>o, si dispone de bash:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>web<span class="w"> </span>bash
+</code></pre></div>
+<h3 id="para-que-sirve_2">Para qué sirve<a class="headerlink" href="#para-que-sirve_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>inspeccionar rutas;</li>
+<li>comprobar que el código está donde debe;</li>
+<li>lanzar <code>php -l</code>;</li>
+<li>revisar permisos;</li>
+<li>localizar logs.</li>
+</ul>
+<hr />
+<h2 id="9-revisar-errores-de-php-en-pantalla-durante-desarrollo">9. Revisar errores de PHP en pantalla durante desarrollo<a class="headerlink" href="#9-revisar-errores-de-php-en-pantalla-durante-desarrollo" title="Permanent link">&para;</a></h2>
+<p>En un entorno de desarrollo, puede ser útil activar la visualización de errores al principio del script:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="nb">error_reporting</span><span class="p">(</span><span class="k">E_ALL</span><span class="p">);</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="nb">ini_set</span><span class="p">(</span><span class="s1">'display_errors'</span><span class="p">,</span> <span class="s1">'1'</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="importante_1">Importante<a class="headerlink" href="#importante_1" title="Permanent link">&para;</a></h3>
+<p>Esto está bien <strong>solo en desarrollo</strong>.<br />
+En producción, los errores no deben mostrarse al usuario final.</p>
+<hr />
+<h2 id="10-localizar-errores-de-cabeceras">10. Localizar errores de cabeceras<a class="headerlink" href="#10-localizar-errores-de-cabeceras" title="Permanent link">&para;</a></h2>
+<p>Si aparece algo parecido a:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Warning: Cannot modify header information - headers already sent...
+</code></pre></div>
+<h3 id="significado-habitual">Significado habitual<a class="headerlink" href="#significado-habitual" title="Permanent link">&para;</a></h3>
+<p>Has intentado usar:
+- <code>header()</code>,
+- <code>setcookie()</code>,
+- o iniciar/redirigir una sesión</p>
+<p><strong>después</strong> de haber enviado salida al navegador.</p>
+<h3 id="que-revisar">Qué revisar<a class="headerlink" href="#que-revisar" title="Permanent link">&para;</a></h3>
+<ul>
+<li>espacios o líneas antes de <code>&lt;?php</code>;</li>
+<li><code>echo</code> prematuros;</li>
+<li>HTML antes de <code>session_start()</code> o <code>setcookie()</code>.</li>
+</ul>
+<hr />
+<h2 id="11-probar-rapidamente-una-redireccion">11. Probar rápidamente una redirección<a class="headerlink" href="#11-probar-rapidamente-una-redireccion" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nb">header</span><span class="p">(</span><span class="s1">'Location: panel.php'</span><span class="p">);</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">exit</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="recomendacion">Recomendación<a class="headerlink" href="#recomendacion" title="Permanent link">&para;</a></h3>
+<p>Después de <code>header('Location: ...')</code>, utiliza siempre <code>exit;</code>.</p>
+<h3 id="por-que">Por qué<a class="headerlink" href="#por-que" title="Permanent link">&para;</a></h3>
+<p>Evita que el script siga ejecutando código innecesario.</p>
+<hr />
+<h2 id="12-comprobar-que-llega-por-get-o-post">12. Comprobar qué llega por GET o POST<a class="headerlink" href="#12-comprobar-que-llega-por-get-o-post" title="Permanent link">&para;</a></h2>
+<p>Durante las primeras pruebas, es útil inspeccionar el contenido recibido:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="k">echo</span> <span class="s1">'&lt;pre&gt;'</span><span class="p">;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="nb">var_dump</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">);</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="k">echo</span> <span class="s1">'&lt;/pre&gt;'</span><span class="p">;</span>
+</code></pre></div>
+<p>o:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="k">echo</span> <span class="s1">'&lt;pre&gt;'</span><span class="p">;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nb">print_r</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">);</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="k">echo</span> <span class="s1">'&lt;/pre&gt;'</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="cuando-usarlo_1">Cuándo usarlo<a class="headerlink" href="#cuando-usarlo_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>cuando un formulario “no llega”;</li>
+<li>cuando el nombre de los campos no coincide;</li>
+<li>cuando dudas de qué estructura estás recibiendo.</li>
+</ul>
+<hr />
+<h2 id="13-comprobar-sesiones">13. Comprobar sesiones<a class="headerlink" href="#13-comprobar-sesiones" title="Permanent link">&para;</a></h2>
+<p>Inicio básico:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nb">session_start</span><span class="p">();</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="nb">var_dump</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="que-permite-ver">Qué permite ver<a class="headerlink" href="#que-permite-ver" title="Permanent link">&para;</a></h3>
+<ul>
+<li>si la sesión se está creando;</li>
+<li>si realmente se guardan datos;</li>
+<li>si los valores esperados existen.</li>
+</ul>
+<hr />
+<h2 id="14-borrar-una-sesion-correctamente">14. Borrar una sesión correctamente<a class="headerlink" href="#14-borrar-una-sesion-correctamente" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nb">session_start</span><span class="p">();</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="nv">$_SESSION</span> <span class="o">=</span> <span class="p">[];</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="nb">session_destroy</span><span class="p">();</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="nb">header</span><span class="p">(</span><span class="s1">'Location: login.php'</span><span class="p">);</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="k">exit</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="cuando-usarlo_2">Cuándo usarlo<a class="headerlink" href="#cuando-usarlo_2" title="Permanent link">&para;</a></h3>
+<p>En el cierre de sesión (<code>logout</code>).</p>
+<hr />
+<h2 id="15-generar-un-hash-de-contrasena-rapido-para-pruebas">15. Generar un hash de contraseña rápido para pruebas<a class="headerlink" href="#15-generar-un-hash-de-contrasena-rapido-para-pruebas" title="Permanent link">&para;</a></h2>
+<p>En consola:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>php<span class="w"> </span>-r<span class="w"> </span><span class="s2">"echo password_hash('ClaveSegura123', PASSWORD_DEFAULT) . PHP_EOL;"</span>
+</code></pre></div>
+<h3 id="para-que-sirve_3">Para qué sirve<a class="headerlink" href="#para-que-sirve_3" title="Permanent link">&para;</a></h3>
+<p>Crear un hash real para incluirlo en una práctica sin guardar la contraseña en texto plano.</p>
+<hr />
+<h2 id="16-comprobar-puertos-escuchando">16. Comprobar puertos escuchando<a class="headerlink" href="#16-comprobar-puertos-escuchando" title="Permanent link">&para;</a></h2>
+<p>En algunos sistemas:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>lsof<span class="w"> </span>-i<span class="w"> </span>:8000
+</code></pre></div>
+<p>o:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>ss<span class="w"> </span>-ltnp
+</code></pre></div>
+<h3 id="cuando-tiene-sentido">Cuándo tiene sentido<a class="headerlink" href="#cuando-tiene-sentido" title="Permanent link">&para;</a></h3>
+<p>Cuando <code>php -S localhost:8000</code> o un contenedor no arranca porque el puerto ya está en uso.</p>
+<hr />
+<h2 id="17-que-revisar-cuando-la-pagina-sale-en-blanco">17. Qué revisar cuando “la página sale en blanco”<a class="headerlink" href="#17-que-revisar-cuando-la-pagina-sale-en-blanco" title="Permanent link">&para;</a></h2>
+<p>Una página en blanco suele significar una de estas cosas:</p>
+<ol>
+<li>hay un error de PHP y no se está mostrando;</li>
+<li>el archivo no se está ejecutando donde crees;</li>
+<li>has redirigido a otra ruta inexistente;</li>
+<li>hay un <code>exit;</code> o <code>die;</code> antes de tiempo.</li>
+</ol>
+<h3 id="checklist-rapido">Checklist rápido<a class="headerlink" href="#checklist-rapido" title="Permanent link">&para;</a></h3>
+<ul>
+<li>¿has activado errores en desarrollo?</li>
+<li>¿has mirado logs?</li>
+<li>¿el archivo termina en <code>.php</code> y se está sirviendo como PHP?</li>
+<li>¿la ruta del formulario <code>action</code> es correcta?</li>
+<li>¿el servidor está leyendo la carpeta correcta?</li>
+</ul>
+<hr />
+<h2 id="18-flujo-minimo-recomendado-de-trabajo">18. Flujo mínimo recomendado de trabajo<a class="headerlink" href="#18-flujo-minimo-recomendado-de-trabajo" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1"># 1. Entrar en la carpeta del proyecto</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nb">cd</span><span class="w"> </span>ruta/del/proyecto
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="c1"># 2. Abrir en VS Code</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>code<span class="w"> </span>.
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="c1"># 3. Validar archivos clave</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>php<span class="w"> </span>-l<span class="w"> </span>index.php
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>php<span class="w"> </span>-l<span class="w"> </span>login.php
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>php<span class="w"> </span>-l<span class="w"> </span>panel.php
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a><span class="c1"># 4A. Opción A: servidor embebido</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>php<span class="w"> </span>-S<span class="w"> </span>localhost:8000
+<a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>
+<a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a><span class="c1"># 4B. Opción B: entorno reproducible</span>
+<a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+<a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a>
+<a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a><span class="c1"># 5. Si falla algo, revisar logs</span>
+<a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f
+</code></pre></div>
+<hr />
+<h2 id="19-recomendaciones-de-depuracion-en-esta-ut">19. Recomendaciones de depuración en esta UT<a class="headerlink" href="#19-recomendaciones-de-depuracion-en-esta-ut" title="Permanent link">&para;</a></h2>
+<p>Orden recomendado de comprobación:</p>
+<ol>
+<li>
+<p><strong>Sintaxis</strong><br />
+   Usa <code>php -l</code>.</p>
+</li>
+<li>
+<p><strong>Llegada de datos</strong><br />
+   Inspecciona <code>$_GET</code>, <code>$_POST</code> o <code>$_SESSION</code>.</p>
+</li>
+<li>
+<p><strong>Flujo del programa</strong><br />
+   Introduce mensajes de prueba muy controlados o <code>var_dump()</code> puntuales.</p>
+</li>
+<li>
+<p><strong>Cabeceras y sesión</strong><br />
+   Revisa si estás llamando a <code>session_start()</code>, <code>setcookie()</code> o <code>header()</code> demasiado tarde.</p>
+</li>
+<li>
+<p><strong>Logs</strong><br />
+   Si algo sigue sin cuadrar, revisa el log del servidor o del contenedor.</p>
+</li>
+</ol>
+<hr />
+<h2 id="20-recordatorio-final">20. Recordatorio final<a class="headerlink" href="#20-recordatorio-final" title="Permanent link">&para;</a></h2>
+<p>Esta UT no va de memorizar comandos.<br />
+Va de saber usar los <strong>mínimos comandos útiles</strong> para comprobar que:</p>
+<ul>
+<li>el entorno funciona;</li>
+<li>el script tiene buena sintaxis;</li>
+<li>el formulario envía lo que debe;</li>
+<li>la sesión realmente guarda datos;</li>
+<li>los errores se entienden y se corrigen.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2053 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y practicas del modulo Implantacion de Aplicaciones Web">
+      
+      
+      
+        <link rel="canonical" href="https://TU_USUARIO.github.io/iaw-alumnos/UT2/practica-1/">
+      
+      
+        <link rel="prev" href="../guia-comandos/">
+      
+      
+        <link rel="next" href="../practica-2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 1 - IAW - ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-1-formulario-de-presupuesto-de-alojamiento-web" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="IAW - ASIR" class="md-header__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IAW - ASIR" class="md-nav__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IAW - ASIR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1. Entorno de implantacion web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1. Entorno de implantacion web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT2. Programacion web en servidor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT2. Programacion web en servidor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-vas-a-construir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué vas a construir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-que-demuestra-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Qué demuestra esta práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Qué demuestra esta práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-del-ra5-trabajados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios del RA5 trabajados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-contexto-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contexto funcional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-requisitos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Requisitos obligatorios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-requisitos-tecnicos-minimos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Requisitos técnicos mínimos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Requisitos técnicos mínimos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obligatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muy-recomendable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Muy recomendable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-tarifas-orientativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Tarifas orientativas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-estructura-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Estructura orientativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-flujo-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Flujo esperado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-errores-tipicos-a-evitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Errores típicos a evitar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Errores típicos a evitar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leer-_post-sin-comprobar-nada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leer $_POST sin comprobar nada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confiar-solo-en-la-validacion-del-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confiar solo en la validación del navegador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perder-los-datos-al-mostrar-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perder los datos al mostrar errores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mezclar-calculo-y-presentacion-sin-orden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mezclar cálculo y presentación sin orden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-ampliaciones-opcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Ampliaciones opcionales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-como-se-evaluara-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Cómo se evaluará esta práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-rubrica-de-evaluacion-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Rúbrica de evaluación de la práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Rúbrica de evaluación de la práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretacion-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretación rápida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condicion-minima-recomendable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condición mínima recomendable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-checklist-del-alumno-antes-de-entregar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Checklist del alumno antes de entregar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT4. Implantacion de CMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT4. Implantacion de CMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automatizacion-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automatizacion con Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-vas-a-construir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué vas a construir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-que-demuestra-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Qué demuestra esta práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Qué demuestra esta práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-del-ra5-trabajados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios del RA5 trabajados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-contexto-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contexto funcional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-requisitos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Requisitos obligatorios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-requisitos-tecnicos-minimos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Requisitos técnicos mínimos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Requisitos técnicos mínimos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obligatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muy-recomendable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Muy recomendable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-tarifas-orientativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Tarifas orientativas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-estructura-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Estructura orientativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-flujo-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Flujo esperado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-errores-tipicos-a-evitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Errores típicos a evitar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Errores típicos a evitar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leer-_post-sin-comprobar-nada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leer $_POST sin comprobar nada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confiar-solo-en-la-validacion-del-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confiar solo en la validación del navegador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perder-los-datos-al-mostrar-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perder los datos al mostrar errores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mezclar-calculo-y-presentacion-sin-orden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mezclar cálculo y presentación sin orden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-ampliaciones-opcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Ampliaciones opcionales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-como-se-evaluara-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Cómo se evaluará esta práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-rubrica-de-evaluacion-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Rúbrica de evaluación de la práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Rúbrica de evaluación de la práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretacion-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretación rápida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condicion-minima-recomendable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condición mínima recomendable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-checklist-del-alumno-antes-de-entregar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Checklist del alumno antes de entregar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practica-1-formulario-de-presupuesto-de-alojamiento-web">Práctica 1 · Formulario de presupuesto de alojamiento web<a class="headerlink" href="#practica-1-formulario-de-presupuesto-de-alojamiento-web" title="Permanent link">&para;</a></h1>
+<h2 id="1-que-vas-a-construir">1. Qué vas a construir<a class="headerlink" href="#1-que-vas-a-construir" title="Permanent link">&para;</a></h2>
+<p>Vas a desarrollar una miniaplicación PHP que muestre un formulario, reciba los datos enviados por <code>POST</code>, los valide en el servidor y genere una respuesta dinámica con un presupuesto orientativo de hosting.</p>
+<p>No se busca una web “bonita”, sino una solución clara, funcional y bien pensada.</p>
+<hr />
+<h2 id="2-que-demuestra-esta-practica">2. Qué demuestra esta práctica<a class="headerlink" href="#2-que-demuestra-esta-practica" title="Permanent link">&para;</a></h2>
+<p>Con esta práctica debes demostrar que sabes:</p>
+<ul>
+<li>relacionar HTML y PHP en una misma aplicación;</li>
+<li>procesar formularios en servidor;</li>
+<li>usar estructuras de control;</li>
+<li>definir y utilizar funciones;</li>
+<li>validar datos de entrada;</li>
+<li>generar una salida dinámica comprensible.</li>
+</ul>
+<h3 id="criterios-del-ra5-trabajados">Criterios del RA5 trabajados<a class="headerlink" href="#criterios-del-ra5-trabajados" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>CE2</strong>. Relación entre lenguaje de servidor y lenguaje de marcas.</li>
+<li><strong>CE3</strong>. Sintaxis básica del lenguaje.</li>
+<li><strong>CE4</strong>. Estructuras de control.</li>
+<li><strong>CE5</strong>. Definición y uso de funciones.</li>
+<li><strong>CE6</strong>. Uso de formularios para introducir información.</li>
+</ul>
+<hr />
+<h2 id="3-contexto-funcional">3. Contexto funcional<a class="headerlink" href="#3-contexto-funcional" title="Permanent link">&para;</a></h2>
+<p>Una pequeña empresa quiere una página sencilla para que un posible cliente pida un presupuesto inicial de alojamiento web.</p>
+<p>La aplicación no contrata nada ni guarda todavía los datos en base de datos. Su misión es:</p>
+<ol>
+<li>recoger la información del formulario;</li>
+<li>comprobar si los datos son válidos;</li>
+<li>calcular un precio orientativo;</li>
+<li>devolver una respuesta clara al usuario.</li>
+</ol>
+<hr />
+<h2 id="4-requisitos-obligatorios">4. Requisitos obligatorios<a class="headerlink" href="#4-requisitos-obligatorios" title="Permanent link">&para;</a></h2>
+<p>Tu aplicación debe incluir, como mínimo, estos campos:</p>
+<ul>
+<li><strong>Nombre de contacto</strong></li>
+<li><strong>Correo electrónico</strong></li>
+<li><strong>Tipo de plan</strong></li>
+<li>Básico</li>
+<li>Profesional</li>
+<li>Empresa</li>
+<li><strong>Meses de contratación</strong></li>
+<li><strong>Copia de seguridad avanzada</strong></li>
+<li><strong>Soporte prioritario</strong></li>
+</ul>
+<p>Además, debe cumplir estos requisitos:</p>
+<ol>
+<li>usar un formulario enviado por <strong>POST</strong>;</li>
+<li>validar los datos en <strong>PHP</strong>;</li>
+<li>mostrar mensajes de error claros cuando algo no sea válido;</li>
+<li>conservar los valores ya introducidos si hay errores;</li>
+<li>calcular y mostrar:</li>
+<li>plan elegido,</li>
+<li>extras seleccionados,</li>
+<li>importe base,</li>
+<li>recargos,</li>
+<li>total final;</li>
+<li>utilizar al menos:</li>
+<li>una estructura condicional,</li>
+<li>una estructura de recorrido,</li>
+<li>una o varias funciones propias.</li>
+</ol>
+<hr />
+<h2 id="5-requisitos-tecnicos-minimos">5. Requisitos técnicos mínimos<a class="headerlink" href="#5-requisitos-tecnicos-minimos" title="Permanent link">&para;</a></h2>
+<h3 id="obligatorio">Obligatorio<a class="headerlink" href="#obligatorio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Al menos un archivo <code>.php</code> que genere HTML dinámico.</li>
+<li>Tratamiento correcto de <code>$_POST</code>.</li>
+<li>Validación básica de datos.</li>
+<li>Funciones propias para separar lógica.</li>
+<li>Código ordenado y fácil de seguir.</li>
+</ul>
+<h3 id="muy-recomendable">Muy recomendable<a class="headerlink" href="#muy-recomendable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Separar funciones auxiliares en un archivo <code>includes/funciones.php</code>.</li>
+<li>Evitar leer índices inexistentes con <code>??</code>.</li>
+<li>Usar <code>trim()</code> en campos de texto.</li>
+</ul>
+<hr />
+<h2 id="6-tarifas-orientativas">6. Tarifas orientativas<a class="headerlink" href="#6-tarifas-orientativas" title="Permanent link">&para;</a></h2>
+<p>Puedes usar estas tarifas o unas equivalentes si las explicas:</p>
+<ul>
+<li><strong>Básico</strong>: 5 €/mes</li>
+<li><strong>Profesional</strong>: 9 €/mes</li>
+<li><strong>Empresa</strong>: 15 €/mes</li>
+</ul>
+<p>Extras:</p>
+<ul>
+<li><strong>Copia de seguridad avanzada</strong>: +2 €/mes</li>
+<li><strong>Soporte prioritario</strong>: +3 €/mes</li>
+</ul>
+<hr />
+<h2 id="7-estructura-orientativa">7. Estructura orientativa<a class="headerlink" href="#7-estructura-orientativa" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>practica-1/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── index.php
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── procesar.php
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>└── includes/
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    └── funciones.php
+</code></pre></div>
+<p>También puedes resolverla en un solo archivo si el resultado queda claro y ordenado.</p>
+<hr />
+<h2 id="8-flujo-esperado">8. Flujo esperado<a class="headerlink" href="#8-flujo-esperado" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+    A[Usuario abre el formulario] --&gt; B[Rellena datos]
+    B --&gt; C[Envía por POST]
+    C --&gt; D[PHP valida la información]
+    D --&gt;|Hay errores| E[Se vuelve a mostrar el formulario con mensajes]
+    D --&gt;|Todo correcto| F[PHP calcula el presupuesto]
+    F --&gt; G[Se muestra el resumen final]</code></pre>
+<hr />
+<h2 id="9-entrega">9. Entrega<a class="headerlink" href="#9-entrega" title="Permanent link">&para;</a></h2>
+<p>Debes entregar:</p>
+<ul>
+<li>carpeta o <code>.zip</code> con el proyecto;</li>
+<li>una captura del formulario;</li>
+<li>una captura de un caso correcto;</li>
+<li>una captura de un caso con errores de validación;</li>
+<li>opcionalmente, un <code>README.md</code> breve con la estructura y decisiones tomadas.</li>
+</ul>
+<hr />
+<h2 id="10-errores-tipicos-a-evitar">10. Errores típicos a evitar<a class="headerlink" href="#10-errores-tipicos-a-evitar" title="Permanent link">&para;</a></h2>
+<h3 id="leer-_post-sin-comprobar-nada">Leer <code>$_POST</code> sin comprobar nada<a class="headerlink" href="#leer-_post-sin-comprobar-nada" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">$nombre = $_POST['nombre'];</span>
+</code></pre></div>
+<p>Mejor enfoque:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">if ($_SERVER['REQUEST_METHOD'] === 'POST') {</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">    $nombre = trim($_POST['nombre'] ?? '');</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">}</span>
+</code></pre></div>
+<h3 id="confiar-solo-en-la-validacion-del-navegador">Confiar solo en la validación del navegador<a class="headerlink" href="#confiar-solo-en-la-validacion-del-navegador" title="Permanent link">&para;</a></h3>
+<p>El navegador ayuda, pero la validación importante en esta práctica está en <strong>servidor</strong>.</p>
+<h3 id="perder-los-datos-al-mostrar-errores">Perder los datos al mostrar errores<a class="headerlink" href="#perder-los-datos-al-mostrar-errores" title="Permanent link">&para;</a></h3>
+<p>Si el usuario se equivoca, no debería tener que rellenar todo otra vez.</p>
+<h3 id="mezclar-calculo-y-presentacion-sin-orden">Mezclar cálculo y presentación sin orden<a class="headerlink" href="#mezclar-calculo-y-presentacion-sin-orden" title="Permanent link">&para;</a></h3>
+<p>El flujo recomendado es:</p>
+<ol>
+<li>recibir;</li>
+<li>validar;</li>
+<li>calcular;</li>
+<li>mostrar.</li>
+</ol>
+<hr />
+<h2 id="11-ampliaciones-opcionales">11. Ampliaciones opcionales<a class="headerlink" href="#11-ampliaciones-opcionales" title="Permanent link">&para;</a></h2>
+<p>Si acabas antes, puedes añadir alguna mejora:</p>
+<ul>
+<li>descuento por contratación anual;</li>
+<li>mensaje distinto según el plan;</li>
+<li>desglose más detallado del cálculo;</li>
+<li>CSS básico;</li>
+<li>validación más estricta del correo.</li>
+</ul>
+<hr />
+<h2 id="12-como-se-evaluara-esta-practica">12. Cómo se evaluará esta práctica<a class="headerlink" href="#12-como-se-evaluara-esta-practica" title="Permanent link">&para;</a></h2>
+<p>La evaluación será la misma tanto si cursas presencial como si cursas semipresencial.</p>
+<p>El profesor valorará dos cosas:</p>
+<ol>
+<li><strong>el producto entregado y su funcionamiento</strong>;</li>
+<li><strong>una validación breve de autoría y comprensión</strong>, que podrá hacerse en clase o por videollamada.</li>
+</ol>
+<p>En esa validación se te puede pedir que:</p>
+<ul>
+<li>ejecutes tu práctica;</li>
+<li>señales dónde se procesa el formulario;</li>
+<li>expliques una función tuya;</li>
+<li>hagas una mini modificación muy pequeña, por ejemplo:</li>
+<li>añadir un nuevo plan,</li>
+<li>cambiar un recargo,</li>
+<li>exigir un mínimo de 3 meses,</li>
+<li>mostrar un mensaje especial si el total supera cierta cantidad.</li>
+</ul>
+<hr />
+<h2 id="13-rubrica-de-evaluacion-de-la-practica">13. Rúbrica de evaluación de la práctica<a class="headerlink" href="#13-rubrica-de-evaluacion-de-la-practica" title="Permanent link">&para;</a></h2>
+<p>Cada bloque se valora con <strong>0, 1 o 2 puntos</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Bloque</th>
+<th>0 puntos</th>
+<th>1 punto</th>
+<th>2 puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Funcionamiento técnico</strong></td>
+<td>La práctica no funciona o falla en lo esencial.</td>
+<td>Funciona parcialmente, con errores de flujo o resultados poco fiables.</td>
+<td>Funciona bien en lo esencial: recibe datos, procesa y muestra un resultado coherente.</td>
+</tr>
+<tr>
+<td><strong>2. PHP, lógica y organización</strong></td>
+<td>El código está muy desordenado o apenas usa PHP de forma real.</td>
+<td>Usa PHP y algo de lógica, pero con organización mejorable.</td>
+<td>Usa PHP de forma clara, con estructuras de control y funciones útiles.</td>
+</tr>
+<tr>
+<td><strong>3. Validación de entrada</strong></td>
+<td>No valida o valida de forma muy pobre.</td>
+<td>Valida lo básico, pero con huecos o mensajes poco claros.</td>
+<td>Valida bien los datos importantes, muestra errores comprensibles y conserva valores si procede.</td>
+</tr>
+<tr>
+<td><strong>4. Comprensión del trabajo</strong></td>
+<td>No sabe explicar qué archivo procesa, qué hace el formulario o cómo calcula.</td>
+<td>Explica una parte, pero con dudas importantes.</td>
+<td>Explica con claridad el flujo completo y localiza las partes clave del código.</td>
+</tr>
+<tr>
+<td><strong>5. Autoría y mini variante</strong></td>
+<td>No sabe hacer una modificación mínima ni orientarse en su propio código.</td>
+<td>Hace la variante con mucha ayuda o de forma incompleta.</td>
+<td>Resuelve o encamina bien una mini variante sencilla sobre su propia práctica.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpretacion-rapida">Interpretación rápida<a class="headerlink" href="#interpretacion-rapida" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>0 a 4 puntos</strong> → insuficiente</li>
+<li><strong>5 a 6 puntos</strong> → suficiente</li>
+<li><strong>7 a 8 puntos</strong> → bien / notable</li>
+<li><strong>9 a 10 puntos</strong> → notable alto / sobresaliente</li>
+</ul>
+<h3 id="condicion-minima-recomendable">Condición mínima recomendable<a class="headerlink" href="#condicion-minima-recomendable" title="Permanent link">&para;</a></h3>
+<p>Para considerar la práctica superada, debe cumplirse esto:</p>
+<ul>
+<li>el producto funciona en lo esencial;</li>
+<li>el alumno demuestra comprensión básica de su propio código;</li>
+<li>supera una validación breve de autoría.</li>
+</ul>
+<hr />
+<h2 id="14-checklist-del-alumno-antes-de-entregar">14. Checklist del alumno antes de entregar<a class="headerlink" href="#14-checklist-del-alumno-antes-de-entregar" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Mi formulario envía datos por <code>POST</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Estoy comprobando la petición antes de leer <code>$_POST</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Uso al menos una estructura condicional.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Uso al menos una función propia.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Valido los datos en PHP.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Si hay errores, el usuario los entiende.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El presupuesto final se calcula correctamente.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Soy capaz de explicar mi código y hacer una modificación pequeña.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

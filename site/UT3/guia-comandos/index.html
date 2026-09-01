@@ -1,0 +1,2837 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y practicas del modulo Implantacion de Aplicaciones Web">
+      
+      
+      
+        <link rel="canonical" href="https://TU_USUARIO.github.io/iaw-alumnos/UT3/guia-comandos/">
+      
+      
+        <link rel="prev" href="../apuntes/">
+      
+      
+        <link rel="next" href="../practica-1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Guia rapida de comandos - IAW - ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-de-comandos-de-la-ut3" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="IAW - ASIR" class="md-header__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guia rapida de comandos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IAW - ASIR" class="md-nav__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IAW - ASIR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1. Entorno de implantacion web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1. Entorno de implantacion web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT2. Programacion web en servidor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT2. Programacion web en servidor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-comprobar-que-php-esta-disponible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Comprobar que PHP está disponible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0. Comprobar que PHP está disponible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve-en-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve en esta UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-observar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué debes observar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-comprobar-que-php-tiene-pdo-y-drivers-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Comprobar que PHP tiene PDO y drivers disponibles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Comprobar que PHP tiene PDO y drivers disponibles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usarlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo usarlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desde-sistema-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desde sistema local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-trabajas-con-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si trabajas con Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-levantar-el-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Levantar el entorno
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Levantar el entorno">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#con-servidor-embebido-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Con servidor embebido de PHP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#con-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Con Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-trabajar-con-sqlite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Trabajar con SQLite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Trabajar con SQLite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abrir-la-base-de-datos-desde-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abrir la base de datos desde terminal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-basicos-dentro-de-sqlite3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos básicos dentro de sqlite3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#borrar-la-base-de-datos-sqlite-y-regenerarla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Borrar la base de datos SQLite y regenerarla
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-trabajar-con-mariadb-mysql-desde-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Trabajar con MariaDB / MySQL desde terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Trabajar con MariaDB / MySQL desde terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conectar-al-contenedor-o-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectar al contenedor o servicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-el-servicio-se-llama-db-dentro-de-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si el servicio se llama db dentro de Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-sql-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos SQL frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-crear-base-de-datos-y-usuario-de-aplicacion-en-mysqlmariadb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Crear base de datos y usuario de aplicación en MySQL/MariaDB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Crear base de datos y usuario de aplicación en MySQL/MariaDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendación didáctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-probar-la-conexion-pdo-rapidamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Probar la conexión PDO rápidamente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Probar la conexión PDO rápidamente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqlite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQLite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-crear-tabla-desde-php-con-exec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Crear tabla desde PHP con exec()
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Crear tabla desde PHP con exec()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-insertar-con-prepare-y-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Insertar con prepare() y execute()
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Insertar con prepare() y execute()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-leer-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Leer resultados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Leer resultados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-consultar-una-fila-concreta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Consultar una fila concreta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Consultar una fila concreta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-actualizar-un-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Actualizar un registro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Actualizar un registro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-borrar-un-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Borrar un registro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Borrar un registro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-verificar-errores-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Verificar errores frecuentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Verificar errores frecuentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist rápido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errores-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores habituales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#driver-no-encontrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Driver no encontrado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-no-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla no existente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruta-sqlite-incorrecta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ruta SQLite incorrecta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-de-conexion-mal-configuradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables de conexión mal configuradas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-revisar-registros-desde-adminer-phpmyadmin-como-apoyo-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Revisar registros desde Adminer / phpMyAdmin como apoyo visual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Revisar registros desde Adminer / phpMyAdmin como apoyo visual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-conviene-mirar-ahi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué conviene mirar ahí
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-no-debes-hacer-siempre-desde-ahi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué no debes hacer siempre desde ahí
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-comandos-rapidos-de-depuracion-en-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Comandos rápidos de depuración en Docker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-checklist-express-antes-de-entregar-una-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Checklist express antes de entregar una práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT4. Implantacion de CMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT4. Implantacion de CMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT4/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automatizacion-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automatizacion con Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-comprobar-que-php-esta-disponible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Comprobar que PHP está disponible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0. Comprobar que PHP está disponible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve-en-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve en esta UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-observar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué debes observar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-comprobar-que-php-tiene-pdo-y-drivers-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Comprobar que PHP tiene PDO y drivers disponibles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Comprobar que PHP tiene PDO y drivers disponibles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usarlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo usarlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desde-sistema-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desde sistema local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-trabajas-con-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si trabajas con Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-levantar-el-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Levantar el entorno
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Levantar el entorno">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#con-servidor-embebido-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Con servidor embebido de PHP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#con-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Con Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-trabajar-con-sqlite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Trabajar con SQLite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Trabajar con SQLite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abrir-la-base-de-datos-desde-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abrir la base de datos desde terminal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-basicos-dentro-de-sqlite3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos básicos dentro de sqlite3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#borrar-la-base-de-datos-sqlite-y-regenerarla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Borrar la base de datos SQLite y regenerarla
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-trabajar-con-mariadb-mysql-desde-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Trabajar con MariaDB / MySQL desde terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Trabajar con MariaDB / MySQL desde terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conectar-al-contenedor-o-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectar al contenedor o servicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-el-servicio-se-llama-db-dentro-de-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si el servicio se llama db dentro de Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-sql-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos SQL frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-crear-base-de-datos-y-usuario-de-aplicacion-en-mysqlmariadb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Crear base de datos y usuario de aplicación en MySQL/MariaDB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Crear base de datos y usuario de aplicación en MySQL/MariaDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendación didáctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-probar-la-conexion-pdo-rapidamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Probar la conexión PDO rápidamente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Probar la conexión PDO rápidamente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqlite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQLite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-crear-tabla-desde-php-con-exec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Crear tabla desde PHP con exec()
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Crear tabla desde PHP con exec()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-insertar-con-prepare-y-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Insertar con prepare() y execute()
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Insertar con prepare() y execute()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-leer-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Leer resultados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Leer resultados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-consultar-una-fila-concreta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Consultar una fila concreta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Consultar una fila concreta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-actualizar-un-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Actualizar un registro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Actualizar un registro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-borrar-un-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Borrar un registro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Borrar un registro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-verificar-errores-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Verificar errores frecuentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Verificar errores frecuentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist rápido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errores-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores habituales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#driver-no-encontrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Driver no encontrado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-no-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla no existente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruta-sqlite-incorrecta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ruta SQLite incorrecta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-de-conexion-mal-configuradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables de conexión mal configuradas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-revisar-registros-desde-adminer-phpmyadmin-como-apoyo-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Revisar registros desde Adminer / phpMyAdmin como apoyo visual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Revisar registros desde Adminer / phpMyAdmin como apoyo visual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-conviene-mirar-ahi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué conviene mirar ahí
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-no-debes-hacer-siempre-desde-ahi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué no debes hacer siempre desde ahí
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-comandos-rapidos-de-depuracion-en-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Comandos rápidos de depuración en Docker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-checklist-express-antes-de-entregar-una-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Checklist express antes de entregar una práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-de-comandos-de-la-ut3">Guía de comandos de la UT3<a class="headerlink" href="#guia-de-comandos-de-la-ut3" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Esta guía no sustituye a los apuntes. Sirve como chuleta operativa para trabajar más deprisa en el entorno de la UT.</p>
+</blockquote>
+<h2 id="0-comprobar-que-php-esta-disponible">0. Comprobar que PHP está disponible<a class="headerlink" href="#0-comprobar-que-php-esta-disponible" title="Permanent link">&para;</a></h2>
+<h3 id="que-hace">Qué hace<a class="headerlink" href="#que-hace" title="Permanent link">&para;</a></h3>
+<p>Permite comprobar que PHP está instalado y accesible desde terminal.</p>
+<h3 id="para-que-sirve-en-esta-ut">Para qué sirve en esta UT<a class="headerlink" href="#para-que-sirve-en-esta-ut" title="Permanent link">&para;</a></h3>
+<p>Sin PHP no podrás probar los scripts que conectan con la base de datos.</p>
+<h3 id="que-debes-observar">Qué debes observar<a class="headerlink" href="#que-debes-observar" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>php<span class="w"> </span>-v
+</code></pre></div>
+<p>Debe devolverte la versión instalada.</p>
+<hr />
+<h2 id="1-comprobar-que-php-tiene-pdo-y-drivers-disponibles">1. Comprobar que PHP tiene PDO y drivers disponibles<a class="headerlink" href="#1-comprobar-que-php-tiene-pdo-y-drivers-disponibles" title="Permanent link">&para;</a></h2>
+<h3 id="que-hace_1">Qué hace<a class="headerlink" href="#que-hace_1" title="Permanent link">&para;</a></h3>
+<p>Permite verificar si PHP tiene soporte para PDO y qué motores están disponibles.</p>
+<h3 id="cuando-usarlo">Cuándo usarlo<a class="headerlink" href="#cuando-usarlo" title="Permanent link">&para;</a></h3>
+<p>Cuando una conexión falla o cuando quieres confirmar si están activos <code>pdo_sqlite</code> o <code>pdo_mysql</code>.</p>
+<h3 id="desde-sistema-local">Desde sistema local<a class="headerlink" href="#desde-sistema-local" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>pdo
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>sqlite
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>mysql
+</code></pre></div>
+<p>También puedes usar este script rápido:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">print_r</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">getAvailableDrivers</span><span class="p">());</span>
+</code></pre></div>
+<h3 id="si-trabajas-con-docker">Si trabajas con Docker<a class="headerlink" href="#si-trabajas-con-docker" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>php<span class="w"> </span>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>pdo
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>php<span class="w"> </span>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>sqlite
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>php<span class="w"> </span>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>mysql
+</code></pre></div>
+<hr />
+<h2 id="2-levantar-el-entorno">2. Levantar el entorno<a class="headerlink" href="#2-levantar-el-entorno" title="Permanent link">&para;</a></h2>
+<h3 id="con-servidor-embebido-de-php">Con servidor embebido de PHP<a class="headerlink" href="#con-servidor-embebido-de-php" title="Permanent link">&para;</a></h3>
+<p>Lanza un servidor local sencillo para pruebas cuando quieres probar rápido la práctica con SQLite o una aplicación pequeña.</p>
+<p>Ejecútalo desde la carpeta adecuada, normalmente <code>public/</code> o la raíz del proyecto según tu estructura.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>php<span class="w"> </span>-S<span class="w"> </span>localhost:8000<span class="w"> </span>-t<span class="w"> </span>public
+</code></pre></div>
+<h3 id="con-docker-compose">Con Docker Compose<a class="headerlink" href="#con-docker-compose" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>ps
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>php
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>db
+</code></pre></div>
+<hr />
+<h2 id="3-trabajar-con-sqlite">3. Trabajar con SQLite<a class="headerlink" href="#3-trabajar-con-sqlite" title="Permanent link">&para;</a></h2>
+<h3 id="abrir-la-base-de-datos-desde-terminal">Abrir la base de datos desde terminal<a class="headerlink" href="#abrir-la-base-de-datos-desde-terminal" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sqlite3<span class="w"> </span>data/agenda.sqlite
+</code></pre></div>
+<h3 id="comandos-basicos-dentro-de-sqlite3">Comandos básicos dentro de <code>sqlite3</code><a class="headerlink" href="#comandos-basicos-dentro-de-sqlite3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">tables</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">.</span><span class="k">schema</span><span class="w"> </span><span class="n">contactos</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">contactos</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">.</span><span class="n">quit</span>
+</code></pre></div>
+<h3 id="borrar-la-base-de-datos-sqlite-y-regenerarla">Borrar la base de datos SQLite y regenerarla<a class="headerlink" href="#borrar-la-base-de-datos-sqlite-y-regenerarla" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>rm<span class="w"> </span>-f<span class="w"> </span>data/agenda.sqlite
+</code></pre></div>
+<blockquote>
+<p>Úsalo solo si sabes que tu aplicación la recrea o si estás reiniciando una práctica.</p>
+</blockquote>
+<hr />
+<h2 id="4-trabajar-con-mariadb-mysql-desde-terminal">4. Trabajar con MariaDB / MySQL desde terminal<a class="headerlink" href="#4-trabajar-con-mariadb-mysql-desde-terminal" title="Permanent link">&para;</a></h2>
+<h3 id="conectar-al-contenedor-o-servicio">Conectar al contenedor o servicio<a class="headerlink" href="#conectar-al-contenedor-o-servicio" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>mysql<span class="w"> </span>-h<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w"> </span>-P<span class="w"> </span><span class="m">3306</span><span class="w"> </span>-u<span class="w"> </span>agenda_user<span class="w"> </span>-p<span class="w"> </span>agenda
+</code></pre></div>
+<h3 id="si-el-servicio-se-llama-db-dentro-de-docker">Si el servicio se llama <code>db</code> dentro de Docker<a class="headerlink" href="#si-el-servicio-se-llama-db-dentro-de-docker" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>db<span class="w"> </span>mariadb<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
+</code></pre></div>
+<p>o, según imagen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>db<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
+</code></pre></div>
+<h3 id="comandos-sql-frecuentes">Comandos SQL frecuentes<a class="headerlink" href="#comandos-sql-frecuentes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">DATABASES</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">USE</span><span class="w"> </span><span class="n">agenda</span><span class="p">;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="p">;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="k">DESCRIBE</span><span class="w"> </span><span class="n">contactos</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">contactos</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="5-crear-base-de-datos-y-usuario-de-aplicacion-en-mysqlmariadb">5. Crear base de datos y usuario de aplicación en MySQL/MariaDB<a class="headerlink" href="#5-crear-base-de-datos-y-usuario-de-aplicacion-en-mysqlmariadb" title="Permanent link">&para;</a></h2>
+<h3 id="para-que-sirve">Para qué sirve<a class="headerlink" href="#para-que-sirve" title="Permanent link">&para;</a></h3>
+<p>Evita trabajar con <code>root</code> en la aplicación.</p>
+<h3 id="recomendacion">Recomendación<a class="headerlink" href="#recomendacion" title="Permanent link">&para;</a></h3>
+<p>Hazlo una vez y reutilízalo en la práctica 2.</p>
+<p>Hazlo como administrador del gestor, no como usuario normal de la aplicación.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">agenda</span><span class="w"> </span><span class="nb">CHARACTER</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">utf8mb4</span><span class="w"> </span><span class="k">COLLATE</span><span class="w"> </span><span class="n">utf8mb4_unicode_ci</span><span class="p">;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">'agenda_user'</span><span class="o">@</span><span class="s1">'%'</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">'agenda_pass'</span><span class="p">;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">agenda</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">'agenda_user'</span><span class="o">@</span><span class="s1">'%'</span><span class="p">;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="recomendacion-didactica">Recomendación didáctica<a class="headerlink" href="#recomendacion-didactica" title="Permanent link">&para;</a></h3>
+<p>En una práctica de aula puedes conceder todos los privilegios para simplificar inicialización.<br />
+En un entorno más profesional conviene separar mejor los permisos. <code>CREATE</code> y <code>ALTER</code> no son necesarios para el CRUD básico.</p>
+<hr />
+<h2 id="6-probar-la-conexion-pdo-rapidamente">6. Probar la conexión PDO rápidamente<a class="headerlink" href="#6-probar-la-conexion-pdo-rapidamente" title="Permanent link">&para;</a></h2>
+<h3 id="sqlite">SQLite<a class="headerlink" href="#sqlite" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">'sqlite:data/agenda.sqlite'</span><span class="p">);</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="k">echo</span> <span class="s1">'Conexión SQLite OK'</span><span class="p">;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="k">echo</span> <span class="s1">'Error SQLite: '</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="mysql">MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>        <span class="s1">'mysql:host=db;port=3306;dbname=agenda;charset=utf8mb4'</span><span class="p">,</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>        <span class="s1">'agenda_user'</span><span class="p">,</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>        <span class="s1">'agenda_pass'</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    <span class="p">);</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    <span class="k">echo</span> <span class="s1">'Conexión MySQL OK'</span><span class="p">;</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>    <span class="k">echo</span> <span class="s1">'Error MySQL: '</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="7-crear-tabla-desde-php-con-exec">7. Crear tabla desde PHP con <code>exec()</code><a class="headerlink" href="#7-crear-tabla-desde-php-con-exec" title="Permanent link">&para;</a></h2>
+<h3 id="que-hace_2">Qué hace<a class="headerlink" href="#que-hace_2" title="Permanent link">&para;</a></h3>
+<p>Ejecuta sentencias SQL que no devuelven filas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nv">$sql</span> <span class="o">=</span> <span class="s2">"</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="s2">    CREATE TABLE IF NOT EXISTS contactos (</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="s2">        id INTEGER PRIMARY KEY AUTOINCREMENT,</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="s2">        nombre TEXT NOT NULL,</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="s2">        email TEXT NOT NULL</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="s2">    )</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="s2">"</span><span class="p">;</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="8-insertar-con-prepare-y-execute">8. Insertar con <code>prepare()</code> y <code>execute()</code><a class="headerlink" href="#8-insertar-con-prepare-y-execute" title="Permanent link">&para;</a></h2>
+<h3 id="que-hace_3">Qué hace<a class="headerlink" href="#que-hace_3" title="Permanent link">&para;</a></h3>
+<p>Permite usar consultas preparadas con parámetros.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="s2">    INSERT INTO contactos (nombre, email)</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="s2">    VALUES (:nombre, :email)</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="s2">"</span><span class="p">);</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    <span class="s1">':nombre'</span> <span class="o">=&gt;</span> <span class="s1">'Ana'</span><span class="p">,</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>    <span class="s1">':email'</span> <span class="o">=&gt;</span> <span class="s1">'ana@ejemplo.com'</span><span class="p">,</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="p">]);</span>
+</code></pre></div>
+<hr />
+<h2 id="9-leer-resultados">9. Leer resultados<a class="headerlink" href="#9-leer-resultados" title="Permanent link">&para;</a></h2>
+<h3 id="que-hace_4">Qué hace<a class="headerlink" href="#que-hace_4" title="Permanent link">&para;</a></h3>
+<p>Recupera filas desde la base de datos.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">"SELECT * FROM contactos ORDER BY id DESC"</span><span class="p">);</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="nv">$filas</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">();</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="nb">print_r</span><span class="p">(</span><span class="nv">$filas</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="10-consultar-una-fila-concreta">10. Consultar una fila concreta<a class="headerlink" href="#10-consultar-una-fila-concreta" title="Permanent link">&para;</a></h2>
+<h3 id="que-hace_5">Qué hace<a class="headerlink" href="#que-hace_5" title="Permanent link">&para;</a></h3>
+<p>Permite recuperar un solo registro por identificador.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"SELECT * FROM contactos WHERE id = :id"</span><span class="p">);</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="s1">':id'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">]);</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="nv">$fila</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="11-actualizar-un-registro">11. Actualizar un registro<a class="headerlink" href="#11-actualizar-un-registro" title="Permanent link">&para;</a></h2>
+<h3 id="que-hace_6">Qué hace<a class="headerlink" href="#que-hace_6" title="Permanent link">&para;</a></h3>
+<p>Modifica una fila existente.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="s2">    UPDATE contactos</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="s2">    SET nombre = :nombre, email = :email</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="s2">    WHERE id = :id</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="s2">"</span><span class="p">);</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>    <span class="s1">':nombre'</span> <span class="o">=&gt;</span> <span class="s1">'Ana Pérez'</span><span class="p">,</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>    <span class="s1">':email'</span> <span class="o">=&gt;</span> <span class="s1">'ana.perez@ejemplo.com'</span><span class="p">,</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>    <span class="s1">':id'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="p">]);</span>
+</code></pre></div>
+<hr />
+<h2 id="12-borrar-un-registro">12. Borrar un registro<a class="headerlink" href="#12-borrar-un-registro" title="Permanent link">&para;</a></h2>
+<h3 id="que-hace_7">Qué hace<a class="headerlink" href="#que-hace_7" title="Permanent link">&para;</a></h3>
+<p>Elimina una fila por identificador.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"DELETE FROM contactos WHERE id = :id"</span><span class="p">);</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="s1">':id'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">]);</span>
+</code></pre></div>
+<hr />
+<h2 id="13-verificar-errores-frecuentes">13. Verificar errores frecuentes<a class="headerlink" href="#13-verificar-errores-frecuentes" title="Permanent link">&para;</a></h2>
+<h3 id="checklist-rapido">Checklist rápido<a class="headerlink" href="#checklist-rapido" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>1. ¿PHP está disponible?
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>2. ¿PDO está activo?
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>3. ¿Está el driver correcto?
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>4. ¿El DSN apunta al sitio correcto?
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>5. ¿La tabla existe?
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>6. ¿El usuario tiene permisos?
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>7. ¿Estoy usando prepare() con datos variables?
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>8. ¿Estoy mostrando o capturando el error en desarrollo?
+</code></pre></div>
+<h3 id="errores-habituales">Errores habituales<a class="headerlink" href="#errores-habituales" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>could not find driver</code></li>
+<li><code>no such table</code></li>
+<li><code>access denied</code></li>
+<li><code>unknown database</code></li>
+</ul>
+<h3 id="driver-no-encontrado">Driver no encontrado<a class="headerlink" href="#driver-no-encontrado" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>pdo
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>sqlite
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>mysql
+</code></pre></div>
+<h3 id="tabla-no-existente">Tabla no existente<a class="headerlink" href="#tabla-no-existente" title="Permanent link">&para;</a></h3>
+<p>Comprueba:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="p">;</span>
+</code></pre></div>
+<p>o en SQLite:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">.</span><span class="n">tables</span>
+</code></pre></div>
+<h3 id="ruta-sqlite-incorrecta">Ruta SQLite incorrecta<a class="headerlink" href="#ruta-sqlite-incorrecta" title="Permanent link">&para;</a></h3>
+<p>Comprueba:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>ls<span class="w"> </span>-la<span class="w"> </span>data
+</code></pre></div>
+<h3 id="variables-de-conexion-mal-configuradas">Variables de conexión mal configuradas<a class="headerlink" href="#variables-de-conexion-mal-configuradas" title="Permanent link">&para;</a></h3>
+<p>Revisa:</p>
+<ul>
+<li>host</li>
+<li>puerto</li>
+<li>nombre de base de datos</li>
+<li>usuario</li>
+<li>contraseña</li>
+<li><code>charset=utf8mb4</code></li>
+</ul>
+<hr />
+<h2 id="14-revisar-registros-desde-adminer-phpmyadmin-como-apoyo-visual">14. Revisar registros desde Adminer / phpMyAdmin como apoyo visual<a class="headerlink" href="#14-revisar-registros-desde-adminer-phpmyadmin-como-apoyo-visual" title="Permanent link">&para;</a></h2>
+<h3 id="que-conviene-mirar-ahi">Qué conviene mirar ahí<a class="headerlink" href="#que-conviene-mirar-ahi" title="Permanent link">&para;</a></h3>
+<ul>
+<li>si la tabla se ha creado;</li>
+<li>si realmente se han insertado datos;</li>
+<li>si un <code>UPDATE</code> ha cambiado lo esperado;</li>
+<li>si la estructura coincide con tu SQL.</li>
+</ul>
+<h3 id="que-no-debes-hacer-siempre-desde-ahi">Qué no debes hacer siempre desde ahí<a class="headerlink" href="#que-no-debes-hacer-siempre-desde-ahi" title="Permanent link">&para;</a></h3>
+<ul>
+<li>crear manualmente toda la práctica y luego decir que la ha hecho el PHP;</li>
+<li>depender de clics que no sabes reproducir por código.</li>
+</ul>
+<hr />
+<h2 id="15-comandos-rapidos-de-depuracion-en-docker">15. Comandos rápidos de depuración en Docker<a class="headerlink" href="#15-comandos-rapidos-de-depuracion-en-docker" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>ps
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>php
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>db
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>php<span class="w"> </span>php<span class="w"> </span>-v
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>php<span class="w"> </span>php<span class="w"> </span>-m
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>php<span class="w"> </span>ls<span class="w"> </span>-la<span class="w"> </span>/var/www/html
+</code></pre></div>
+<hr />
+<h2 id="16-checklist-express-antes-de-entregar-una-practica">16. Checklist express antes de entregar una práctica<a class="headerlink" href="#16-checklist-express-antes-de-entregar-una-practica" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El proyecto arranca sin error fatal</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> PDO y el driver correspondiente están disponibles</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> La conexión está centralizada</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> La tabla existe</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El alta funciona</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El listado funciona</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> La edición funciona</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El borrado funciona</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Se usan consultas preparadas</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> La salida HTML está escapada</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> No se usa <code>root</code> como usuario de la app en MySQL</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

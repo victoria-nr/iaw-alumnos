@@ -1,0 +1,2288 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y practicas del modulo Implantacion de Aplicaciones Web">
+      
+      
+      
+        <link rel="canonical" href="https://TU_USUARIO.github.io/iaw-alumnos/UT4/practica-1/">
+      
+      
+        <link rel="prev" href="../guia-comandos/">
+      
+      
+        <link rel="next" href="../practica-2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 1 - IAW - ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-1-implantacion-guiada-de-wordpress-con-docker-compose" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="IAW - ASIR" class="md-header__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IAW - ASIR" class="md-nav__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IAW - ASIR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1. Entorno de implantacion web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1. Entorno de implantacion web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT2. Programacion web en servidor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT2. Programacion web en servidor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT4. Implantacion de CMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT4. Implantacion de CMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-vas-a-construir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué vas a construir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-que-demuestra-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Qué demuestra esta práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Qué demuestra esta práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-del-ra2-trabajados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios del RA2 trabajados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-contexto-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contexto funcional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-requisitos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Requisitos obligatorios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Requisitos obligatorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-despliegue-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Despliegue técnico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-instalacion-inicial-de-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Instalación inicial de WordPress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-configuracion-basica-del-sitio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Configuración básica del sitio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-comprobacion-funcional-minima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Comprobación funcional mínima
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-requisitos-tecnicos-minimos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Requisitos técnicos mínimos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Requisitos técnicos mínimos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obligatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muy-recomendable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Muy recomendable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estructura-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Estructura orientativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-flujo-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Flujo esperado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-requisitos-funcionales-detallados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Requisitos funcionales detallados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Requisitos funcionales detallados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-datos-minimos-del-sitio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. Datos mínimos del sitio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-contenido-minimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Contenido mínimo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-persistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3. Persistencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-errores-tipicos-a-evitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Errores típicos a evitar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Errores típicos a evitar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usar-localhost-como-host-de-la-base-de-datos-dentro-de-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usar localhost como host de la base de datos dentro de WordPress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-usar-volumenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No usar volúmenes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dar-por-finalizada-la-practica-tras-el-instalador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dar por finalizada la práctica tras el instalador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-probar-tras-reinicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No probar tras reinicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dejar-contenido-por-defecto-sin-revisar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dejar contenido por defecto sin revisar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-ampliaciones-opcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Ampliaciones opcionales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-como-se-evaluara-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Cómo se evaluará esta práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-rubrica-de-evaluacion-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Rúbrica de evaluación de la práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Rúbrica de evaluación de la práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretacion-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretación rápida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condicion-minima-recomendable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condición mínima recomendable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-checklist-del-alumno-antes-de-entregar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Checklist del alumno antes de entregar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automatizacion-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automatizacion con Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-vas-a-construir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué vas a construir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-que-demuestra-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Qué demuestra esta práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Qué demuestra esta práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-del-ra2-trabajados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios del RA2 trabajados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-contexto-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contexto funcional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-requisitos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Requisitos obligatorios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Requisitos obligatorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-despliegue-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Despliegue técnico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-instalacion-inicial-de-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Instalación inicial de WordPress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-configuracion-basica-del-sitio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Configuración básica del sitio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-comprobacion-funcional-minima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Comprobación funcional mínima
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-requisitos-tecnicos-minimos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Requisitos técnicos mínimos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Requisitos técnicos mínimos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obligatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muy-recomendable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Muy recomendable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estructura-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Estructura orientativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-flujo-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Flujo esperado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-requisitos-funcionales-detallados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Requisitos funcionales detallados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Requisitos funcionales detallados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-datos-minimos-del-sitio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. Datos mínimos del sitio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-contenido-minimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Contenido mínimo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-persistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3. Persistencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-errores-tipicos-a-evitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Errores típicos a evitar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Errores típicos a evitar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usar-localhost-como-host-de-la-base-de-datos-dentro-de-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usar localhost como host de la base de datos dentro de WordPress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-usar-volumenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No usar volúmenes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dar-por-finalizada-la-practica-tras-el-instalador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dar por finalizada la práctica tras el instalador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-probar-tras-reinicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No probar tras reinicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dejar-contenido-por-defecto-sin-revisar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dejar contenido por defecto sin revisar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-ampliaciones-opcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Ampliaciones opcionales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-como-se-evaluara-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Cómo se evaluará esta práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-rubrica-de-evaluacion-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Rúbrica de evaluación de la práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Rúbrica de evaluación de la práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretacion-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretación rápida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condicion-minima-recomendable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condición mínima recomendable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-checklist-del-alumno-antes-de-entregar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Checklist del alumno antes de entregar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practica-1-implantacion-guiada-de-wordpress-con-docker-compose">Práctica 1 · Implantación guiada de WordPress con Docker Compose<a class="headerlink" href="#practica-1-implantacion-guiada-de-wordpress-con-docker-compose" title="Permanent link">&para;</a></h1>
+<h2 id="1-que-vas-a-construir">1. Qué vas a construir<a class="headerlink" href="#1-que-vas-a-construir" title="Permanent link">&para;</a></h2>
+<p>Vas a desplegar un entorno reproducible con <strong>WordPress + base de datos</strong>, completar la instalación inicial y dejar preparado un sitio web mínimo, funcional y coherente.</p>
+<p>La idea no es solo “levantar contenedores”, sino demostrar que sabes relacionar:</p>
+<ul>
+<li>servicios;</li>
+<li>base de datos;</li>
+<li>persistencia;</li>
+<li>instalación del CMS;</li>
+<li>y configuración inicial del sitio.</li>
+</ul>
+<hr />
+<h2 id="2-que-demuestra-esta-practica">2. Qué demuestra esta práctica<a class="headerlink" href="#2-que-demuestra-esta-practica" title="Permanent link">&para;</a></h2>
+<p>Con esta práctica debes demostrar que sabes:</p>
+<ul>
+<li>valorar la utilidad real de un CMS;</li>
+<li>implantar un CMS en un entorno reproducible;</li>
+<li>identificar los servicios mínimos que necesita;</li>
+<li>completar la instalación inicial;</li>
+<li>personalizar los ajustes básicos del sitio;</li>
+<li>realizar comprobaciones funcionales sencillas.</li>
+</ul>
+<h3 id="criterios-del-ra2-trabajados">Criterios del RA2 trabajados<a class="headerlink" href="#criterios-del-ra2-trabajados" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>CE1</strong>. Valoración del uso y utilidad de los gestores de contenidos.  </li>
+<li><strong>CE3</strong>. Instalación de gestores de contenidos.  </li>
+<li><strong>CE4</strong>. Diferenciación básica de características.  </li>
+<li><strong>CE5</strong>. Personalización y configuración.  </li>
+<li><strong>CE7</strong>. Pruebas de funcionamiento.</li>
+</ul>
+<hr />
+<h2 id="3-contexto-funcional">3. Contexto funcional<a class="headerlink" href="#3-contexto-funcional" title="Permanent link">&para;</a></h2>
+<p>Un pequeño departamento necesita una web sencilla y gestionable sin desarrollar desde cero.</p>
+<p>Te piden una implantación inicial que permita:</p>
+<ul>
+<li>levantar el CMS;</li>
+<li>completar el asistente inicial;</li>
+<li>crear una estructura mínima del sitio;</li>
+<li>y dejar el proyecto listo para seguir trabajando en él.</li>
+</ul>
+<p>En esta primera práctica el foco está en <strong>implantar y dejar operativo</strong>.</p>
+<hr />
+<h2 id="4-requisitos-obligatorios">4. Requisitos obligatorios<a class="headerlink" href="#4-requisitos-obligatorios" title="Permanent link">&para;</a></h2>
+<p>Tu práctica debe incluir, como mínimo:</p>
+<h3 id="a-despliegue-tecnico">A. Despliegue técnico<a class="headerlink" href="#a-despliegue-tecnico" title="Permanent link">&para;</a></h3>
+<ul>
+<li>un <code>docker-compose.yml</code> con <strong>WordPress</strong> y <strong>base de datos</strong>;</li>
+<li>publicación del puerto de acceso web;</li>
+<li>uso de <strong>volúmenes persistentes</strong>;</li>
+<li>arranque correcto de los servicios.</li>
+</ul>
+<h3 id="b-instalacion-inicial-de-wordpress">B. Instalación inicial de WordPress<a class="headerlink" href="#b-instalacion-inicial-de-wordpress" title="Permanent link">&para;</a></h3>
+<p>Debes completar el instalador y dejar configurado:</p>
+<ul>
+<li>idioma;</li>
+<li>título del sitio;</li>
+<li>usuario administrador;</li>
+<li>correo principal;</li>
+<li>acceso al panel.</li>
+</ul>
+<h3 id="c-configuracion-basica-del-sitio">C. Configuración básica del sitio<a class="headerlink" href="#c-configuracion-basica-del-sitio" title="Permanent link">&para;</a></h3>
+<p>Debes dejar al menos:</p>
+<ul>
+<li>página <strong>Inicio</strong>;</li>
+<li>página <strong>Servicios</strong>;</li>
+<li>página <strong>Contacto</strong>;</li>
+<li>menú principal que enlace esas páginas;</li>
+<li>ajuste correcto de zona horaria;</li>
+<li>enlaces permanentes con una estructura legible.</li>
+</ul>
+<h3 id="d-comprobacion-funcional-minima">D. Comprobación funcional mínima<a class="headerlink" href="#d-comprobacion-funcional-minima" title="Permanent link">&para;</a></h3>
+<p>Debes comprobar, al menos:</p>
+<ul>
+<li>que abre el frontend;</li>
+<li>que abre <code>/wp-admin</code>;</li>
+<li>que puedes iniciar sesión;</li>
+<li>que las páginas creadas se muestran;</li>
+<li>que el sitio sigue operativo tras reiniciar los servicios.</li>
+</ul>
+<hr />
+<h2 id="5-requisitos-tecnicos-minimos">5. Requisitos técnicos mínimos<a class="headerlink" href="#5-requisitos-tecnicos-minimos" title="Permanent link">&para;</a></h2>
+<h3 id="obligatorio">Obligatorio<a class="headerlink" href="#obligatorio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>servicios diferenciados para aplicación y base de datos;</li>
+<li>conexión correcta entre ambos servicios;</li>
+<li>persistencia mediante volúmenes;</li>
+<li>evidencia del despliegue y de la instalación;</li>
+<li>configuración básica coherente del CMS.</li>
+</ul>
+<h3 id="muy-recomendable">Muy recomendable<a class="headerlink" href="#muy-recomendable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>usar un fichero <code>.env</code> o una estructura equivalente;</li>
+<li>nombrar con claridad servicios y volúmenes;</li>
+<li>documentar el puerto y la URL de acceso;</li>
+<li>no usar credenciales absurdamente débiles.</li>
+</ul>
+<hr />
+<h2 id="6-estructura-orientativa">6. Estructura orientativa<a class="headerlink" href="#6-estructura-orientativa" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>practica-1/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── docker-compose.yml
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── .env              # opcional pero recomendable
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>└── README.md         # opcional, muy recomendable
+</code></pre></div>
+<p>También puedes organizarlo con carpetas auxiliares si lo explicas bien.</p>
+<hr />
+<h2 id="7-flujo-esperado">7. Flujo esperado<a class="headerlink" href="#7-flujo-esperado" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+    A[Crear docker-compose.yml] --&gt; B[Levantar servicios]
+    B --&gt; C[Entrar a localhost:puerto]
+    C --&gt; D[Completar instalador WordPress]
+    D --&gt; E[Entrar a wp-admin]
+    E --&gt; F[Crear páginas y menú]
+    F --&gt; G[Revisar ajustes generales]
+    G --&gt; H[Reiniciar servicios]
+    H --&gt; I[Comprobar persistencia]</code></pre>
+<hr />
+<h2 id="8-requisitos-funcionales-detallados">8. Requisitos funcionales detallados<a class="headerlink" href="#8-requisitos-funcionales-detallados" title="Permanent link">&para;</a></h2>
+<h3 id="81-datos-minimos-del-sitio">8.1. Datos mínimos del sitio<a class="headerlink" href="#81-datos-minimos-del-sitio" title="Permanent link">&para;</a></h3>
+<p>Configura un sitio con estos elementos o equivalentes:</p>
+<ul>
+<li><strong>Título del sitio</strong>: libre, pero profesional.</li>
+<li><strong>Descripción corta</strong>: una frase breve coherente.</li>
+<li><strong>Idioma</strong>: español.</li>
+<li><strong>Zona horaria</strong>: Madrid o equivalente coherente.</li>
+<li><strong>Menú principal</strong> con Inicio, Servicios y Contacto.</li>
+</ul>
+<h3 id="82-contenido-minimo">8.2. Contenido mínimo<a class="headerlink" href="#82-contenido-minimo" title="Permanent link">&para;</a></h3>
+<p>No vale dejar la instalación con el contenido por defecto sin más.</p>
+<p>Debes revisar y dejar el sitio en un estado mínimo presentable:</p>
+<ul>
+<li>portada visible;</li>
+<li>páginas creadas;</li>
+<li>menú navegable;</li>
+<li>contenido por defecto revisado.</li>
+</ul>
+<h3 id="83-persistencia">8.3. Persistencia<a class="headerlink" href="#83-persistencia" title="Permanent link">&para;</a></h3>
+<p>Debes demostrar que el estado del sitio persiste tras reiniciar los servicios.</p>
+<p>Por ejemplo:
+1. creas páginas o cambias el título;
+2. reinicias contenedores;
+3. compruebas que los cambios siguen ahí.</p>
+<hr />
+<h2 id="9-entrega">9. Entrega<a class="headerlink" href="#9-entrega" title="Permanent link">&para;</a></h2>
+<p>Debes entregar:</p>
+<ul>
+<li>carpeta o <code>.zip</code> con el proyecto;</li>
+<li>capturas de:</li>
+<li><code>docker compose ps</code>,</li>
+<li>portada del sitio,</li>
+<li>panel <code>/wp-admin</code>,</li>
+<li>menú con las páginas creadas,</li>
+<li>ajuste de enlaces permanentes,</li>
+<li>prueba tras reinicio;</li>
+<li>y, si es posible, un pequeño <code>README.md</code> con:</li>
+<li>URL de acceso,</li>
+<li>puerto usado,</li>
+<li>servicios definidos,</li>
+<li>decisiones básicas tomadas.</li>
+</ul>
+<hr />
+<h2 id="10-errores-tipicos-a-evitar">10. Errores típicos a evitar<a class="headerlink" href="#10-errores-tipicos-a-evitar" title="Permanent link">&para;</a></h2>
+<h3 id="usar-localhost-como-host-de-la-base-de-datos-dentro-de-wordpress">Usar <code>localhost</code> como host de la base de datos dentro de WordPress<a class="headerlink" href="#usar-localhost-como-host-de-la-base-de-datos-dentro-de-wordpress" title="Permanent link">&para;</a></h3>
+<p>Dentro de Compose, la aplicación debe conectar con el servicio <code>db</code>, no con <code>localhost</code>.</p>
+<h3 id="no-usar-volumenes">No usar volúmenes<a class="headerlink" href="#no-usar-volumenes" title="Permanent link">&para;</a></h3>
+<p>Si no defines persistencia, puedes perderlo todo al recrear el entorno.</p>
+<h3 id="dar-por-finalizada-la-practica-tras-el-instalador">Dar por finalizada la práctica tras el instalador<a class="headerlink" href="#dar-por-finalizada-la-practica-tras-el-instalador" title="Permanent link">&para;</a></h3>
+<p>Instalar no es suficiente.<br />
+Hay que revisar ajustes y dejar una estructura mínima del sitio.</p>
+<h3 id="no-probar-tras-reinicio">No probar tras reinicio<a class="headerlink" href="#no-probar-tras-reinicio" title="Permanent link">&para;</a></h3>
+<p>Si no reinicias y compruebas, no estás verificando bien la implantación.</p>
+<h3 id="dejar-contenido-por-defecto-sin-revisar">Dejar contenido por defecto sin revisar<a class="headerlink" href="#dejar-contenido-por-defecto-sin-revisar" title="Permanent link">&para;</a></h3>
+<p>Una implantación profesional mínima no debería quedarse en el estado “recién salido del asistente”.</p>
+<hr />
+<h2 id="11-ampliaciones-opcionales">11. Ampliaciones opcionales<a class="headerlink" href="#11-ampliaciones-opcionales" title="Permanent link">&para;</a></h2>
+<p>Si acabas antes, puedes añadir alguna mejora:</p>
+<ul>
+<li>una página adicional “Quiénes somos”;</li>
+<li>imagen destacada o logotipo;</li>
+<li>una portada estática;</li>
+<li>un usuario editor;</li>
+<li>ajuste fino de lectura o formato de fecha;</li>
+<li>pequeño <code>README</code> técnico más detallado.</li>
+</ul>
+<hr />
+<h2 id="12-como-se-evaluara-esta-practica">12. Cómo se evaluará esta práctica<a class="headerlink" href="#12-como-se-evaluara-esta-practica" title="Permanent link">&para;</a></h2>
+<p>La evaluación será igual en presencial y semipresencial.</p>
+<p>El profesor valorará dos cosas:</p>
+<ol>
+<li><strong>el producto entregado y su funcionamiento</strong>;  </li>
+<li><strong>una validación breve de autoría y comprensión</strong>, en clase o por videollamada.</li>
+</ol>
+<p>En esa validación se te puede pedir que:</p>
+<ul>
+<li>ejecutes la pila;</li>
+<li>expliques qué servicio hace qué;</li>
+<li>señales dónde está la persistencia;</li>
+<li>justifiques por qué el host de base de datos no es <code>localhost</code>;</li>
+<li>hagas una mini modificación sencilla, por ejemplo:</li>
+<li>cambiar el puerto publicado,</li>
+<li>añadir una página al menú,</li>
+<li>modificar el título del sitio,</li>
+<li>crear un segundo usuario,</li>
+<li>o explicar qué ocurriría si borrases los volúmenes.</li>
+</ul>
+<hr />
+<h2 id="13-rubrica-de-evaluacion-de-la-practica">13. Rúbrica de evaluación de la práctica<a class="headerlink" href="#13-rubrica-de-evaluacion-de-la-practica" title="Permanent link">&para;</a></h2>
+<p>Cada bloque se valora con <strong>0, 1 o 2 puntos</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Bloque</th>
+<th>0 puntos</th>
+<th>1 punto</th>
+<th>2 puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Despliegue técnico</strong></td>
+<td>El entorno no arranca o está mal planteado.</td>
+<td>Arranca parcialmente o con errores importantes de configuración.</td>
+<td>El entorno arranca bien, con servicios diferenciados y acceso funcional.</td>
+</tr>
+<tr>
+<td><strong>2. Instalación y configuración inicial</strong></td>
+<td>La instalación no está completada o apenas hay configuración real.</td>
+<td>La instalación está hecha, pero faltan ajustes importantes.</td>
+<td>La instalación está completa y el sitio tiene una configuración inicial coherente.</td>
+</tr>
+<tr>
+<td><strong>3. Estructura mínima del sitio</strong></td>
+<td>No hay páginas, menú o estructura básica utilizable.</td>
+<td>Hay estructura parcial, pero incompleta o poco cuidada.</td>
+<td>Hay páginas mínimas, menú funcional y estado presentable del sitio.</td>
+</tr>
+<tr>
+<td><strong>4. Pruebas y persistencia</strong></td>
+<td>No se han probado los aspectos esenciales o no se demuestra persistencia.</td>
+<td>Se prueban algunas partes, pero de forma incompleta.</td>
+<td>Se prueban frontend, panel y persistencia tras reinicio.</td>
+</tr>
+<tr>
+<td><strong>5. Comprensión y autoría</strong></td>
+<td>No sabe explicar su propia implantación ni orientarse en ella.</td>
+<td>Explica parte del proceso, pero con dudas importantes.</td>
+<td>Explica con claridad servicios, conexión, persistencia y decisiones básicas.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpretacion-rapida">Interpretación rápida<a class="headerlink" href="#interpretacion-rapida" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>0 a 4 puntos</strong> → insuficiente  </li>
+<li><strong>5 a 6 puntos</strong> → suficiente  </li>
+<li><strong>7 a 8 puntos</strong> → bien / notable  </li>
+<li><strong>9 a 10 puntos</strong> → notable alto / sobresaliente</li>
+</ul>
+<h3 id="condicion-minima-recomendable">Condición mínima recomendable<a class="headerlink" href="#condicion-minima-recomendable" title="Permanent link">&para;</a></h3>
+<p>Para considerar esta práctica superada, debe cumplirse esto:</p>
+<ul>
+<li>el CMS arranca y es accesible;</li>
+<li>la instalación está completada;</li>
+<li>hay una configuración mínima coherente;</li>
+<li>el alumno demuestra comprensión básica de su propia implantación.</li>
+</ul>
+<hr />
+<h2 id="14-checklist-del-alumno-antes-de-entregar">14. Checklist del alumno antes de entregar<a class="headerlink" href="#14-checklist-del-alumno-antes-de-entregar" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Tengo un <code>docker-compose.yml</code> funcional.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> WordPress y la base de datos están separados por servicios.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He usado persistencia con volúmenes.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El CMS es accesible por navegador.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He completado el instalador inicial.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He configurado título, idioma, zona horaria y permalinks.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He creado Inicio, Servicios y Contacto.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He montado un menú principal.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He reiniciado servicios y comprobado que el sitio persiste.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Soy capaz de explicar mi despliegue y hacer una modificación pequeña.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

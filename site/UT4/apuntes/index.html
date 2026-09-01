@@ -1,0 +1,5369 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y practicas del modulo Implantacion de Aplicaciones Web">
+      
+      
+      
+        <link rel="canonical" href="https://TU_USUARIO.github.io/iaw-alumnos/UT4/apuntes/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../guia-comandos/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Apuntes de teoria - IAW - ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#apuntes-implantacion-de-cms" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="IAW - ASIR" class="md-header__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Apuntes de teoria
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IAW - ASIR" class="md-nav__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IAW - ASIR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1. Entorno de implantacion web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1. Entorno de implantacion web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT2. Programacion web en servidor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT2. Programacion web en servidor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT3/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT4. Implantacion de CMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT4. Implantacion de CMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-antes-de-empezar-que-vas-a-aprender-de-verdad-aqui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Antes de empezar: qué vas a aprender de verdad aquí
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-un-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Qué es un CMS?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ¿Qué es un CMS?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dicho-de-forma-sencilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicho de forma sencilla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-problema-resuelve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué problema resuelve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-un-cms-no-hace-por-arte-de-magia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que un CMS no hace por arte de magia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cuando-tiene-sentido-usar-un-cms-y-cuando-no" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. ¿Cuándo tiene sentido usar un CMS y cuándo no?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. ¿Cuándo tiene sentido usar un CMS y cuándo no?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-donde-un-cms-suele-encajar-muy-bien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos donde un CMS suele encajar muy bien
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-donde-quiza-no-es-la-mejor-opcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos donde quizá no es la mejor opción
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-metafora-util" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una metáfora útil
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-arquitectura-basica-de-un-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Arquitectura básica de un CMS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Arquitectura básica de un CMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-suele-haber-por-debajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué suele haber por debajo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué suele haber por debajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-servidor-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Servidor web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-aplicacion-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Aplicación CMS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Base de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-archivos-persistentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Archivos persistentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tipos-de-cms-segun-la-funcionalidad-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tipos de CMS según la funcionalidad principal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Tipos de CMS según la funcionalidad principal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-cms-de-proposito-general-o-editorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. CMS de propósito general o editorial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1. CMS de propósito general o editorial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-claro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo claro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-cms-orientados-a-portales-complejos-y-modelado-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. CMS orientados a portales complejos y modelado de contenido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. CMS orientados a portales complejos y modelado de contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-claro_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo claro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-cms-de-comercio-electronico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. CMS de comercio electrónico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. CMS de comercio electrónico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos habituales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-lms-o-plataformas-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. LMS o plataformas de aprendizaje
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. LMS o plataformas de aprendizaje">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-claro_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo claro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-wikis-y-documentacion-colaborativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5. Wikis y documentación colaborativa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Wikis y documentación colaborativa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-claro_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo claro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-cms-desacoplados-o-headless" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6. CMS desacoplados o headless
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-rapida-de-orientacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla rápida de orientación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-criterios-de-seleccion-de-un-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Criterios de selección de un CMS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Criterios de selección de un CMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preguntas-que-conviene-hacerse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas que conviene hacerse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preguntas que conviene hacerse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-tipo-de-sitio-necesito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué tipo de sitio necesito?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quien-va-a-editar-el-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Quién va a editar el contenido?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-complejidad-de-contenidos-voy-a-manejar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué complejidad de contenidos voy a manejar?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-rapidez-de-implantacion-necesito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué rapidez de implantación necesito?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-ecosistema-y-soporte-tiene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué ecosistema y soporte tiene?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-exige-la-operacion-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué exige la operación posterior?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-tipico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error típico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-wordpress-como-cms-de-referencia-en-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. WordPress como CMS de referencia en esta UT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. WordPress como CMS de referencia en esta UT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-wordpress-aparece-aqui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué WordPress aparece aquí?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-hace-especialmente-util-a-wordpress-en-esta-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace especialmente útil a WordPress en esta unidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-no-conviene-pensar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que no conviene pensar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-que-suelen-aparecer-en-una-implantacion-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes que suelen aparecer en una implantación WordPress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-comparacion-breve-wordpress-y-drupal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Comparación breve: WordPress y Drupal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Comparación breve: WordPress y Drupal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wordpress-suele-destacar-cuando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WordPress suele destacar cuando...
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drupal-suele-destacar-cuando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drupal suele destacar cuando...
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-comparacion-muy-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una comparación muy práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion-realista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión realista
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-opciones-de-implantacion-de-un-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Opciones de implantación de un CMS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Opciones de implantación de un CMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-hosting-compartido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. Hosting compartido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-servidor-propio-o-vps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Servidor propio o VPS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3. Contenedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-paas-o-soluciones-gestionadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4. PaaS o soluciones gestionadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-wordpress-con-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. WordPress con Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#91-servicios-minimos-que-necesitamos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1. Servicios mínimos que necesitamos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.1. Servicios mínimos que necesitamos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-minima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura mínima
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92-ejemplo-minimo-de-docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2. Ejemplo mínimo de docker-compose.yml
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.2. Ejemplo mínimo de docker-compose.yml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-entender-de-este-fichero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué debes entender de este fichero
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué debes entender de este fichero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servicio-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servicio db
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicio-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servicio wordpress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wordpress_db_host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORDPRESS_DB_HOST
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-localhost-seria-un-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué localhost sería un error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-variables-puertos-y-persistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3. Variables, puertos y persistencia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.3. Variables, puertos y persistencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#puerto-publicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Puerto publicado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volumenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volúmenes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion-docente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendación docente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#94-puesta-en-marcha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4. Puesta en marcha
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#95-que-hace-realmente-el-instalador-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5. Qué hace realmente el instalador inicial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-configuracion-inicial-de-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Configuración inicial de WordPress
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101-ajustes-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1. Ajustes generales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-estructura-inicial-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2. Estructura inicial de contenido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.2. Estructura inicial de contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-esto-importa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué esto importa?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103-enlaces-permanentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3. Enlaces permanentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-usuarios-y-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4. Usuarios y roles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.4. Usuarios y roles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105-temas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5. Temas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6. Plugins
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.6. Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-sana-para-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla sana para esta UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-seguridad-inicial-del-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Seguridad inicial del CMS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-actualizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1. Actualizaciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-usuarios-y-contrasenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2. Usuarios y contraseñas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-comentarios-registro-y-superficie-de-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3. Comentarios, registro y superficie de ataque
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.3. Comentarios, registro y superficie de ataque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-practica_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-no-indexar-durante-construccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4. No indexar durante construcción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-https-y-entorno-publicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.5. HTTPS y entorno publicado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-mostrar-errores-y-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.6. Mostrar errores y depuración
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.6. Mostrar errores y depuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-implica-esto-en-la-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué implica esto en la UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-pruebas-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Pruebas de funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-que-se-debe-probar-como-minimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1. Qué se debe probar como mínimo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.1. Qué se debe probar como mínimo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-tecnicas-minimas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas técnicas mínimas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-funcionales-minimas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas funcionales mínimas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-de-publicacion-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas de publicación básica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-smoke-test-sencillo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2. Smoke test sencillo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-por-que-esto-importa-tanto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3. Por qué esto importa tanto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.3. Por qué esto importa tanto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-publicacion-basica-del-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Publicación básica del CMS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#131-niveles-posibles-de-publicacion-en-esta-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1. Niveles posibles de publicación en esta unidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.1. Niveles posibles de publicación en esta unidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nivel-1-publicacion-local-controlada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nivel 1. Publicación local controlada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-2-publicacion-en-red-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nivel 2. Publicación en red local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-3-publicacion-en-entorno-del-centro-o-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nivel 3. Publicación en entorno del centro o servidor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#132-que-revisar-antes-de-publicar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2. Qué revisar antes de publicar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#133-error-clasico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3. Error clásico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-errores-tipicos-y-diagnostico-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Errores típicos y diagnóstico rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#141-error-wordpress-no-conecta-con-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1. Error: WordPress no conecta con la base de datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.1. Error: WordPress no conecta con la base de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pista-de-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pista de diagnóstico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#142-error-he-reiniciado-y-he-perdido-todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2. Error: he reiniciado y he perdido todo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.2. Error: he reiniciado y he perdido todo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea-clave_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#143-error-funciona-el-frontend-pero-no-el-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3. Error: funciona el frontend, pero no el panel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#144-error-el-sitio-se-ve-muy-vacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.4. Error: el sitio se ve muy “vacío”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#145-error-demasiados-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5. Error: demasiados plugins
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#146-error-todo-el-mundo-es-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.6. Error: todo el mundo es admin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.6. Error: todo el mundo es admin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-buenas-practicas-basicas-para-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Buenas prácticas básicas para esta UT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-resumen-final-de-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Resumen final de la unidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-puente-hacia-la-ut5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Puente hacia la UT5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-actividades-finales-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Actividades finales de repaso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-cierre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Cierre
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automatizacion-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automatizacion con Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-antes-de-empezar-que-vas-a-aprender-de-verdad-aqui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Antes de empezar: qué vas a aprender de verdad aquí
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-un-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Qué es un CMS?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ¿Qué es un CMS?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dicho-de-forma-sencilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicho de forma sencilla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-problema-resuelve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué problema resuelve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-un-cms-no-hace-por-arte-de-magia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que un CMS no hace por arte de magia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cuando-tiene-sentido-usar-un-cms-y-cuando-no" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. ¿Cuándo tiene sentido usar un CMS y cuándo no?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. ¿Cuándo tiene sentido usar un CMS y cuándo no?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-donde-un-cms-suele-encajar-muy-bien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos donde un CMS suele encajar muy bien
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-donde-quiza-no-es-la-mejor-opcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos donde quizá no es la mejor opción
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regla-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-metafora-util" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una metáfora útil
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-arquitectura-basica-de-un-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Arquitectura básica de un CMS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Arquitectura básica de un CMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-suele-haber-por-debajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué suele haber por debajo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué suele haber por debajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-servidor-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Servidor web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-aplicacion-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Aplicación CMS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Base de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-archivos-persistentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Archivos persistentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tipos-de-cms-segun-la-funcionalidad-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tipos de CMS según la funcionalidad principal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Tipos de CMS según la funcionalidad principal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-cms-de-proposito-general-o-editorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. CMS de propósito general o editorial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1. CMS de propósito general o editorial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-claro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo claro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-cms-orientados-a-portales-complejos-y-modelado-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. CMS orientados a portales complejos y modelado de contenido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. CMS orientados a portales complejos y modelado de contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-claro_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo claro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-cms-de-comercio-electronico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. CMS de comercio electrónico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. CMS de comercio electrónico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos habituales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-lms-o-plataformas-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. LMS o plataformas de aprendizaje
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. LMS o plataformas de aprendizaje">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-claro_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo claro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-wikis-y-documentacion-colaborativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5. Wikis y documentación colaborativa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Wikis y documentación colaborativa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-claro_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo claro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-cms-desacoplados-o-headless" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6. CMS desacoplados o headless
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-rapida-de-orientacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla rápida de orientación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-criterios-de-seleccion-de-un-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Criterios de selección de un CMS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Criterios de selección de un CMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preguntas-que-conviene-hacerse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas que conviene hacerse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preguntas que conviene hacerse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-tipo-de-sitio-necesito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué tipo de sitio necesito?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quien-va-a-editar-el-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Quién va a editar el contenido?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-complejidad-de-contenidos-voy-a-manejar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué complejidad de contenidos voy a manejar?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-rapidez-de-implantacion-necesito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué rapidez de implantación necesito?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-ecosistema-y-soporte-tiene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué ecosistema y soporte tiene?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-exige-la-operacion-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué exige la operación posterior?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-tipico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error típico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-wordpress-como-cms-de-referencia-en-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. WordPress como CMS de referencia en esta UT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. WordPress como CMS de referencia en esta UT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-wordpress-aparece-aqui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué WordPress aparece aquí?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-hace-especialmente-util-a-wordpress-en-esta-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hace especialmente útil a WordPress en esta unidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-no-conviene-pensar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que no conviene pensar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-que-suelen-aparecer-en-una-implantacion-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes que suelen aparecer en una implantación WordPress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-comparacion-breve-wordpress-y-drupal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Comparación breve: WordPress y Drupal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Comparación breve: WordPress y Drupal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wordpress-suele-destacar-cuando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WordPress suele destacar cuando...
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drupal-suele-destacar-cuando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drupal suele destacar cuando...
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-comparacion-muy-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una comparación muy práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion-realista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión realista
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-opciones-de-implantacion-de-un-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Opciones de implantación de un CMS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Opciones de implantación de un CMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-hosting-compartido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. Hosting compartido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-servidor-propio-o-vps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Servidor propio o VPS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3. Contenedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-paas-o-soluciones-gestionadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4. PaaS o soluciones gestionadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-wordpress-con-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. WordPress con Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#91-servicios-minimos-que-necesitamos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1. Servicios mínimos que necesitamos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.1. Servicios mínimos que necesitamos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-minima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura mínima
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92-ejemplo-minimo-de-docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2. Ejemplo mínimo de docker-compose.yml
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.2. Ejemplo mínimo de docker-compose.yml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-entender-de-este-fichero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué debes entender de este fichero
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué debes entender de este fichero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servicio-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servicio db
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicio-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servicio wordpress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wordpress_db_host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORDPRESS_DB_HOST
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-localhost-seria-un-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué localhost sería un error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-variables-puertos-y-persistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3. Variables, puertos y persistencia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.3. Variables, puertos y persistencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#puerto-publicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Puerto publicado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volumenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volúmenes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion-docente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendación docente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#94-puesta-en-marcha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4. Puesta en marcha
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#95-que-hace-realmente-el-instalador-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5. Qué hace realmente el instalador inicial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-configuracion-inicial-de-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Configuración inicial de WordPress
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101-ajustes-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1. Ajustes generales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-estructura-inicial-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2. Estructura inicial de contenido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.2. Estructura inicial de contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-esto-importa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué esto importa?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103-enlaces-permanentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3. Enlaces permanentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-usuarios-y-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4. Usuarios y roles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.4. Usuarios y roles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105-temas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5. Temas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6. Plugins
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.6. Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-sana-para-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla sana para esta UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-seguridad-inicial-del-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Seguridad inicial del CMS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-actualizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1. Actualizaciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-usuarios-y-contrasenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2. Usuarios y contraseñas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-comentarios-registro-y-superficie-de-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3. Comentarios, registro y superficie de ataque
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.3. Comentarios, registro y superficie de ataque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-practica_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-no-indexar-durante-construccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4. No indexar durante construcción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-https-y-entorno-publicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.5. HTTPS y entorno publicado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-mostrar-errores-y-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.6. Mostrar errores y depuración
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.6. Mostrar errores y depuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-implica-esto-en-la-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué implica esto en la UT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-pruebas-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Pruebas de funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-que-se-debe-probar-como-minimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1. Qué se debe probar como mínimo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.1. Qué se debe probar como mínimo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-tecnicas-minimas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas técnicas mínimas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-funcionales-minimas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas funcionales mínimas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-de-publicacion-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas de publicación básica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-smoke-test-sencillo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2. Smoke test sencillo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-por-que-esto-importa-tanto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3. Por qué esto importa tanto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.3. Por qué esto importa tanto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-publicacion-basica-del-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Publicación básica del CMS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#131-niveles-posibles-de-publicacion-en-esta-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1. Niveles posibles de publicación en esta unidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.1. Niveles posibles de publicación en esta unidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nivel-1-publicacion-local-controlada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nivel 1. Publicación local controlada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-2-publicacion-en-red-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nivel 2. Publicación en red local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-3-publicacion-en-entorno-del-centro-o-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nivel 3. Publicación en entorno del centro o servidor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#132-que-revisar-antes-de-publicar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2. Qué revisar antes de publicar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#133-error-clasico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3. Error clásico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-errores-tipicos-y-diagnostico-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Errores típicos y diagnóstico rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#141-error-wordpress-no-conecta-con-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1. Error: WordPress no conecta con la base de datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.1. Error: WordPress no conecta con la base de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pista-de-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pista de diagnóstico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#142-error-he-reiniciado-y-he-perdido-todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2. Error: he reiniciado y he perdido todo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.2. Error: he reiniciado y he perdido todo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea-clave_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#143-error-funciona-el-frontend-pero-no-el-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3. Error: funciona el frontend, pero no el panel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#144-error-el-sitio-se-ve-muy-vacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.4. Error: el sitio se ve muy “vacío”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#145-error-demasiados-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5. Error: demasiados plugins
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#146-error-todo-el-mundo-es-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.6. Error: todo el mundo es admin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.6. Error: todo el mundo es admin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mini-ejercicio-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-buenas-practicas-basicas-para-esta-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Buenas prácticas básicas para esta UT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-resumen-final-de-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Resumen final de la unidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-puente-hacia-la-ut5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Puente hacia la UT5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-actividades-finales-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Actividades finales de repaso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-cierre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Cierre
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="apuntes-implantacion-de-cms">Apuntes · Implantación de CMS<a class="headerlink" href="#apuntes-implantacion-de-cms" title="Permanent link">&para;</a></h1>
+<h2 id="0-antes-de-empezar-que-vas-a-aprender-de-verdad-aqui">0. Antes de empezar: qué vas a aprender de verdad aquí<a class="headerlink" href="#0-antes-de-empezar-que-vas-a-aprender-de-verdad-aqui" title="Permanent link">&para;</a></h2>
+<p>Esta unidad no va de memorizar pantallas del panel de WordPress.</p>
+<p>Lo importante es entender este proceso:</p>
+<ol>
+<li>una organización necesita publicar contenidos sin programar cada página desde cero;</li>
+<li>se selecciona un CMS adecuado para ese caso;</li>
+<li>se despliega sobre una arquitectura mínima;</li>
+<li>se completa la instalación;</li>
+<li>se configura para que sea usable, segura y mantenible;</li>
+<li>se prueba;</li>
+<li>y solo entonces se considera publicable.</li>
+</ol>
+<p>Si entiendes bien ese ciclo, luego todo encaja:
+- por qué existe un CMS,
+- por qué necesita base de datos,
+- por qué tiene usuarios, roles y plugins,
+- por qué no basta con instalarlo “como salga”,
+- y por qué un administrador de sistemas debe verlo como una implantación real, no como un juguete de aula.</p>
+<hr />
+<h2 id="1-que-es-un-cms">1. ¿Qué es un CMS?<a class="headerlink" href="#1-que-es-un-cms" title="Permanent link">&para;</a></h2>
+<p>Un <strong>CMS</strong> es un <strong>Content Management System</strong>, es decir, un <strong>sistema de gestión de contenidos</strong>.</p>
+<p>Su objetivo es permitir que una organización publique y mantenga contenidos web sin tener que programar cada página manualmente.</p>
+<h3 id="dicho-de-forma-sencilla">Dicho de forma sencilla<a class="headerlink" href="#dicho-de-forma-sencilla" title="Permanent link">&para;</a></h3>
+<p>Un CMS es una aplicación web ya preparada para que alguien pueda:</p>
+<ul>
+<li>crear páginas;</li>
+<li>editar textos;</li>
+<li>subir imágenes;</li>
+<li>organizar menús;</li>
+<li>gestionar usuarios;</li>
+<li>instalar extensiones;</li>
+<li>y publicar un sitio con una base técnica ya resuelta.</li>
+</ul>
+<h3 id="que-problema-resuelve">Qué problema resuelve<a class="headerlink" href="#que-problema-resuelve" title="Permanent link">&para;</a></h3>
+<p>Sin CMS, una organización pequeña o mediana tendría que elegir entre dos extremos:</p>
+<ul>
+<li>crear un sitio completamente a medida;</li>
+<li>o mantener manualmente archivos HTML, CSS y otros recursos.</li>
+</ul>
+<p>Eso suele ser lento, caro y poco escalable para el día a día editorial.</p>
+<p>Un CMS resuelve justo ese problema:</p>
+<ul>
+<li>separa <strong>contenido</strong> y <strong>gestión</strong>;</li>
+<li>ofrece un <strong>panel de administración</strong>;</li>
+<li>reparte tareas entre perfiles técnicos y no técnicos;</li>
+<li>y acelera mucho la puesta en marcha de un sitio.</li>
+</ul>
+<h3 id="lo-que-un-cms-no-hace-por-arte-de-magia">Lo que un CMS no hace por arte de magia<a class="headerlink" href="#lo-que-un-cms-no-hace-por-arte-de-magia" title="Permanent link">&para;</a></h3>
+<p>Un CMS no elimina la técnica.<br />
+Solo la <strong>encapsula</strong> mejor.</p>
+<p>Sigue habiendo:</p>
+<ul>
+<li>servidor web;</li>
+<li>PHP u otra tecnología de aplicación;</li>
+<li>base de datos;</li>
+<li>archivos persistentes;</li>
+<li>copias de seguridad;</li>
+<li>seguridad;</li>
+<li>actualización;</li>
+<li>y pruebas.</li>
+</ul>
+<hr />
+<h3 id="mini-ejercicio-1">Mini ejercicio 1<a class="headerlink" href="#mini-ejercicio-1" title="Permanent link">&para;</a></h3>
+<p>Responde por escrito:</p>
+<ol>
+<li>¿Qué significa CMS?  </li>
+<li>¿Qué problema real resuelve en una empresa o institución?  </li>
+<li>Nombra tres tareas que un editor puede hacer con un CMS sin tocar código.</li>
+</ol>
+<hr />
+<h2 id="2-cuando-tiene-sentido-usar-un-cms-y-cuando-no">2. ¿Cuándo tiene sentido usar un CMS y cuándo no?<a class="headerlink" href="#2-cuando-tiene-sentido-usar-un-cms-y-cuando-no" title="Permanent link">&para;</a></h2>
+<p>No todas las webs necesitan un CMS.</p>
+<h3 id="casos-donde-un-cms-suele-encajar-muy-bien">Casos donde un CMS suele encajar muy bien<a class="headerlink" href="#casos-donde-un-cms-suele-encajar-muy-bien" title="Permanent link">&para;</a></h3>
+<ul>
+<li>sitio corporativo con varias secciones;</li>
+<li>blog o revista digital;</li>
+<li>portal de noticias;</li>
+<li>web de centro educativo;</li>
+<li>intranet sencilla;</li>
+<li>tienda online con catálogo;</li>
+<li>portal institucional con varios perfiles editores.</li>
+</ul>
+<h3 id="casos-donde-quiza-no-es-la-mejor-opcion">Casos donde quizá no es la mejor opción<a class="headerlink" href="#casos-donde-quiza-no-es-la-mejor-opcion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>una landing muy pequeña y estática;</li>
+<li>una aplicación web de negocio con lógica muy específica;</li>
+<li>un frontend desacoplado con requisitos muy concretos;</li>
+<li>una API pura sin panel editorial clásico;</li>
+<li>un micrositio mínimo que apenas cambia.</li>
+</ul>
+<h3 id="regla-practica">Regla práctica<a class="headerlink" href="#regla-practica" title="Permanent link">&para;</a></h3>
+<p>Un CMS tiene sentido cuando el valor está en <strong>gestionar contenidos y usuarios</strong> con rapidez, no en construir toda la lógica desde cero.</p>
+<h3 id="una-metafora-util">Una metáfora útil<a class="headerlink" href="#una-metafora-util" title="Permanent link">&para;</a></h3>
+<p>Piensa en la diferencia entre:</p>
+<ul>
+<li>fabricar un mueble desde tablones;</li>
+<li>o montar un sistema modular bien diseñado.</li>
+</ul>
+<p>Si necesitas algo muy específico, quizá construyas desde cero.<br />
+Si necesitas algo funcional, mantenible y rápido de poner en marcha, lo modular tiene mucha ventaja.</p>
+<hr />
+<h2 id="3-arquitectura-basica-de-un-cms">3. Arquitectura básica de un CMS<a class="headerlink" href="#3-arquitectura-basica-de-un-cms" title="Permanent link">&para;</a></h2>
+<p>Para un alumno de ASIR es importante ver un CMS como una arquitectura, no solo como un panel.</p>
+<pre class="mermaid"><code>flowchart TD
+    A[Navegador del visitante] --&gt; B[Servidor web + CMS]
+    C[Navegador del editor] --&gt; D[Panel de administración]
+    D --&gt; B
+    B --&gt; E[Base de datos]
+    B --&gt; F[Archivos persistentes]</code></pre>
+<h3 id="que-suele-haber-por-debajo">Qué suele haber por debajo<a class="headerlink" href="#que-suele-haber-por-debajo" title="Permanent link">&para;</a></h3>
+<h4 id="1-servidor-web">1. Servidor web<a class="headerlink" href="#1-servidor-web" title="Permanent link">&para;</a></h4>
+<p>Es el componente que recibe la petición HTTP y sirve la aplicación.</p>
+<p>En nuestro caso, con WordPress, normalmente aparecerá como un entorno con:</p>
+<ul>
+<li>Apache o Nginx;</li>
+<li>PHP;</li>
+<li>la aplicación WordPress;</li>
+<li>y acceso a su base de datos.</li>
+</ul>
+<h4 id="2-aplicacion-cms">2. Aplicación CMS<a class="headerlink" href="#2-aplicacion-cms" title="Permanent link">&para;</a></h4>
+<p>Es el propio sistema gestor:</p>
+<ul>
+<li>WordPress,</li>
+<li>Drupal,</li>
+<li>PrestaShop,</li>
+<li>Moodle,</li>
+<li>MediaWiki,</li>
+<li>u otro similar.</li>
+</ul>
+<h4 id="3-base-de-datos">3. Base de datos<a class="headerlink" href="#3-base-de-datos" title="Permanent link">&para;</a></h4>
+<p>El CMS guarda en base de datos gran parte de la información:</p>
+<ul>
+<li>usuarios;</li>
+<li>páginas;</li>
+<li>entradas;</li>
+<li>menús;</li>
+<li>ajustes;</li>
+<li>taxonomías;</li>
+<li>configuraciones;</li>
+<li>y mucha metainformación.</li>
+</ul>
+<h4 id="4-archivos-persistentes">4. Archivos persistentes<a class="headerlink" href="#4-archivos-persistentes" title="Permanent link">&para;</a></h4>
+<p>Además de la base de datos, un CMS suele necesitar almacenamiento para:</p>
+<ul>
+<li>imágenes y medios subidos;</li>
+<li>extensiones;</li>
+<li>temas;</li>
+<li>cachés;</li>
+<li>y configuraciones auxiliares.</li>
+</ul>
+<h3 id="conclusion-importante">Conclusión importante<a class="headerlink" href="#conclusion-importante" title="Permanent link">&para;</a></h3>
+<p>Cuando implantas un CMS, no estás instalando “una página web”.<br />
+Estás levantando una <strong>aplicación con estado</strong>.</p>
+<hr />
+<h3 id="mini-ejercicio-2">Mini ejercicio 2<a class="headerlink" href="#mini-ejercicio-2" title="Permanent link">&para;</a></h3>
+<p>Explica con tus palabras qué papel tiene cada uno de estos elementos en un CMS:</p>
+<ol>
+<li>servidor web;  </li>
+<li>base de datos;  </li>
+<li>almacenamiento persistente.</li>
+</ol>
+<hr />
+<h2 id="4-tipos-de-cms-segun-la-funcionalidad-principal">4. Tipos de CMS según la funcionalidad principal<a class="headerlink" href="#4-tipos-de-cms-segun-la-funcionalidad-principal" title="Permanent link">&para;</a></h2>
+<p>Uno de los criterios de evaluación del RA exige que sepas <strong>clasificar</strong> gestores de contenidos según la función principal del sitio que permiten gestionar.</p>
+<p>No se trata de memorizar listas gigantes, sino de saber orientar la elección.</p>
+<h3 id="41-cms-de-proposito-general-o-editorial">4.1. CMS de propósito general o editorial<a class="headerlink" href="#41-cms-de-proposito-general-o-editorial" title="Permanent link">&para;</a></h3>
+<p>Son los más típicos para:</p>
+<ul>
+<li>webs corporativas;</li>
+<li>blogs;</li>
+<li>páginas de servicios;</li>
+<li>portales con secciones editoriales.</li>
+</ul>
+<h4 id="ejemplo-claro">Ejemplo claro<a class="headerlink" href="#ejemplo-claro" title="Permanent link">&para;</a></h4>
+<p><strong>WordPress</strong></p>
+<p>Puntos fuertes:
+- implantación rápida;
+- curva de entrada razonable;
+- enorme ecosistema;
+- válido para muchos sitios pequeños y medianos.</p>
+<h3 id="42-cms-orientados-a-portales-complejos-y-modelado-de-contenido">4.2. CMS orientados a portales complejos y modelado de contenido<a class="headerlink" href="#42-cms-orientados-a-portales-complejos-y-modelado-de-contenido" title="Permanent link">&para;</a></h3>
+<p>Suelen encajar mejor cuando hay:</p>
+<ul>
+<li>estructuras de contenido más complejas;</li>
+<li>permisos más finos;</li>
+<li>flujos editoriales más exigentes;</li>
+<li>sitios institucionales o grandes portales.</li>
+</ul>
+<h4 id="ejemplo-claro_1">Ejemplo claro<a class="headerlink" href="#ejemplo-claro_1" title="Permanent link">&para;</a></h4>
+<p><strong>Drupal</strong></p>
+<p>Puntos fuertes:
+- modelado potente;
+- enfoque más estructurado;
+- buena base para portales complejos.</p>
+<h3 id="43-cms-de-comercio-electronico">4.3. CMS de comercio electrónico<a class="headerlink" href="#43-cms-de-comercio-electronico" title="Permanent link">&para;</a></h3>
+<p>Se centran en:</p>
+<ul>
+<li>catálogo;</li>
+<li>pedidos;</li>
+<li>clientes;</li>
+<li>pagos;</li>
+<li>stock;</li>
+<li>promociones.</li>
+</ul>
+<h4 id="ejemplos-habituales">Ejemplos habituales<a class="headerlink" href="#ejemplos-habituales" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PrestaShop  </li>
+<li>Magento / Adobe Commerce  </li>
+<li>WooCommerce como extensión sobre WordPress</li>
+</ul>
+<h3 id="44-lms-o-plataformas-de-aprendizaje">4.4. LMS o plataformas de aprendizaje<a class="headerlink" href="#44-lms-o-plataformas-de-aprendizaje" title="Permanent link">&para;</a></h3>
+<p>Aunque no siempre se nombren como CMS en sentido clásico, gestionan contenidos formativos y usuarios.</p>
+<h4 id="ejemplo-claro_2">Ejemplo claro<a class="headerlink" href="#ejemplo-claro_2" title="Permanent link">&para;</a></h4>
+<p><strong>Moodle</strong></p>
+<p>Se centra en:
+- cursos;
+- alumnado;
+- actividades;
+- evaluación;
+- seguimiento.</p>
+<h3 id="45-wikis-y-documentacion-colaborativa">4.5. Wikis y documentación colaborativa<a class="headerlink" href="#45-wikis-y-documentacion-colaborativa" title="Permanent link">&para;</a></h3>
+<p>Se orientan a conocimiento compartido y edición colaborativa.</p>
+<h4 id="ejemplo-claro_3">Ejemplo claro<a class="headerlink" href="#ejemplo-claro_3" title="Permanent link">&para;</a></h4>
+<p><strong>MediaWiki</strong></p>
+<p>Útil para:
+- documentación;
+- base de conocimiento;
+- intranets documentales.</p>
+<h3 id="46-cms-desacoplados-o-headless">4.6. CMS desacoplados o headless<a class="headerlink" href="#46-cms-desacoplados-o-headless" title="Permanent link">&para;</a></h3>
+<p>Gestionan contenido en backend y lo exponen a otros frontends o APIs.</p>
+<p>No son el foco de esta UT, pero conviene saber que existen.</p>
+<h3 id="tabla-rapida-de-orientacion">Tabla rápida de orientación<a class="headerlink" href="#tabla-rapida-de-orientacion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Ejemplos</th>
+<th>Suele encajar en</th>
+<th>Idea clave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMS general/editorial</td>
+<td>WordPress</td>
+<td>webs corporativas, blogs, sitios de contenido</td>
+<td>rapidez y ecosistema</td>
+</tr>
+<tr>
+<td>CMS portal/estructurado</td>
+<td>Drupal</td>
+<td>portales complejos, institucionales</td>
+<td>estructura y modelado</td>
+</tr>
+<tr>
+<td>CMS e-commerce</td>
+<td>PrestaShop, Magento</td>
+<td>tiendas online</td>
+<td>catálogo y venta</td>
+</tr>
+<tr>
+<td>LMS</td>
+<td>Moodle</td>
+<td>enseñanza y formación</td>
+<td>cursos y seguimiento</td>
+</tr>
+<tr>
+<td>Wiki/documentación</td>
+<td>MediaWiki</td>
+<td>conocimiento compartido</td>
+<td>colaboración documental</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="mini-ejercicio-3">Mini ejercicio 3<a class="headerlink" href="#mini-ejercicio-3" title="Permanent link">&para;</a></h3>
+<p>Clasifica cada caso en el tipo de CMS que mejor encaja:</p>
+<ol>
+<li>una academia que necesita cursos, tareas y seguimiento;  </li>
+<li>una tienda con catálogo y carrito;  </li>
+<li>una web corporativa con blog y páginas de servicios;  </li>
+<li>una base interna de documentación técnica.</li>
+</ol>
+<hr />
+<h2 id="5-criterios-de-seleccion-de-un-cms">5. Criterios de selección de un CMS<a class="headerlink" href="#5-criterios-de-seleccion-de-un-cms" title="Permanent link">&para;</a></h2>
+<p>Elegir un CMS no es una cuestión de gustos.<br />
+Es una decisión técnica y funcional.</p>
+<h3 id="preguntas-que-conviene-hacerse">Preguntas que conviene hacerse<a class="headerlink" href="#preguntas-que-conviene-hacerse" title="Permanent link">&para;</a></h3>
+<h4 id="que-tipo-de-sitio-necesito">¿Qué tipo de sitio necesito?<a class="headerlink" href="#que-tipo-de-sitio-necesito" title="Permanent link">&para;</a></h4>
+<p>No es lo mismo:</p>
+<ul>
+<li>un blog,</li>
+<li>una web corporativa,</li>
+<li>una tienda,</li>
+<li>un portal institucional,</li>
+<li>o una plataforma educativa.</li>
+</ul>
+<h4 id="quien-va-a-editar-el-contenido">¿Quién va a editar el contenido?<a class="headerlink" href="#quien-va-a-editar-el-contenido" title="Permanent link">&para;</a></h4>
+<ul>
+<li>un perfil técnico;</li>
+<li>personal administrativo;</li>
+<li>profesorado;</li>
+<li>departamento de comunicación;</li>
+<li>múltiples editores con distintos roles.</li>
+</ul>
+<h4 id="que-complejidad-de-contenidos-voy-a-manejar">¿Qué complejidad de contenidos voy a manejar?<a class="headerlink" href="#que-complejidad-de-contenidos-voy-a-manejar" title="Permanent link">&para;</a></h4>
+<ul>
+<li>páginas simples;</li>
+<li>noticias;</li>
+<li>taxonomías;</li>
+<li>fichas con muchos campos;</li>
+<li>permisos por secciones;</li>
+<li>flujos de revisión.</li>
+</ul>
+<h4 id="que-rapidez-de-implantacion-necesito">¿Qué rapidez de implantación necesito?<a class="headerlink" href="#que-rapidez-de-implantacion-necesito" title="Permanent link">&para;</a></h4>
+<p>A veces la prioridad es salir rápido.<br />
+Otras veces importa más la estructura a largo plazo.</p>
+<h4 id="que-ecosistema-y-soporte-tiene">¿Qué ecosistema y soporte tiene?<a class="headerlink" href="#que-ecosistema-y-soporte-tiene" title="Permanent link">&para;</a></h4>
+<ul>
+<li>temas;</li>
+<li>plugins o módulos;</li>
+<li>documentación;</li>
+<li>comunidad;</li>
+<li>facilidad para encontrar profesionales.</li>
+</ul>
+<h4 id="que-exige-la-operacion-posterior">¿Qué exige la operación posterior?<a class="headerlink" href="#que-exige-la-operacion-posterior" title="Permanent link">&para;</a></h4>
+<ul>
+<li>actualizaciones;</li>
+<li>backups;</li>
+<li>mantenimiento;</li>
+<li>formación de editores;</li>
+<li>seguridad;</li>
+<li>observabilidad básica.</li>
+</ul>
+<h3 id="error-tipico">Error típico<a class="headerlink" href="#error-tipico" title="Permanent link">&para;</a></h3>
+<p>Elegir un CMS solo por fama.</p>
+<p>La fama ayuda, pero la pregunta correcta es:</p>
+<blockquote>
+<p><strong>¿Encaja con este caso concreto y con los recursos reales de quien lo va a operar?</strong></p>
+</blockquote>
+<hr />
+<h2 id="6-wordpress-como-cms-de-referencia-en-esta-ut">6. WordPress como CMS de referencia en esta UT<a class="headerlink" href="#6-wordpress-como-cms-de-referencia-en-esta-ut" title="Permanent link">&para;</a></h2>
+<p>En esta unidad nos centraremos principalmente en <strong>WordPress</strong>.</p>
+<h3 id="por-que-wordpress-aparece-aqui">¿Por qué WordPress aparece aquí?<a class="headerlink" href="#por-que-wordpress-aparece-aqui" title="Permanent link">&para;</a></h3>
+<p>Porque sigue siendo una referencia muy habitual en implantación web y cuenta con una documentación amplia sobre puesta en marcha, administración y seguridad. Además, su enfoque encaja muy bien con una UT donde importa tanto la implantación como la configuración posterior.</p>
+<h3 id="que-hace-especialmente-util-a-wordpress-en-esta-unidad">Qué hace especialmente útil a WordPress en esta unidad<a class="headerlink" href="#que-hace-especialmente-util-a-wordpress-en-esta-unidad" title="Permanent link">&para;</a></h3>
+<ul>
+<li>permite una implantación bastante rápida;</li>
+<li>encaja muy bien en sitios corporativos, blogs y webs de contenido;</li>
+<li>es fácil de contextualizar profesionalmente;</li>
+<li>tiene una arquitectura comprensible para alumnado de ASIR;</li>
+<li>permite trabajar instalación, configuración, seguridad inicial, pruebas y publicación sin una complejidad desbordante.</li>
+</ul>
+<h3 id="lo-que-no-conviene-pensar">Lo que no conviene pensar<a class="headerlink" href="#lo-que-no-conviene-pensar" title="Permanent link">&para;</a></h3>
+<p>No conviene caer en dos extremos:</p>
+<ul>
+<li>“WordPress sirve para todo”.  </li>
+<li>“WordPress es solo un blog”.</li>
+</ul>
+<p>La realidad es más útil y más matizada:</p>
+<ul>
+<li>sirve muy bien para muchos casos;</li>
+<li>pero no es la respuesta universal a cualquier sistema web;</li>
+<li>y su calidad final depende muchísimo de cómo se implante y se mantenga.</li>
+</ul>
+<h3 id="componentes-que-suelen-aparecer-en-una-implantacion-wordpress">Componentes que suelen aparecer en una implantación WordPress<a class="headerlink" href="#componentes-que-suelen-aparecer-en-una-implantacion-wordpress" title="Permanent link">&para;</a></h3>
+<ul>
+<li>contenedor o servidor con WordPress;</li>
+<li>servicio de base de datos;</li>
+<li>volúmenes persistentes;</li>
+<li>configuración inicial del sitio;</li>
+<li>temas y plugins;</li>
+<li>usuarios y roles;</li>
+<li>pruebas;</li>
+<li>y una estrategia mínima de publicación y mantenimiento.</li>
+</ul>
+<hr />
+<h3 id="mini-ejercicio-4">Mini ejercicio 4<a class="headerlink" href="#mini-ejercicio-4" title="Permanent link">&para;</a></h3>
+<p>Escribe tres razones por las que WordPress tiene sentido como CMS principal en esta UT y una razón por la que no debería elegirse “por defecto” para cualquier proyecto.</p>
+<hr />
+<h2 id="7-comparacion-breve-wordpress-y-drupal">7. Comparación breve: WordPress y Drupal<a class="headerlink" href="#7-comparacion-breve-wordpress-y-drupal" title="Permanent link">&para;</a></h2>
+<p>No vamos a convertir esta UT en una unidad de Drupal, pero sí conviene que sepas compararlo con WordPress, porque ambos aparecen con frecuencia en contextos profesionales y ambos disponen de documentación oficial de instalación y uso. Además, Drupal suele presentarse con un enfoque más técnico y estructurado en su puesta en marcha.</p>
+<h3 id="wordpress-suele-destacar-cuando">WordPress suele destacar cuando...<a class="headerlink" href="#wordpress-suele-destacar-cuando" title="Permanent link">&para;</a></h3>
+<ul>
+<li>necesitas rapidez de implantación;</li>
+<li>el sitio es editorial o corporativo;</li>
+<li>quieres una curva de entrada razonable;</li>
+<li>el ecosistema disponible te ayuda mucho.</li>
+</ul>
+<h3 id="drupal-suele-destacar-cuando">Drupal suele destacar cuando...<a class="headerlink" href="#drupal-suele-destacar-cuando" title="Permanent link">&para;</a></h3>
+<ul>
+<li>el contenido tiene una estructura más exigente;</li>
+<li>los permisos y el modelado importan mucho;</li>
+<li>hay mayor complejidad institucional o portal.</li>
+</ul>
+<h3 id="una-comparacion-muy-practica">Una comparación muy práctica<a class="headerlink" href="#una-comparacion-muy-practica" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>WordPress</th>
+<th>Drupal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entrada inicial</td>
+<td>más rápida en muchos casos</td>
+<td>más exigente</td>
+</tr>
+<tr>
+<td>Curva de aprendizaje</td>
+<td>más amable para empezar</td>
+<td>más pronunciada</td>
+</tr>
+<tr>
+<td>Enfoque habitual</td>
+<td>editorial/generalista</td>
+<td>estructurado/portal</td>
+</tr>
+<tr>
+<td>Ecosistema</td>
+<td>enorme y muy visible</td>
+<td>sólido, más técnico</td>
+</tr>
+<tr>
+<td>Encaje típico en esta UT</td>
+<td>ideal como eje principal</td>
+<td>útil para contraste técnico</td>
+</tr>
+</tbody>
+</table>
+<h3 id="conclusion-realista">Conclusión realista<a class="headerlink" href="#conclusion-realista" title="Permanent link">&para;</a></h3>
+<p>En una FP de ASIR, WordPress es muy buen eje para aprender la competencia de implantación.<br />
+Drupal aporta contraste y criterio de selección.</p>
+<hr />
+<h3 id="mini-ejercicio-5">Mini ejercicio 5<a class="headerlink" href="#mini-ejercicio-5" title="Permanent link">&para;</a></h3>
+<p>Indica en qué caso elegirías mejor WordPress y en cuál Drupal:</p>
+<ol>
+<li>sitio corporativo pequeño de una academia;  </li>
+<li>portal institucional con tipos de contenido y permisos más complejos.</li>
+</ol>
+<p>Justifica cada respuesta en dos o tres líneas.</p>
+<hr />
+<h2 id="8-opciones-de-implantacion-de-un-cms">8. Opciones de implantación de un CMS<a class="headerlink" href="#8-opciones-de-implantacion-de-un-cms" title="Permanent link">&para;</a></h2>
+<p>Un CMS puede implantarse de varias formas.</p>
+<h3 id="81-hosting-compartido">8.1. Hosting compartido<a class="headerlink" href="#81-hosting-compartido" title="Permanent link">&para;</a></h3>
+<p>Es frecuente en entornos pequeños o de bajo coste.</p>
+<p>Ventajas:
+- sencillo;
+- barato;
+- rápido de arrancar.</p>
+<p>Inconvenientes:
+- menos control;
+- más limitaciones;
+- peor reproducibilidad;
+- menos parecido a un entorno administrado por ASIR.</p>
+<h3 id="82-servidor-propio-o-vps">8.2. Servidor propio o VPS<a class="headerlink" href="#82-servidor-propio-o-vps" title="Permanent link">&para;</a></h3>
+<p>Da más control sobre:</p>
+<ul>
+<li>sistema;</li>
+<li>servicios;</li>
+<li>red;</li>
+<li>backups;</li>
+<li>publicación;</li>
+<li>seguridad.</li>
+</ul>
+<h3 id="83-contenedores">8.3. Contenedores<a class="headerlink" href="#83-contenedores" title="Permanent link">&para;</a></h3>
+<p>Para esta UT es una opción muy buena porque permite:</p>
+<ul>
+<li>reproducibilidad;</li>
+<li>aislamiento razonable;</li>
+<li>despliegue rápido;</li>
+<li>estructura clara por servicios;</li>
+<li>y facilidad para reiniciar, borrar o rehacer entornos.</li>
+</ul>
+<p>Por eso aquí tiene mucho sentido usar <strong>Docker Compose</strong>.</p>
+<h3 id="84-paas-o-soluciones-gestionadas">8.4. PaaS o soluciones gestionadas<a class="headerlink" href="#84-paas-o-soluciones-gestionadas" title="Permanent link">&para;</a></h3>
+<p>Existen, pero no son el centro de esta unidad.</p>
+<h3 id="idea-clave">Idea clave<a class="headerlink" href="#idea-clave" title="Permanent link">&para;</a></h3>
+<p>No estamos usando Docker Compose por moda, sino porque ayuda a que el alumnado vea claramente:</p>
+<ul>
+<li>qué servicios hay;</li>
+<li>cómo se relacionan;</li>
+<li>qué datos deben persistir;</li>
+<li>y cómo dejar un entorno replicable.</li>
+</ul>
+<hr />
+<h2 id="9-wordpress-con-docker-compose">9. WordPress con Docker Compose<a class="headerlink" href="#9-wordpress-con-docker-compose" title="Permanent link">&para;</a></h2>
+<p>Docker Compose encaja muy bien en esta unidad porque obliga a pensar en servicios, persistencia, puertos y comprobaciones de funcionamiento dentro de una aplicación multicontenedor.</p>
+<h2 id="91-servicios-minimos-que-necesitamos">9.1. Servicios mínimos que necesitamos<a class="headerlink" href="#91-servicios-minimos-que-necesitamos" title="Permanent link">&para;</a></h2>
+<p>Para una implantación básica de WordPress necesitamos, como mínimo:</p>
+<ol>
+<li><strong>un servicio de base de datos</strong>;</li>
+<li><strong>un servicio WordPress</strong>;</li>
+<li><strong>volúmenes persistentes</strong> para no perder datos al recrear contenedores.</li>
+</ol>
+<h3 id="arquitectura-minima">Arquitectura mínima<a class="headerlink" href="#arquitectura-minima" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    A[Navegador] --&gt; B[WordPress]
+    B --&gt; C[MariaDB]
+    B --&gt; D[Volumen de WordPress]
+    C --&gt; E[Volumen de base de datos]</code></pre>
+<h2 id="92-ejemplo-minimo-de-docker-composeyml">9.2. Ejemplo mínimo de <code>docker-compose.yml</code><a class="headerlink" href="#92-ejemplo-minimo-de-docker-composeyml" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb:11</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ut4_wp_db</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">MARIADB_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">MARIADB_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">MARIADB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="nt">MARIADB_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rootpass</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db_data:/var/lib/mysql</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">wordpress</span><span class="p">:</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress:latest</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ut4_wp_app</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8080:80"</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">      </span><span class="nt">WORDPRESS_DB_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db:3306</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">      </span><span class="nt">WORDPRESS_DB_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">      </span><span class="nt">WORDPRESS_DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">      </span><span class="nt">WORDPRESS_DB_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wp_data:/var/www/html</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">  </span><span class="nt">db_data</span><span class="p">:</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">  </span><span class="nt">wp_data</span><span class="p">:</span>
+</code></pre></div>
+<h3 id="que-debes-entender-de-este-fichero">Qué debes entender de este fichero<a class="headerlink" href="#que-debes-entender-de-este-fichero" title="Permanent link">&para;</a></h3>
+<h4 id="servicio-db">Servicio <code>db</code><a class="headerlink" href="#servicio-db" title="Permanent link">&para;</a></h4>
+<p>Levanta la base de datos y crea:</p>
+<ul>
+<li>base de datos;</li>
+<li>usuario;</li>
+<li>contraseña;</li>
+<li>password de root.</li>
+</ul>
+<h4 id="servicio-wordpress">Servicio <code>wordpress</code><a class="headerlink" href="#servicio-wordpress" title="Permanent link">&para;</a></h4>
+<p>Levanta WordPress y le indica cómo conectar con la base de datos.</p>
+<h4 id="wordpress_db_host"><code>WORDPRESS_DB_HOST</code><a class="headerlink" href="#wordpress_db_host" title="Permanent link">&para;</a></h4>
+<p>Aquí aparece uno de los errores más típicos de toda la UT.</p>
+<p>Dentro de Compose, el host no debe ser <code>localhost</code>, sino el <strong>nombre del servicio</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>db
+</code></pre></div>
+<p>o, si se especifica puerto:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>db:3306
+</code></pre></div>
+<h3 id="por-que-localhost-seria-un-error">Por qué <code>localhost</code> sería un error<a class="headerlink" href="#por-que-localhost-seria-un-error" title="Permanent link">&para;</a></h3>
+<p>Porque desde el contenedor de WordPress, <code>localhost</code> significa “este mismo contenedor”, no el contenedor de base de datos.</p>
+<hr />
+<h3 id="mini-ejercicio-6">Mini ejercicio 6<a class="headerlink" href="#mini-ejercicio-6" title="Permanent link">&para;</a></h3>
+<p>Observa el <code>docker-compose.yml</code> anterior y responde:</p>
+<ol>
+<li>¿Qué servicio atiende las peticiones web?  </li>
+<li>¿Qué servicio guarda los datos?  </li>
+<li>¿Qué dos elementos hacen que los datos no se pierdan al reiniciar el entorno?  </li>
+<li>¿Por qué <code>WORDPRESS_DB_HOST</code> no debe ser <code>localhost</code>?</li>
+</ol>
+<hr />
+<h2 id="93-variables-puertos-y-persistencia">9.3. Variables, puertos y persistencia<a class="headerlink" href="#93-variables-puertos-y-persistencia" title="Permanent link">&para;</a></h2>
+<h3 id="puerto-publicado">Puerto publicado<a class="headerlink" href="#puerto-publicado" title="Permanent link">&para;</a></h3>
+<p>En el ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8080:80"</span>
+</code></pre></div>
+<p>significa:</p>
+<ul>
+<li>puerto <strong>8080</strong> en el host;</li>
+<li>puerto <strong>80</strong> dentro del contenedor.</li>
+</ul>
+<p>Por tanto, el sitio será accesible desde:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>http://localhost:8080
+</code></pre></div>
+<h3 id="volumenes">Volúmenes<a class="headerlink" href="#volumenes" title="Permanent link">&para;</a></h3>
+<p>Los volúmenes son fundamentales.</p>
+<p>Sin ellos, podrías perder:
+- la base de datos;
+- los archivos de WordPress;
+- medios subidos;
+- parte de la configuración.</p>
+<h3 id="recomendacion-docente">Recomendación docente<a class="headerlink" href="#recomendacion-docente" title="Permanent link">&para;</a></h3>
+<p>En esta UT conviene que el alumnado pruebe una vez el efecto de levantar y bajar el entorno sin borrar volúmenes, y otra vez el efecto de hacer <code>down -v</code>, para que vea la diferencia entre:</p>
+<ul>
+<li>parar servicios;</li>
+<li>y destruir el estado.</li>
+</ul>
+<h2 id="94-puesta-en-marcha">9.4. Puesta en marcha<a class="headerlink" href="#94-puesta-en-marcha" title="Permanent link">&para;</a></h2>
+<p>Una secuencia típica sería:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>ps
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>wordpress
+</code></pre></div>
+<p>Después se abre en navegador:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>http://localhost:8080
+</code></pre></div>
+<p>y se completa el instalador web.</p>
+<h2 id="95-que-hace-realmente-el-instalador-inicial">9.5. Qué hace realmente el instalador inicial<a class="headerlink" href="#95-que-hace-realmente-el-instalador-inicial" title="Permanent link">&para;</a></h2>
+<p>En el instalador sueles definir:</p>
+<ul>
+<li>idioma;</li>
+<li>título del sitio;</li>
+<li>usuario administrador;</li>
+<li>contraseña;</li>
+<li>correo;</li>
+<li>visibilidad inicial o ajustes relacionados.</li>
+</ul>
+<p>Aunque visualmente parece “un asistente sencillo”, en realidad estás:</p>
+<ul>
+<li>conectando la aplicación a su estado;</li>
+<li>creando la estructura base del sitio;</li>
+<li>generando un administrador;</li>
+<li>y dejando el CMS listo para entrar en operación.</li>
+</ul>
+<hr />
+<h2 id="10-configuracion-inicial-de-wordpress">10. Configuración inicial de WordPress<a class="headerlink" href="#10-configuracion-inicial-de-wordpress" title="Permanent link">&para;</a></h2>
+<p>La instalación no termina cuando aparece el panel.</p>
+<p>Ese es otro error clásico.</p>
+<p>Instalar es solo el principio.<br />
+Después hay que <strong>configurar con criterio</strong>.</p>
+<h2 id="101-ajustes-generales">10.1. Ajustes generales<a class="headerlink" href="#101-ajustes-generales" title="Permanent link">&para;</a></h2>
+<p>Nada más entrar, conviene revisar al menos:</p>
+<ul>
+<li>título del sitio;</li>
+<li>descripción corta o lema;</li>
+<li>idioma;</li>
+<li>zona horaria;</li>
+<li>formato de fecha y hora;</li>
+<li>correo principal del sitio.</li>
+</ul>
+<p>Esto parece pequeño, pero da pistas muy rápidas de si la implantación se ha hecho con cabeza o deprisa.</p>
+<h2 id="102-estructura-inicial-de-contenido">10.2. Estructura inicial de contenido<a class="headerlink" href="#102-estructura-inicial-de-contenido" title="Permanent link">&para;</a></h2>
+<p>Para una implantación mínima razonable conviene dejar, al menos:</p>
+<ul>
+<li>una página de inicio;</li>
+<li>una página de servicios o equivalente;</li>
+<li>una página de contacto;</li>
+<li>un menú de navegación básico.</li>
+</ul>
+<h3 id="por-que-esto-importa">¿Por qué esto importa?<a class="headerlink" href="#por-que-esto-importa" title="Permanent link">&para;</a></h3>
+<p>Porque la UT no trata solo de “que el login funcione”, sino de implantar un sitio <strong>utilizable</strong>.</p>
+<h2 id="103-enlaces-permanentes">10.3. Enlaces permanentes<a class="headerlink" href="#103-enlaces-permanentes" title="Permanent link">&para;</a></h2>
+<p>Una revisión muy importante es la de <strong>permalinks</strong> o enlaces permanentes.</p>
+<p>Si se dejan con una estructura poco amigable, el sitio funciona, sí, pero la publicación es peor:</p>
+<ul>
+<li>URLs menos claras;</li>
+<li>peor legibilidad;</li>
+<li>peor impresión profesional.</li>
+</ul>
+<p>Una configuración habitual y bastante razonable es:</p>
+<ul>
+<li>nombre de la entrada</li>
+<li>o una estructura equivalente simple y legible</li>
+</ul>
+<h2 id="104-usuarios-y-roles">10.4. Usuarios y roles<a class="headerlink" href="#104-usuarios-y-roles" title="Permanent link">&para;</a></h2>
+<p>Un CMS tiene sentido, entre otras cosas, porque reparte tareas.</p>
+<p>En WordPress conviene distinguir entre perfiles como:</p>
+<ul>
+<li>administrador;</li>
+<li>editor;</li>
+<li>autor;</li>
+<li>colaborador;</li>
+<li>suscriptor.</li>
+</ul>
+<h3 id="idea-importante">Idea importante<a class="headerlink" href="#idea-importante" title="Permanent link">&para;</a></h3>
+<p>No todo el mundo debe ser administrador.</p>
+<p>Ese es un error muy común en sitios pequeños:
+- se crea un usuario y se le da acceso total “por comodidad”.</p>
+<p>Desde el punto de vista de implantación y seguridad, eso es mala práctica.</p>
+<h2 id="105-temas">10.5. Temas<a class="headerlink" href="#105-temas" title="Permanent link">&para;</a></h2>
+<p>Un <strong>tema</strong> define gran parte de la presentación del sitio.</p>
+<p>En esta UT no vamos a desarrollar temas, pero sí debemos entender que:</p>
+<ul>
+<li>elegir un tema también es una decisión de implantación;</li>
+<li>conviene usar uno estable y razonable;</li>
+<li>no hay que instalar temas al azar solo porque “quedan bonitos”.</li>
+</ul>
+<h2 id="106-plugins">10.6. Plugins<a class="headerlink" href="#106-plugins" title="Permanent link">&para;</a></h2>
+<p>Los plugins amplían la funcionalidad.</p>
+<p>Son útiles, pero también introducen:
+- mantenimiento;
+- riesgo;
+- dependencia;
+- y posibles problemas de compatibilidad.</p>
+<h3 id="regla-sana-para-esta-ut">Regla sana para esta UT<a class="headerlink" href="#regla-sana-para-esta-ut" title="Permanent link">&para;</a></h3>
+<p>Instala pocos y con propósito claro.</p>
+<p>Un plugin no es un trofeo.<br />
+Es una pieza adicional que habrá que mantener.</p>
+<hr />
+<h3 id="mini-ejercicio-7">Mini ejercicio 7<a class="headerlink" href="#mini-ejercicio-7" title="Permanent link">&para;</a></h3>
+<p>Haz una checklist mínima de configuración inicial para un WordPress recién instalado.<br />
+Incluye al menos seis puntos y ordénalos de más urgente a menos urgente.</p>
+<hr />
+<h2 id="11-seguridad-inicial-del-cms">11. Seguridad inicial del CMS<a class="headerlink" href="#11-seguridad-inicial-del-cms" title="Permanent link">&para;</a></h2>
+<p>La seguridad inicial de WordPress no depende de una única opción mágica, sino de un conjunto de decisiones sensatas: actualizar, revisar usuarios y roles, limitar superficie innecesaria y publicar con criterios mínimos de protección.</p>
+<p>En esta UT no vamos a hacer un hardening completo de producción, pero sí una <strong>capa inicial razonable</strong>.</p>
+<h2 id="111-actualizaciones">11.1. Actualizaciones<a class="headerlink" href="#111-actualizaciones" title="Permanent link">&para;</a></h2>
+<p>Lo primero y más básico:</p>
+<ul>
+<li>WordPress actualizado;</li>
+<li>temas actualizados;</li>
+<li>plugins actualizados.</li>
+</ul>
+<p>No tiene sentido implantar deprisa y dejar desactualizado desde el minuto uno.</p>
+<p>Además, conviene transmitir al alumnado que el mantenimiento activo no es una recomendación decorativa, sino una parte real del ciclo de vida del CMS.</p>
+<h2 id="112-usuarios-y-contrasenas">11.2. Usuarios y contraseñas<a class="headerlink" href="#112-usuarios-y-contrasenas" title="Permanent link">&para;</a></h2>
+<p>Medidas mínimas:
+- no usar credenciales triviales;
+- crear usuarios con el rol justo;
+- separar administración y edición si el caso lo pide;
+- no compartir la misma cuenta entre varias personas.</p>
+<h2 id="113-comentarios-registro-y-superficie-de-ataque">11.3. Comentarios, registro y superficie de ataque<a class="headerlink" href="#113-comentarios-registro-y-superficie-de-ataque" title="Permanent link">&para;</a></h2>
+<p>Si el sitio no necesita comentarios, no tiene por qué dejarlos abiertos.</p>
+<p>Si no necesitas registro público de usuarios, no tiene sentido abrirlo.</p>
+<h3 id="regla-practica_1">Regla práctica<a class="headerlink" href="#regla-practica_1" title="Permanent link">&para;</a></h3>
+<p>Todo lo que no aporta valor al caso real y aumenta superficie de ataque debe revisarse.</p>
+<h2 id="114-no-indexar-durante-construccion">11.4. No indexar durante construcción<a class="headerlink" href="#114-no-indexar-durante-construccion" title="Permanent link">&para;</a></h2>
+<p>Mientras el sitio está en montaje o pruebas, suele ser buena idea evitar que se indexe prematuramente.</p>
+<p>Eso no sustituye a una seguridad real, pero sí evita publicar accidentalmente una web a medias.</p>
+<h2 id="115-https-y-entorno-publicado">11.5. HTTPS y entorno publicado<a class="headerlink" href="#115-https-y-entorno-publicado" title="Permanent link">&para;</a></h2>
+<p>Siempre que el entorno lo permita, una publicación seria debería priorizar HTTPS para proteger accesos y visitantes. En aula puede que no se monte TLS completo, pero el criterio debe quedar claro.</p>
+<h2 id="116-mostrar-errores-y-depuracion">11.6. Mostrar errores y depuración<a class="headerlink" href="#116-mostrar-errores-y-depuracion" title="Permanent link">&para;</a></h2>
+<p>En producción no conviene mostrar errores detallados al público.<br />
+En entornos publicados no conviene mostrar errores detallados al público.</p>
+<h3 id="que-implica-esto-en-la-ut">Qué implica esto en la UT<a class="headerlink" href="#que-implica-esto-en-la-ut" title="Permanent link">&para;</a></h3>
+<ul>
+<li>en desarrollo puedes usar logs y depuración;</li>
+<li>en publicación debes evitar mostrar información sensible.</li>
+</ul>
+<hr />
+<h3 id="mini-ejercicio-8">Mini ejercicio 8<a class="headerlink" href="#mini-ejercicio-8" title="Permanent link">&para;</a></h3>
+<p>Indica si cada medida encaja o no en una seguridad inicial razonable y justifica muy brevemente:</p>
+<ol>
+<li>dejar todos los usuarios como administradores;  </li>
+<li>actualizar núcleo, plugins y temas;  </li>
+<li>abrir comentarios si el sitio no los necesita;  </li>
+<li>usar contraseñas robustas;  </li>
+<li>publicar una web en obras sin revisarla.</li>
+</ol>
+<hr />
+<h2 id="12-pruebas-de-funcionamiento">12. Pruebas de funcionamiento<a class="headerlink" href="#12-pruebas-de-funcionamiento" title="Permanent link">&para;</a></h2>
+<p>Implantar no es solo levantar servicios y entrar al panel.<br />
+Hay que <strong>probar</strong>.</p>
+<h2 id="121-que-se-debe-probar-como-minimo">12.1. Qué se debe probar como mínimo<a class="headerlink" href="#121-que-se-debe-probar-como-minimo" title="Permanent link">&para;</a></h2>
+<h3 id="pruebas-tecnicas-minimas">Pruebas técnicas mínimas<a class="headerlink" href="#pruebas-tecnicas-minimas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>el contenedor de WordPress arranca;</li>
+<li>la base de datos responde;</li>
+<li>el sitio carga;</li>
+<li>el panel de administración es accesible;</li>
+<li>no aparecen errores graves.</li>
+</ul>
+<h3 id="pruebas-funcionales-minimas">Pruebas funcionales mínimas<a class="headerlink" href="#pruebas-funcionales-minimas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>se puede iniciar sesión;</li>
+<li>las páginas creadas se ven;</li>
+<li>el menú funciona;</li>
+<li>el rol editor tiene permisos coherentes;</li>
+<li>el visitante ve lo que tiene que ver;</li>
+<li>el sitio mantiene su estado tras reinicio de contenedores.</li>
+</ul>
+<h3 id="pruebas-de-publicacion-basica">Pruebas de publicación básica<a class="headerlink" href="#pruebas-de-publicacion-basica" title="Permanent link">&para;</a></h3>
+<ul>
+<li>la URL o IP/puerto se abre desde el equipo esperado;</li>
+<li>el frontend responde;</li>
+<li>el panel responde;</li>
+<li>no se han roto rutas o menús;</li>
+<li>la configuración principal sigue intacta.</li>
+</ul>
+<h2 id="122-smoke-test-sencillo">12.2. Smoke test sencillo<a class="headerlink" href="#122-smoke-test-sencillo" title="Permanent link">&para;</a></h2>
+<p>Un <strong>smoke test</strong> es una comprobación rápida para detectar si lo esencial funciona.</p>
+<p>Ejemplo simple para esta UT:</p>
+<ol>
+<li>abrir portada;</li>
+<li>abrir una página secundaria;</li>
+<li>iniciar sesión;</li>
+<li>comprobar el menú;</li>
+<li>revisar ajustes principales;</li>
+<li>reiniciar contenedores;</li>
+<li>volver a comprobar portada y panel.</li>
+</ol>
+<h2 id="123-por-que-esto-importa-tanto">12.3. Por qué esto importa tanto<a class="headerlink" href="#123-por-que-esto-importa-tanto" title="Permanent link">&para;</a></h2>
+<p>Porque uno de los errores más frecuentes en alumnado técnico es pensar:</p>
+<blockquote>
+<p>“Como el sitio se ve, ya está”.</p>
+</blockquote>
+<p>No.<br />
+Un CMS puede “verse” y, aun así, tener problemas de:</p>
+<ul>
+<li>permisos;</li>
+<li>persistencia;</li>
+<li>publicación;</li>
+<li>rutas;</li>
+<li>roles;</li>
+<li>o configuración incoherente.</li>
+</ul>
+<hr />
+<h3 id="mini-ejercicio-9">Mini ejercicio 9<a class="headerlink" href="#mini-ejercicio-9" title="Permanent link">&para;</a></h3>
+<p>Diseña un plan de pruebas mínimo de 6 comprobaciones para validar una implantación básica de WordPress antes de darla por buena.</p>
+<hr />
+<h2 id="13-publicacion-basica-del-cms">13. Publicación básica del CMS<a class="headerlink" href="#13-publicacion-basica-del-cms" title="Permanent link">&para;</a></h2>
+<p>La publicación no siempre significa “ponerlo en Internet para todo el mundo” en esta UT.</p>
+<p>Aquí la idea es que el sitio quede:</p>
+<ul>
+<li>accesible por una URL o IP/puerto;</li>
+<li>coherente en su configuración;</li>
+<li>y listo para una salida razonable de preproducción o publicación básica.</li>
+</ul>
+<h2 id="131-niveles-posibles-de-publicacion-en-esta-unidad">13.1. Niveles posibles de publicación en esta unidad<a class="headerlink" href="#131-niveles-posibles-de-publicacion-en-esta-unidad" title="Permanent link">&para;</a></h2>
+<h3 id="nivel-1-publicacion-local-controlada">Nivel 1. Publicación local controlada<a class="headerlink" href="#nivel-1-publicacion-local-controlada" title="Permanent link">&para;</a></h3>
+<p>El sitio es accesible desde el propio host por una URL clara.</p>
+<p>Ejemplo:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>http://localhost:8080
+</code></pre></div></p>
+<h3 id="nivel-2-publicacion-en-red-local">Nivel 2. Publicación en red local<a class="headerlink" href="#nivel-2-publicacion-en-red-local" title="Permanent link">&para;</a></h3>
+<p>El sitio es accesible desde otro equipo de la red del aula usando la IP del host.</p>
+<p>Ejemplo:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>http://192.168.1.50:8080
+</code></pre></div></p>
+<h3 id="nivel-3-publicacion-en-entorno-del-centro-o-servidor">Nivel 3. Publicación en entorno del centro o servidor<a class="headerlink" href="#nivel-3-publicacion-en-entorno-del-centro-o-servidor" title="Permanent link">&para;</a></h3>
+<p>Si el centro dispone de infraestructura, podría exponerse por dominio interno o subdominio.</p>
+<p>No es obligatorio en todos los contextos, pero sí conviene comprender el salto conceptual.</p>
+<h2 id="132-que-revisar-antes-de-publicar">13.2. Qué revisar antes de publicar<a class="headerlink" href="#132-que-revisar-antes-de-publicar" title="Permanent link">&para;</a></h2>
+<ul>
+<li>URL correcta;</li>
+<li>estructura básica finalizada;</li>
+<li>usuarios y roles revisados;</li>
+<li>actualizaciones al día;</li>
+<li>comentarios o registros innecesarios desactivados;</li>
+<li>visibilidad del sitio decidida con criterio;</li>
+<li>pruebas mínimas completadas.</li>
+</ul>
+<h2 id="133-error-clasico">13.3. Error clásico<a class="headerlink" href="#133-error-clasico" title="Permanent link">&para;</a></h2>
+<p>Confundir “se abre en mi navegador” con “está correctamente publicado”.</p>
+<p>Eso no es suficiente.<br />
+Hay que comprobar que:</p>
+<ul>
+<li>el entorno es el correcto;</li>
+<li>los datos persisten;</li>
+<li>el sitio es navegable;</li>
+<li>y la configuración no está a medio hacer.</li>
+</ul>
+<hr />
+<h2 id="14-errores-tipicos-y-diagnostico-rapido">14. Errores típicos y diagnóstico rápido<a class="headerlink" href="#14-errores-tipicos-y-diagnostico-rapido" title="Permanent link">&para;</a></h2>
+<h2 id="141-error-wordpress-no-conecta-con-la-base-de-datos">14.1. Error: WordPress no conecta con la base de datos<a class="headerlink" href="#141-error-wordpress-no-conecta-con-la-base-de-datos" title="Permanent link">&para;</a></h2>
+<p>Causas típicas:
+- host mal indicado;
+- usuario o contraseña incorrectos;
+- base de datos aún no preparada;
+- servicio <code>db</code> caído.</p>
+<h3 id="pista-de-diagnostico">Pista de diagnóstico<a class="headerlink" href="#pista-de-diagnostico" title="Permanent link">&para;</a></h3>
+<p>Revisa:
+- <code>docker compose ps</code>
+- <code>docker compose logs db</code>
+- <code>docker compose logs wordpress</code></p>
+<h2 id="142-error-he-reiniciado-y-he-perdido-todo">14.2. Error: he reiniciado y he perdido todo<a class="headerlink" href="#142-error-he-reiniciado-y-he-perdido-todo" title="Permanent link">&para;</a></h2>
+<p>Suele ocurrir cuando:
+- no había volúmenes;
+- o se ha ejecutado <code>docker compose down -v</code>.</p>
+<h3 id="idea-clave_1">Idea clave<a class="headerlink" href="#idea-clave_1" title="Permanent link">&para;</a></h3>
+<p>Parar contenedores no es lo mismo que destruir el estado.</p>
+<h2 id="143-error-funciona-el-frontend-pero-no-el-panel">14.3. Error: funciona el frontend, pero no el panel<a class="headerlink" href="#143-error-funciona-el-frontend-pero-no-el-panel" title="Permanent link">&para;</a></h2>
+<p>Posibles causas:
+- configuración incompleta;
+- rutas mal resueltas;
+- problema de permisos;
+- error temporal de aplicación;
+- plugin o tema conflictivo.</p>
+<h2 id="144-error-el-sitio-se-ve-muy-vacio">14.4. Error: el sitio se ve muy “vacío”<a class="headerlink" href="#144-error-el-sitio-se-ve-muy-vacio" title="Permanent link">&para;</a></h2>
+<p>No es un error técnico, pero sí de implantación incompleta.</p>
+<p>Una implantación mínima profesional no debería quedarse en:
+- portada por defecto;
+- entrada “Hello world”;
+- comentario de prueba;
+- menú inexistente.</p>
+<h2 id="145-error-demasiados-plugins">14.5. Error: demasiados plugins<a class="headerlink" href="#145-error-demasiados-plugins" title="Permanent link">&para;</a></h2>
+<p>Cuando aparecen muchos plugins innecesarios, suele ocurrir esto:
+- mayor complejidad;
+- más actualizaciones;
+- más riesgo;
+- peor trazabilidad.</p>
+<h2 id="146-error-todo-el-mundo-es-admin">14.6. Error: todo el mundo es admin<a class="headerlink" href="#146-error-todo-el-mundo-es-admin" title="Permanent link">&para;</a></h2>
+<p>Esto simplifica hoy y complica mañana.</p>
+<p>Es cómodo, pero mala práctica.</p>
+<hr />
+<h3 id="mini-ejercicio-10">Mini ejercicio 10<a class="headerlink" href="#mini-ejercicio-10" title="Permanent link">&para;</a></h3>
+<p>Lee este caso y detecta al menos cuatro problemas:</p>
+<blockquote>
+<p>Un alumno despliega WordPress con Compose. Usa <code>localhost</code> como host de base de datos dentro del contenedor, no define volúmenes, deja el usuario “admin” con contraseña débil, no cambia los enlaces permanentes y da por terminada la práctica sin probar el acceso desde otra sesión ni revisar los roles.</p>
+</blockquote>
+<hr />
+<h2 id="15-buenas-practicas-basicas-para-esta-ut">15. Buenas prácticas básicas para esta UT<a class="headerlink" href="#15-buenas-practicas-basicas-para-esta-ut" title="Permanent link">&para;</a></h2>
+<ul>
+<li>levantar el CMS en un entorno reproducible;</li>
+<li>separar servicios con claridad;</li>
+<li>usar persistencia;</li>
+<li>documentar el puerto y la URL de acceso;</li>
+<li>revisar ajustes generales nada más instalar;</li>
+<li>configurar una estructura mínima de contenido;</li>
+<li>limitar roles según necesidad real;</li>
+<li>instalar pocos plugins y con propósito;</li>
+<li>actualizar antes de dar por bueno;</li>
+<li>probar antes de publicar;</li>
+<li>dejar evidencia de lo hecho.</li>
+</ul>
+<hr />
+<h2 id="16-resumen-final-de-la-unidad">16. Resumen final de la unidad<a class="headerlink" href="#16-resumen-final-de-la-unidad" title="Permanent link">&para;</a></h2>
+<p>Un CMS no es solo una herramienta para escribir páginas.<br />
+Es una aplicación web completa que debes saber implantar con criterio.</p>
+<p>En esta UT has visto que:</p>
+<ul>
+<li>un CMS resuelve necesidades editoriales muy comunes;</li>
+<li>hay varios tipos según la función principal del sitio;</li>
+<li>WordPress encaja muy bien como eje de aprendizaje;</li>
+<li>la implantación técnica importa tanto como la parte visual;</li>
+<li>seguridad, pruebas y publicación no son extras, sino parte del trabajo;</li>
+<li>y un entorno reproducible con Docker Compose ayuda mucho a aprender bien.</li>
+</ul>
+<hr />
+<h2 id="17-puente-hacia-la-ut5">17. Puente hacia la UT5<a class="headerlink" href="#17-puente-hacia-la-ut5" title="Permanent link">&para;</a></h2>
+<p>En esta UT has dejado un CMS implantado y configurado.</p>
+<p>En la siguiente unidad el foco pasará de:</p>
+<ul>
+<li><strong>ponerlo en marcha</strong><br />
+a  </li>
+<li><strong>administrarlo y mantenerlo</strong>.</li>
+</ul>
+<p>Es decir:</p>
+<ul>
+<li>usuarios;</li>
+<li>operación cotidiana;</li>
+<li>mantenimiento;</li>
+<li>y gobierno básico de la plataforma.</li>
+</ul>
+<hr />
+<h2 id="18-actividades-finales-de-repaso">18. Actividades finales de repaso<a class="headerlink" href="#18-actividades-finales-de-repaso" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Explica qué diferencia hay entre implantar un CMS y administrarlo.  </li>
+<li>Justifica cuándo elegirías WordPress frente a Drupal.  </li>
+<li>Dibuja la arquitectura mínima de WordPress con base de datos y persistencia.  </li>
+<li>Enumera una checklist de publicación básica.  </li>
+<li>Explica por qué un CMS necesita pruebas aunque “se vea bien” en pantalla.</li>
+</ol>
+<hr />
+<h2 id="19-cierre">19. Cierre<a class="headerlink" href="#19-cierre" title="Permanent link">&para;</a></h2>
+<p>Si al terminar esta unidad eres capaz de mirar un encargo del tipo:</p>
+<blockquote>
+<p>“Necesitamos una web sencilla gestionable por varias personas; implántala y déjala lista para publicar”</p>
+</blockquote>
+<p>y sabes responder con una secuencia técnica sensata, entonces has entendido lo esencial de esta UT.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2037 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y practicas del modulo Implantacion de Aplicaciones Web">
+      
+      
+      
+        <link rel="canonical" href="https://TU_USUARIO.github.io/iaw-alumnos/UT3/">
+      
+      
+        <link rel="prev" href="../UT2/practica-2/">
+      
+      
+        <link rel="next" href="apuntes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Vision general - IAW - ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ut3-php-con-acceso-a-bases-de-datos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="IAW - ASIR" class="md-header__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vision general
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IAW - ASIR" class="md-nav__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IAW - ASIR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1. Entorno de implantacion web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1. Entorno de implantacion web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT1/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT1/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT1/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT1/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT2. Programacion web en servidor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT2. Programacion web en servidor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT2/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT2/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT2/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT2/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT3. Programacion web con acceso a bases de datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentacion-de-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presentación de la unidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultado-de-aprendizaje-trabajado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado de aprendizaje trabajado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resultado de aprendizaje trabajado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de evaluación del RA6
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo-didactico-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo didáctico general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-vas-a-aprender-realmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué vas a aprender realmente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enfoque-didactico-de-la-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enfoque didáctico de la UT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacion-con-otras-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con otras UT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secuenciacion-orientativa-12-horas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secuenciación orientativa (12 horas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-conceptual-de-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura conceptual de la unidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitectura conceptual de la unidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conclusion-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-que-usaremos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramientas que usaremos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-no-vamos-a-hacer-todavia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué no vamos a hacer todavía
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-seras-capaz-de-construir-al-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué serás capaz de construir al final
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#productos-de-trabajo-de-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Productos de trabajo de la unidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Productos de trabajo de la unidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practica-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-tipicos-que-vamos-a-combatir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores típicos que vamos a combatir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-se-evaluara" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se evaluará
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterio-metodologico-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterio metodológico importante
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recomendacion-de-estudio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendación de estudio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-empezar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antes de empezar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultado-esperado-al-finalizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado esperado al finalizar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT4. Implantacion de CMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT4. Implantacion de CMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT4/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT4/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT4/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT4/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automatizacion-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automatizacion con Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentacion-de-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presentación de la unidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultado-de-aprendizaje-trabajado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado de aprendizaje trabajado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resultado de aprendizaje trabajado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de evaluación del RA6
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo-didactico-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo didáctico general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-vas-a-aprender-realmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué vas a aprender realmente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enfoque-didactico-de-la-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enfoque didáctico de la UT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacion-con-otras-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con otras UT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secuenciacion-orientativa-12-horas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secuenciación orientativa (12 horas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-conceptual-de-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura conceptual de la unidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitectura conceptual de la unidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conclusion-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-que-usaremos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramientas que usaremos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-no-vamos-a-hacer-todavia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué no vamos a hacer todavía
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-seras-capaz-de-construir-al-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué serás capaz de construir al final
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#productos-de-trabajo-de-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Productos de trabajo de la unidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Productos de trabajo de la unidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practica-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-tipicos-que-vamos-a-combatir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores típicos que vamos a combatir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-se-evaluara" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se evaluará
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterio-metodologico-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterio metodológico importante
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recomendacion-de-estudio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendación de estudio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-empezar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antes de empezar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultado-esperado-al-finalizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado esperado al finalizar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ut3-php-con-acceso-a-bases-de-datos">UT3. PHP con acceso a bases de datos<a class="headerlink" href="#ut3-php-con-acceso-a-bases-de-datos" title="Permanent link">&para;</a></h1>
+<h2 id="presentacion-de-la-unidad">Presentación de la unidad<a class="headerlink" href="#presentacion-de-la-unidad" title="Permanent link">&para;</a></h2>
+<p>En la UT2 trabajaste con PHP como lenguaje de servidor para generar páginas, procesar formularios y organizar lógica básica. En esta UT damos el paso natural en cualquier aplicación web real: <strong>persistir información</strong> en una base de datos y recuperarla de forma segura.</p>
+<p>A partir de aquí PHP deja de ser solo un lenguaje que “pinta HTML” y pasa a convertirse en el intermediario entre:</p>
+<ul>
+<li>el navegador del usuario;</li>
+<li>la lógica de la aplicación;</li>
+<li>y el sistema gestor de bases de datos.</li>
+</ul>
+<p>El foco de la unidad no es aprender SQL de forma aislada, sino <strong>usar SQL desde PHP con sentido profesional</strong>. Por eso la pieza central será <strong>PDO</strong>, que nos permitirá trabajar con <strong>SQLite</strong> y <strong>MariaDB/MySQL</strong> usando una misma forma de programar.</p>
+<div class="admonition info">
+<p class="admonition-title">Idea-fuerza de la UT</p>
+<p>Una aplicación web útil casi siempre necesita recordar algo: usuarios, productos, incidencias, reservas, mensajes o configuraciones. Esa memoria vive en una base de datos, y PHP necesita una forma robusta de hablar con ella.</p>
+</div>
+<h2 id="resultado-de-aprendizaje-trabajado">Resultado de aprendizaje trabajado<a class="headerlink" href="#resultado-de-aprendizaje-trabajado" title="Permanent link">&para;</a></h2>
+<p><strong>RA6. Genera documentos web con acceso a bases de datos utilizando lenguajes de guiones de servidor.</strong></p>
+<h3 id="criterios-de-evaluacion-del-ra6">Criterios de evaluación del RA6<a class="headerlink" href="#criterios-de-evaluacion-del-ra6" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Se han identificado los sistemas gestores de bases de datos más utilizados en entornos web.</li>
+<li>Se ha verificado la integración de los sistemas gestores de bases de datos con el lenguaje de guiones de servidor.</li>
+<li>Se ha configurado en el lenguaje de guiones la conexión para el acceso al sistema gestor de base de datos.</li>
+<li>Se han creado bases de datos y tablas en el gestor utilizando el lenguaje de guiones.</li>
+<li>Se ha obtenido y actualizado la información almacenada en bases de datos.</li>
+<li>Se han aplicado criterios de seguridad en el acceso de los usuarios.</li>
+<li>Se ha verificado el funcionamiento y el rendimiento del sistema.</li>
+</ol>
+<h2 id="objetivo-didactico-general">Objetivo didáctico general<a class="headerlink" href="#objetivo-didactico-general" title="Permanent link">&para;</a></h2>
+<p>Que el alumnado sea capaz de construir una pequeña aplicación web en PHP conectada a una base de datos relacional y realizar sobre ella operaciones <strong>CRUD</strong> básicas de forma <strong>segura</strong>, <strong>estructurada</strong> y <strong>verificable</strong>.</p>
+<h2 id="que-vas-a-aprender-realmente">Qué vas a aprender realmente<a class="headerlink" href="#que-vas-a-aprender-realmente" title="Permanent link">&para;</a></h2>
+<p>Al terminar esta UT deberías poder:</p>
+<ul>
+<li>explicar qué papel cumple una base de datos en una aplicación web;</li>
+<li>distinguir entre <strong>SQLite</strong> y <strong>MariaDB/MySQL</strong> en un contexto web;</li>
+<li>conectar PHP con un SGBD usando <strong>PDO</strong>;</li>
+<li>crear tablas y datos iniciales desde PHP;</li>
+<li>realizar altas, consultas, modificaciones y borrados;</li>
+<li>validar datos en servidor;</li>
+<li>usar <strong>consultas preparadas</strong> para evitar errores y riesgos de seguridad;</li>
+<li>entender por qué una aplicación no debe conectarse como <code>root</code>;</li>
+<li>comprobar si una aplicación con base de datos funciona bien y dónde mirar cuando falla.</li>
+</ul>
+<h2 id="enfoque-didactico-de-la-ut">Enfoque didáctico de la UT<a class="headerlink" href="#enfoque-didactico-de-la-ut" title="Permanent link">&para;</a></h2>
+<p>Esta unidad se ha diseñado con una progresión muy deliberada:</p>
+<ol>
+<li><strong>Primero SQLite</strong>, porque elimina fricción inicial:</li>
+<li>no requiere servidor separado;</li>
+<li>la base de datos es un fichero;</li>
+<li>
+<p>permite concentrarse en PDO y en el flujo CRUD.</p>
+</li>
+<li>
+<p><strong>Después MariaDB/MySQL</strong>, porque representa mejor un escenario profesional:</p>
+</li>
+<li>cliente y servidor separados;</li>
+<li>gestión de usuarios y permisos;</li>
+<li>herramientas visuales como phpMyAdmin o Adminer;</li>
+<li>
+<p>despliegues más cercanos a entornos reales.</p>
+</li>
+<li>
+<p><strong>Siempre desde PHP</strong>, no desde una teoría abstracta de bases de datos:</p>
+</li>
+<li>el SQL aparece cuando hace falta;</li>
+<li>cada consulta tiene un propósito funcional;</li>
+<li>cada decisión técnica se conecta con una necesidad de la aplicación.</li>
+</ol>
+<h2 id="relacion-con-otras-ut">Relación con otras UT<a class="headerlink" href="#relacion-con-otras-ut" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Vienes de la UT1</strong>: reutilizas el entorno reproducible de trabajo.</li>
+<li><strong>Continúas la UT2</strong>: el código PHP ya no se queda “en memoria”, ahora persiste datos.</li>
+<li><strong>Prepara la UT4 y la UT5</strong>: muchos CMS y aplicaciones web usan exactamente esta lógica por debajo.</li>
+</ul>
+<h2 id="secuenciacion-orientativa-12-horas">Secuenciación orientativa (12 horas)<a class="headerlink" href="#secuenciacion-orientativa-12-horas" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Bloque</th>
+<th style="text-align: right;">Horas aprox.</th>
+<th>Idea principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">2 h</td>
+<td>Qué problema resuelve una base de datos en una app web</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">2 h</td>
+<td>SGBD habituales y por qué usamos SQLite y MariaDB/MySQL</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2 h</td>
+<td>PDO: conexión, DSN, errores, lectura de resultados</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">2 h</td>
+<td>CRUD completo con SQLite</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">2 h</td>
+<td>Migración del mismo patrón a MariaDB/MySQL</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align: right;">1 h</td>
+<td>Seguridad básica, validación, usuarios y permisos</td>
+</tr>
+<tr>
+<td>7</td>
+<td style="text-align: right;">1 h</td>
+<td>Comprobación, rendimiento básico y cierre de la UT</td>
+</tr>
+</tbody>
+</table>
+<h2 id="arquitectura-conceptual-de-la-unidad">Arquitectura conceptual de la unidad<a class="headerlink" href="#arquitectura-conceptual-de-la-unidad" title="Permanent link">&para;</a></h2>
+<p><pre class="mermaid"><code>flowchart LR
+    A[Navegador] --&gt; B[PHP]
+    B --&gt; C[PDO]
+    C --&gt; D[SQLite]
+    C --&gt; E[MariaDB / MySQL]
+    D --&gt; B
+    E --&gt; B
+    B --&gt; A</code></pre>
+<pre class="mermaid"><code>sequenceDiagram
+    participant U as Usuario
+    participant N as Navegador
+    participant S as Servidor web
+    participant P as PHP
+    participant D as Base de datos
+
+    U-&gt;&gt;N: Envía formulario
+    N-&gt;&gt;S: Petición HTTP
+    S-&gt;&gt;P: Ejecuta script PHP
+    P-&gt;&gt;D: Consulta o guarda datos
+    D--&gt;&gt;P: Devuelve resultados
+    P--&gt;&gt;S: Genera HTML
+    S--&gt;&gt;N: Respuesta HTTP
+    N--&gt;&gt;U: Ve datos actualizados</code></pre></p>
+<h3 id="conclusion-importante">Conclusión importante<a class="headerlink" href="#conclusion-importante" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PHP procesa la petición.</strong></li>
+<li><strong>La base de datos conserva y organiza la información.</strong></li>
+<li><strong>PDO permite hablar con distintos motores siguiendo un patrón parecido.</strong></li>
+</ul>
+<hr />
+<h2 id="herramientas-que-usaremos">Herramientas que usaremos<a class="headerlink" href="#herramientas-que-usaremos" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>PHP</strong></li>
+<li><strong>PDO</strong></li>
+<li><strong>SQLite</strong></li>
+<li><strong>MariaDB/MySQL</strong></li>
+<li><strong>consultas preparadas</strong></li>
+<li><strong>Adminer o phpMyAdmin</strong> como apoyo visual</li>
+<li><strong>VS Code</strong></li>
+<li><strong>entorno reproducible de la UT1</strong></li>
+</ul>
+<hr />
+<h2 id="que-no-vamos-a-hacer-todavia">Qué no vamos a hacer todavía<a class="headerlink" href="#que-no-vamos-a-hacer-todavia" title="Permanent link">&para;</a></h2>
+<p>En esta unidad <strong>todavía no</strong> vamos a:</p>
+<ul>
+<li>diseñar una base de datos compleja con muchas relaciones;</li>
+<li>optimizar como en un entorno de producción real;</li>
+<li>entrar en ORMs o frameworks;</li>
+<li>estudiar administración avanzada del SGBD;</li>
+<li>convertir esto en una API.</li>
+</ul>
+<p>La prioridad aquí es construir una base sólida y transferible.</p>
+<hr />
+<h2 id="que-seras-capaz-de-construir-al-final">Qué serás capaz de construir al final<a class="headerlink" href="#que-seras-capaz-de-construir-al-final" title="Permanent link">&para;</a></h2>
+<p>Al terminar la unidad podrás desarrollar una miniaplicación PHP con:</p>
+<ul>
+<li>una conexión reutilizable a base de datos;</li>
+<li>creación de tablas desde código;</li>
+<li>formularios que guardan datos;</li>
+<li>listados que leen datos persistentes;</li>
+<li>edición y borrado;</li>
+<li>validación en servidor;</li>
+<li>consultas preparadas;</li>
+<li>cambio razonado entre SQLite y MariaDB/MySQL.</li>
+</ul>
+<hr />
+<h2 id="productos-de-trabajo-de-la-unidad">Productos de trabajo de la unidad<a class="headerlink" href="#productos-de-trabajo-de-la-unidad" title="Permanent link">&para;</a></h2>
+<h3 id="practica-1">Práctica 1<a class="headerlink" href="#practica-1" title="Permanent link">&para;</a></h3>
+<p>Una agenda básica con <strong>SQLite + PDO</strong> y operaciones CRUD completas.</p>
+<h3 id="practica-2">Práctica 2<a class="headerlink" href="#practica-2" title="Permanent link">&para;</a></h3>
+<p>Un mini gestor con <strong>MariaDB/MySQL + PDO</strong> reutilizando la lógica de la práctica 1 y añadiendo filtro funcional.</p>
+<hr />
+<h2 id="errores-tipicos-que-vamos-a-combatir">Errores típicos que vamos a combatir<a class="headerlink" href="#errores-tipicos-que-vamos-a-combatir" title="Permanent link">&para;</a></h2>
+<ul>
+<li>pensar que PDO “es la base de datos”;</li>
+<li>concatenar datos del usuario dentro del SQL;</li>
+<li>creer que <code>required</code> en HTML ya sustituye la validación del servidor;</li>
+<li>usar <code>root</code> como usuario de aplicación;</li>
+<li>mostrar errores técnicos sin control al usuario final;</li>
+<li>olvidar escapar la salida con <code>htmlspecialchars()</code>;</li>
+<li>no comprobar si el driver PDO está disponible;</li>
+<li>creer que SQLite y MySQL obligan a rehacer toda la aplicación.</li>
+</ul>
+<hr />
+<h2 id="como-se-evaluara">Cómo se evaluará<a class="headerlink" href="#como-se-evaluara" title="Permanent link">&para;</a></h2>
+<p>La evaluación combinará:</p>
+<ul>
+<li>prácticas;</li>
+<li>cuestionario;</li>
+<li>validación técnica rápida;</li>
+<li>comprobación de comprensión real y transferencia.</li>
+</ul>
+<p>Se valorará especialmente que el alumnado:</p>
+<ul>
+<li><strong>entienda</strong> la relación entre PHP y el SGBD;</li>
+<li><strong>configure</strong> correctamente la conexión;</li>
+<li><strong>use</strong> consultas preparadas y validación;</li>
+<li><strong>explique</strong> qué cambia y qué no cambia al pasar de SQLite a MySQL;</li>
+<li><strong>demuestre</strong> que sabe corregir errores típicos.</li>
+</ul>
+<hr />
+<h2 id="criterio-metodologico-importante">Criterio metodológico importante<a class="headerlink" href="#criterio-metodologico-importante" title="Permanent link">&para;</a></h2>
+<p>En esta UT se acepta el uso de IA como apoyo, pero <strong>no sustituye la comprensión</strong>.<br />
+Por eso la validación está pensada para comprobar que el alumno sabe:</p>
+<ul>
+<li>explicar qué hace su código;</li>
+<li>adaptar una consulta;</li>
+<li>localizar un error de conexión;</li>
+<li>justificar por qué usa <code>prepare()</code> y no concatenación;</li>
+<li>cambiar de SQLite a MySQL ajustando el DSN y el entorno.</li>
+</ul>
+<h2 id="recomendacion-de-estudio">Recomendación de estudio<a class="headerlink" href="#recomendacion-de-estudio" title="Permanent link">&para;</a></h2>
+<p>No intentes memorizar todas las consultas SQL. Lo importante es entender este ciclo:</p>
+<ol>
+<li>recibo datos;</li>
+<li>valido datos;</li>
+<li>preparo consulta;</li>
+<li>ejecuto consulta;</li>
+<li>trato resultado;</li>
+<li>muestro salida escapada;</li>
+<li>verifico que todo funciona.</li>
+</ol>
+<p>Ese ciclo aparece una y otra vez en aplicaciones web reales.</p>
+<h2 id="antes-de-empezar">Antes de empezar<a class="headerlink" href="#antes-de-empezar" title="Permanent link">&para;</a></h2>
+<p>Conviene tener claros estos conceptos de la UT2:</p>
+<ul>
+<li>variables y arrays en PHP;</li>
+<li>formularios <code>GET</code> y <code>POST</code>;</li>
+<li>separación básica entre HTML y lógica;</li>
+<li>inclusión de ficheros;</li>
+<li>tratamiento básico de errores.</li>
+</ul>
+<p>Si algo de eso no lo tienes asentado, repásalo antes de entrar en prácticas.</p>
+<h2 id="resultado-esperado-al-finalizar">Resultado esperado al finalizar<a class="headerlink" href="#resultado-esperado-al-finalizar" title="Permanent link">&para;</a></h2>
+<p>Si la unidad está bien aprendida, el alumno no solo “hace un CRUD”, sino que entiende que:</p>
+<ul>
+<li>la base de datos resuelve la persistencia;</li>
+<li>PDO reduce el acoplamiento al motor;</li>
+<li>la seguridad empieza ya en cosas aparentemente pequeñas;</li>
+<li>una aplicación web profesional necesita estructura, pruebas y criterio técnico.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
