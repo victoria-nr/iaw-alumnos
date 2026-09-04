@@ -9,24 +9,16 @@ Este documento resume el ritmo de trabajo del módulo para que tengas claro:
 
 ## 1. Vista general del curso
 
-```mermaid
-gantt
-    title Plan general del módulo
-    dateFormat  YYYY-MM-DD
-    axisFormat  %d/%m
+A continuación se muestra una planificación temporales de las Unidades de Trabajo y las evaluaciones a lo largo del curso. Esta planificación queda sujeta a posibles modificaciones.
 
-    section Unidades
-    UT1 Entorno de implantación web     :ut1, 2026-09-09, 2026-10-11
-    UT2 Programación web en servidor    :ut2, 2026-10-12, 2026-11-22
-    UT3 PHP con acceso a BD             :ut3, 2026-11-23, 2026-12-13
-    Vacaciones de Navidad               :vac, 2026-12-21, 2027-01-06
-    UT4-UT6 Proyecto CMS                :cms, 2027-01-07, 2027-02-14
-```
+
+![Planificación IAW](assets/images/planificacion_iaw.png)
+
 
 ## 2. Reglas de trabajo durante el curso
 
 - La fecha ordinaria de entrega será siempre el domingo por la noche.
-- No habrá entregas entre el 21 de diciembre y el 6 de enero.
+- No habrá entregas entre el 22 de diciembre y el 6 de enero.
 - Las entregas se harán en tu repositorio privado del módulo.
 - Los ejercicios de teoría se entregan actualizando `unidades/UTX/ejercicios.md`.
 - Los puntos de control de prácticas se entregan actualizando la carpeta de la práctica correspondiente.
@@ -92,11 +84,12 @@ La idea general es hacer una tutoría colectiva cada dos semanas, normalmente lo
 | 12/10 | Online | Arranque de UT2: qué hace PHP en servidor, primer ejemplo y explicación de la práctica 1 | Haber mirado la teoría de la UT2. |
 | 26/10 | Online | UT2 práctica 1: validación en servidor, funciones y errores típicos | Haber entregado o intentado entregar el punto de control de la práctica 1. |
 | 09/11 | Online | UT2 práctica 2: login, sesion, panel privado y aislamiento por usuario | Haber leído la parte de cookies, sesiones y autenticación básica. |
-| 23/11 | Online | Arranque de UT3: PDO, DSN, SQLite, MariaDB y explicación de la práctica 1 | Haber mirado las primeras secciones de apuntes de la UT3. |
-| 07/12 | Online el 10/12 o video del profesor | UT3 práctica 2: paso de SQLite a MariaDB/MySQL, usuario de aplicación y consultas preparadas | Haber terminado o casi terminado la práctica 1 de UT3. |
-| 21/12 | Online si el calendario lo permite o vídeo del profesor | Presentación del proyecto común de UT4, UT5 y UT6 y formación de parejas | Haber revisado la UT4 cuando se publique. |
-| 18/01 | Online | Punto de control 1 del proyecto CMS | Haber avanzado el despliegue e implantación inicial del CMS en pareja. |
-| 01/02 | Online | Punto de control 2 del proyecto CMS y preparación de la entrega final | Haber avanzado administración, seguridad básica y modificaciones del CMS. |
+| 23/11 | Online | Posible tutoría resolución dudas | Dudas concretas antes del examen. |
+| 10/12 | Online | Arranque de UT3: PDO, DSN, SQLite, MariaDB y explicación de la práctica 1 | Haber mirado las primeras secciones de apuntes de la UT3. |
+| 07/01 | Online | UT3 práctica 2: paso de SQLite a MariaDB/MySQL, usuario de aplicación y consultas preparadas | Haber terminado la práctica 1 de UT3. |
+| 18/01 | Online  | Presentación del proyecto común de UT4, UT5 y UT6 y formación de parejas | Haber revisado la UT4 cuando se publique. |
+| 01/02 | Online | Punto de control 1 del proyecto CMS | Haber avanzado el despliegue e implantación inicial del CMS en pareja. |
+| 15/02 | Online | Punto de control 2 del proyecto CMS y preparación de la entrega final | Haber avanzado administración, seguridad básica y modificaciones del CMS. |
 
 
 ## 5. Entregas de UT1 a UT3
@@ -125,9 +118,10 @@ La idea general es hacer una tutoría colectiva cada dos semanas, normalmente lo
 
 | Fecha | Tipo | Rama orientativa | Ruta principal | Qué debes entregar exactamente |
 |---|---|---|---|---|
-| 29/11 | Ejercicios iniciales de UT3 | `ut3-ejercicios` | `unidades/UT3/ejercicios.md` | Ejercicios de teoria y aplicación sobre SGBD, PDO, DSN, SQLite frente a MariaDB/MySQL, CRUD y seguridad básica. Debes dejar una base suficiente para que se note que has trabajado la teoría minima antes de meterte de lleno con la práctica. |
-| 06/12 | Práctica 1 final | `ut3-practica-agenda` | `unidades/UT3/practica-ut3-agenda/` | Agenda con SQLite y PDO terminada: conexión, tabla creada desde PHP, alta, listado, edición, borrado, validación en servidor, consultas preparadas y salida escapada. |
-| 13/12 | Práctica 2 final | `ut3-practica-incidencias` | `unidades/UT3/practica-ut3-incidencias/` | Proyecto con MariaDB/MySQL y PDO terminado: reutilización razonada de la lógica de UT3, usuario de aplicación, cambio de DSN, CRUD completo, filtro funcional, validación y seguridad básica. |
+| 13/12 | Ejercicios iniciales de UT3 | `ut3-ejercicios` | `unidades/UT3/ejercicios.md` | Ejercicios de teoria y aplicación sobre SGBD, PDO, DSN, SQLite frente a MariaDB/MySQL, CRUD y seguridad básica. Debes dejar una base suficiente para que se note que has trabajado la teoría minima antes de meterte de lleno con la práctica. |
+| 20/12 | Práctica 1 iniciada | `ut3-practica-agenda` | `unidades/UT3/practica-ut3-agenda/` | Agenda con SQLite y PDO iniciada: conexión, tabla creada desde PHP, alta, listado, edición, borrado, validación en servidor, consultas preparadas y salida escapada. |
+| 10/01 | Práctica 1 terminada | `ut3-practica-agenda` | `unidades/UT3/practica-ut3-agenda/` | Agenda con SQLite y PDO terminada: conexión, tabla creada desde PHP, alta, listado, edición, borrado, validación en servidor, consultas preparadas y salida escapada. |
+| 17/01 | Práctica 2 final | `ut3-practica-incidencias` | `unidades/UT3/practica-ut3-incidencias/` | Proyecto con MariaDB/MySQL y PDO terminado: reutilización razonada de la lógica de UT3, usuario de aplicación, cambio de DSN, CRUD completo, filtro funcional, validación y seguridad básica. |
 
 ## 6. Proyecto común de UT4, UT5 y UT6
 
@@ -152,28 +146,12 @@ La idea general será esta:
 
 | Fecha | Tipo | Qué debe verse ya |
 |---|---|---|
-| 17/01 | Punto de control 1 | CMS desplegado y accesible, instalación inicial completada, estructura básica del sitio, usuarios o roles iniciales, y explicación corta de qué parte del proyecto cubre la implantación de UT4. |
-| 31/01 | Punto de control 2 | Proyecto avanzado con tareas de administración ya visibles: roles, actualizaciones, copia de seguridad o estrategia de backup, exportación/importación si procede, y plan de las modificaciones finales a realizar en UT6. |
-| 14/02 | Entrega final | Producto final viable, documentado y funcional, junto con un vídeo donde la pareja muestre el CMS, explique las configuraciones realizadas, las tareas de administración, las modificaciones introducidas y la forma de comprobar que todo funciona. |
+| 31/01 | Punto de control 1 | CMS desplegado y accesible, instalación inicial completada, estructura básica del sitio, usuarios o roles iniciales, y explicación corta de qué parte del proyecto cubre la implantación de UT4. |
+| 14/02 | Punto de control 2 | Proyecto avanzado con tareas de administración ya visibles: roles, actualizaciones, copia de seguridad o estrategia de backup, exportación/importación si procede, y plan de las modificaciones finales a realizar en UT6. |
+| 22/02 | Entrega final | Producto final viable, documentado y funcional, junto con un vídeo donde la pareja muestre el CMS, explique las configuraciones realizadas, las tareas de administración, las modificaciones introducidas y la forma de comprobar que todo funciona. |
 
-## 7. Calendario rápido de fechas clave
 
-```mermaid
-timeline
-    title Fechas clave del curso
-    2026-09-14 : Tutoría colectiva de arranque
-    2026-09-20 : Primera entrega del curso
-    2026-10-11 : Entrega final de UT1
-    2026-11-22 : Entrega final de UT2
-    2026-12-13 : Entrega final de UT3
-    2026-12-21 : Inicio de vacaciones de Navidad
-    2027-01-06 : Fin de vacaciones de Navidad
-    2027-01-17 : Punto de control 1 del proyecto CMS
-    2027-01-31 : Punto de control 2 del proyecto CMS
-    2027-02-14 : Entrega final del proyecto CMS
-```
-
-## 8. Recomendación final
+## 7. Recomendación final
 
 La mejor forma de seguir bien el módulo es esta:
 

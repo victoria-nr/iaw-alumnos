@@ -202,7 +202,7 @@ Después, normalmente bastará con:
 git push
 ```
 
-### 5.7. Abre o actualiza una Pull Request
+### 5.7. Abre o actualiza una Pull Request (PR)
 
 Una Pull Request es una solicitud de revisión: sirve para decir "Profesor, revisa esta rama antes de incorporarla a `main`".
 
@@ -237,9 +237,10 @@ Si no haces `push`, GitHub no verá tus cambios.
 1. Entra en tu repositorio en GitHub.
 2. Si aparece el aviso **Compare & pull request**, púlsalo.
 3. Si no aparece, entra en **Pull requests** y pulsa **New pull request**.
-4. Revisa que la rama base sea `main` y que la rama de comparación sea tu rama, por ejemplo `ut2-practica-1-presupuesto`.
-5. Comprueba que en la vista previa aparecen los archivos correctos.
-6. Pulsa **Create pull request**.
+4. En la Pull Request → panel derecho → Reviewers → selecciona el usuario de tu profesor. Este paso es muy importante.
+5. Revisa que la rama base sea `main` y que la rama de comparación sea tu rama, por ejemplo `ut2-practica-1-presupuesto`.
+6. Comprueba que en la vista previa aparecen los archivos correctos.
+7. Pulsa **Create pull request**.
 
 #### Qué escribir en la Pull Request
 
@@ -292,11 +293,84 @@ Cuando abres la Pull Request empieza la revisión:
 
 Mientras la entrega siga en revisión, la Pull Request debe quedarse abierta.
 
+
+#### Qué hacer cuando el profesor solicita cambios (Request changes)
+
+Si el profesor revisa tu Pull Request y selecciona **Request changes**, significa que la entrega necesita algunas correcciones antes de darse por válida.
+
+No debes crear una nueva Pull Request. Debes seguir trabajando sobre la misma.
+
+##### 1. Lee los comentarios del profesor
+
+En GitHub, entra en tu Pull Request y revisa los comentarios recibidos.
+
+Los comentarios pueden aparecer:
+
+- En la pestaña **Conversation**.
+- Sobre líneas concretas de código en la pestaña **Files changed**.
+
+Lee todos los comentarios antes de empezar a modificar el código.
+
+##### 2. Corrige el código en tu ordenador
+
+Las correcciones deben realizarse normalmente en tu copia local del proyecto utilizando tu editor habitual (VS Code, IntelliJ, Eclipse, etc.).
+
+No es necesario modificar el código desde la web de GitHub.
+
+Realiza los cambios solicitados y comprueba que el programa sigue funcionando correctamente.
+
+##### 3. Haz commit y push
+
+Cuando hayas terminado las correcciones:
+
+```bash
+git add .
+git commit -m "Corrige comentarios de la revisión"
+git push
+```
+
+Debes hacer el `push` a la misma rama que utilizaste para crear la Pull Request.
+
+##### 4. La Pull Request se actualiza automáticamente
+
+No necesitas crear una nueva Pull Request.
+
+Cuando haces `push`, GitHub añade automáticamente los nuevos commits a la Pull Request que ya estaba abierta.
+
+El profesor podrá revisar los cambios realizados.
+
+##### 5. Responde a los comentarios
+
+Después de subir los cambios, vuelve a la Pull Request y responde a los comentarios indicando qué has corregido.
+
+Por ejemplo:
+
+> Corregido en el último commit.
+
+o
+
+> He modificado el método para controlar el caso indicado en la revisión.
+
+Esto ayuda al profesor a localizar rápidamente las correcciones realizadas.
+
+##### 6. Espera una nueva revisión
+
+El profesor volverá a revisar la misma Pull Request.
+
+Puede ocurrir que:
+
+- La entrega quede aprobada.
+- Se soliciten nuevas correcciones.
+
+En este último caso, simplemente repite el mismo proceso: corregir → commit → push → revisión.
+
+> **Importante:** mientras la entrega esté siendo revisada o corregida, la Pull Request debe permanecer abierta. No cierres la Pull Request ni crees una nueva para la misma entrega.
+
 #### Qué es un merge y qué significa cerrar una Pull Request
 
 Hacer **merge** significa pasar los cambios de tu rama a `main`, es decir, incorporarlos a la versión principal del repositorio.
 
-Si una Pull Request se hace merge:
+Si en una Pull Request se hace merge:
 
 - los cambios pasan a `main`;
 - GitHub la marca como completada;
@@ -330,7 +404,7 @@ Abre una Pull Request nueva si empiezas otro bloque, creas otra rama o cambias d
 
 #### Ejemplo completo
 
-Ana termina el archivo `unidades/UT2/ejercicios.md` en la rama `ut2-ejercicios`. Hace `commit`, hace `push` y abre una Pull Request hacia `main`. El profesor la revisa. Si ve errores, deja comentarios; Ana corrige en esa misma rama, hace otro `commit` y otro `push`, y la misma Pull Request se actualiza. Si el trabajo ya es correcto, el profesor la da por válida y, si corresponde, se hace merge. En ese momento GitHub cierra la Pull Request automáticamente.
+Ana termina el archivo `unidades/UT2/ejercicios.md` en la rama `ut2-ejercicios`. Hace `commit`, hace `push` y abre una Pull Request hacia `main`. El profesor la revisa. Si ve errores, deja comentarios; Ana corrige en esa misma rama, hace otro `commit` y otro `push`, y la misma Pull Request se actualiza. Si el trabajo ya es correcto, el profesor la da por válida y, si corresponde, te pide que hagas  merge. En ese momento GitHub cierra la Pull Request automáticamente.
 
 ## 6. Qué harás muchas veces y qué solo harás una vez
 

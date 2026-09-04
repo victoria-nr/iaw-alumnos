@@ -207,9 +207,10 @@ Cuando termines un bloque de trabajo, por ejemplo el `ejercicios.md` de una unid
 
 1. Entra en GitHub.
 2. Abre una **Pull Request** desde tu rama hacia `main`.
-3. En la descripción indica qué bloque has completado, en qué ruta está y cómo se comprueba.
-4. Indica si has usado IA y para qué.
-5. No hagas merge hasta que el profesor lo indique.
+3. En la Pull Request → panel derecho → Reviewers → selecciona el usuario de tu profesor.
+4. En la descripción indica qué bloque has completado, en qué ruta está y cómo se comprueba.
+5. Indica si has usado IA y para qué.
+6. No hagas merge hasta que el profesor lo indique.
 
 La Pull Request permite al profesor ver los cambios realizados, revisar el código y dejar comentarios si es necesario.
 
