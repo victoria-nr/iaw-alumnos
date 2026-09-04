@@ -1,0 +1,1036 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y practicas del modulo Implantacion de Aplicaciones Web">
+      
+      
+      
+        <link rel="canonical" href="https://TU_USUARIO.github.io/iaw-alumnos/entregas/">
+      
+      
+        <link rel="prev" href="../git-github-entregas/">
+      
+      
+        <link rel="next" href="../planificacion/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Entregas - IAW - ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#entregas-del-curso-repositorio-privado-del-modulo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="IAW - ASIR" class="md-header__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Entregas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IAW - ASIR" class="md-nav__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IAW - ASIR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-github-entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git y GitHub para entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-idea-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Idea general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-crear-el-repositorio-desde-la-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Crear el repositorio desde la plantilla
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-invitar-al-profesor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Invitar al profesor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-clonar-tu-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Clonar tu repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-estructura-esperada-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Estructura esperada del repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-forma-de-trabajo-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Forma de trabajo recomendada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-hacer-commits-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Hacer commits frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-abrir-una-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Abrir una Pull Request
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-como-documentar-ejerciciosmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Cómo documentar ejercicios.md
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-que-debe-incluir-una-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Qué debe incluir una práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-normas-sobre-el-uso-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Normas sobre el uso de IA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-defensa-del-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Defensa del trabajo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planificacion del curso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-idea-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Idea general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-crear-el-repositorio-desde-la-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Crear el repositorio desde la plantilla
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-invitar-al-profesor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Invitar al profesor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-clonar-tu-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Clonar tu repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-estructura-esperada-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Estructura esperada del repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-forma-de-trabajo-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Forma de trabajo recomendada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-hacer-commits-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Hacer commits frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-abrir-una-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Abrir una Pull Request
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-como-documentar-ejerciciosmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Cómo documentar ejercicios.md
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-que-debe-incluir-una-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Qué debe incluir una práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-normas-sobre-el-uso-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Normas sobre el uso de IA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-defensa-del-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Defensa del trabajo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="entregas-del-curso-repositorio-privado-del-modulo">Entregas del curso: repositorio privado del módulo<a class="headerlink" href="#entregas-del-curso-repositorio-privado-del-modulo" title="Permanent link">&para;</a></h1>
+<p>Durante el curso usarás un único repositorio privado de GitHub para entregar <strong>todo tu trabajo del módulo de Implantación de Aplicaciones Web</strong>.</p>
+<p>Ese repositorio será tu cuaderno técnico del módulo: ahí irás documentando los ejercicios de cada unidad y subiendo las prácticas completas con su código, sus README y sus evidencias.</p>
+<div class="admonition info">
+<p class="admonition-title">Si es tu primera vez con Git</p>
+<p>Antes de seguir, lee <a href="../git-github-entregas/">Tutorial previo: Git y GitHub para tu repositorio de entregas</a>. Ahí tienes el vocabulario básico y el flujo de trabajo paso a paso.</p>
+</div>
+<h2 id="1-idea-general">1. Idea general<a class="headerlink" href="#1-idea-general" title="Permanent link">&para;</a></h2>
+<p>Durante el curso crearás e irás manteniendo y ampliando tu <strong>repositorio de entregas del módulo</strong>. A continuación se explican sus características de forma más detallada:</p>
+<ul>
+<li>Este repositorio lo crearás en GitHub a partir de un repositorio plantilla que te proporcionará el profesor y lo marcarás como privado.</li>
+<li>El profesor tendrá acceso a tu repositorio privado como colaborador.</li>
+<li>Cada unidad tendrá su propia carpeta.</li>
+<li>Los mini ejercicios y ejercicios finales de una misma unidad se documentarán en un único archivo <code>ejercicios.md</code>.</li>
+<li>Cada práctica se entregará como un proyecto independiente dentro de la carpeta de su unidad.</li>
+<li>Deberás hacer commits frecuentes, no subir todo el trabajo de golpe al final.</li>
+<li>El profesor podrá revisar tu progreso, tus cambios, tus Pull Requests y tu historial de commits.</li>
+</ul>
+<p>No debes entregar ejercicios modificando el repositorio público de apuntes. Las entregas se realizarán únicamente en tu repositorio privado personal.</p>
+<hr />
+<h2 id="2-crear-el-repositorio-desde-la-plantilla">2. Crear el repositorio desde la plantilla<a class="headerlink" href="#2-crear-el-repositorio-desde-la-plantilla" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Entra en el repositorio plantilla indicado por el profesor.</li>
+<li>Pulsa <strong>Use this template</strong>.</li>
+<li>Elige <strong>Create a new repository</strong>.</li>
+<li>Ponle este nombre:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>iaw-entregas-nombre-apellido
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>iaw-entregas-ana-garcia
+</code></pre></div>
+<ol>
+<li>Marca el repositorio como <strong>Private</strong>.</li>
+<li>Crea el repositorio.</li>
+</ol>
+<hr />
+<h2 id="3-invitar-al-profesor">3. Invitar al profesor<a class="headerlink" href="#3-invitar-al-profesor" title="Permanent link">&para;</a></h2>
+<p>Después de crear el repositorio privado, debes invitar al profesor como colaborador.</p>
+<p>En GitHub:</p>
+<ol>
+<li>Entra en tu repositorio privado.</li>
+<li>Ve a <strong>Settings</strong>.</li>
+<li>Entra en <strong>Collaborators</strong> o <strong>Collaborators and teams</strong>.</li>
+<li>Pulsa <strong>Add people</strong>.</li>
+<li>Busca el usuario de GitHub del profesor.</li>
+<li>Envía la invitación.</li>
+</ol>
+<p>El profesor indicará en clase cuál es su usuario de GitHub.</p>
+<hr />
+<h2 id="4-clonar-tu-repositorio">4. Clonar tu repositorio<a class="headerlink" href="#4-clonar-tu-repositorio" title="Permanent link">&para;</a></h2>
+<p>Copia la URL de tu repositorio y clónalo en tu ordenador:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>URL_DE_TU_REPOSITORIO
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>iaw-entregas-nombre-apellido
+</code></pre></div>
+<p>Abre esa carpeta con Visual Studio Code.</p>
+<hr />
+<h2 id="5-estructura-esperada-del-repositorio">5. Estructura esperada del repositorio<a class="headerlink" href="#5-estructura-esperada-del-repositorio" title="Permanent link">&para;</a></h2>
+<p>Tu repositorio tendrá una estructura similar a esta:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>iaw-entregas-ana-garcia/
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├── README.md
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>└── unidades/
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    ├── UT1/
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    │   ├── ejercicios.md
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    │   └── ut1-entorno-web/
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    │       └── README.md
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    ├── UT2/
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    │   ├── ejercicios.md
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    │   ├── practica-1/
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    │   │   └── README.md
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    │   └── practica-2/
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    │       └── README.md
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    ├── UT3/
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    │   ├── ejercicios.md
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    │   ├── practica-ut3-agenda/
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    │   │   └── README.md
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    │   └── practica-ut3-incidencias/
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    │       └── README.md
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    ├── UT4/
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    │   ├── ejercicios.md
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    │   └── practicas/
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    │       └── README.md
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    ├── UT5/
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    │   ├── ejercicios.md
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    │   └── practicas/
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>    │       └── README.md
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    └── UT6/
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>        ├── ejercicios.md
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>        └── practicas/
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>            └── README.md
+</code></pre></div>
+<p>Puntos importantes:</p>
+<ul>
+<li>Cada unidad tendrá su propia carpeta.</li>
+<li>Dentro de cada unidad habrá un único <code>ejercicios.md</code> para recoger los mini ejercicios y ejercicios finales que aparezcan en <code>apuntes.md</code>.</li>
+<li>Cada práctica tendrá su propia carpeta de proyecto.</li>
+<li>La práctica 1 y la práctica 2 de la UT1 comparten el mismo proyecto: <code>ut1-entorno-web</code>.</li>
+<li>Cuando una práctica necesite reproducibilidad técnica, deberá incluir dentro de su carpeta los archivos necesarios para ejecutarse de forma autónoma, por ejemplo <code>compose.yaml</code>, <code>.env.example</code>, scripts de inicialización o una estructura equivalente bien documentada.</li>
+</ul>
+<p>Por ejemplo, en la UT2 trabajarás normalmente en una de estas rutas:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>unidades/UT2/ejercicios.md
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>unidades/UT2/practica-1/
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>unidades/UT2/practica-2/
+</code></pre></div>
+<hr />
+<h2 id="6-forma-de-trabajo-recomendada">6. Forma de trabajo recomendada<a class="headerlink" href="#6-forma-de-trabajo-recomendada" title="Permanent link">&para;</a></h2>
+<p>Antes de empezar a trabajar en un bloque, asegúrate de estar en la rama principal y tener el repositorio actualizado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>pull
+</code></pre></div>
+<p>Después, crea una rama nueva según el bloque que vayas a trabajar. Algunos ejemplos razonables son:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>ut1-ejercicios
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>ut1-practica-entorno-web
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>ut2-practica-1-presupuesto
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>ut3-practica-2-incidencias
+</code></pre></div>
+<p>Trabaja en la carpeta o archivo correspondiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>unidades/UT1/ejercicios.md
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>unidades/UT1/ut1-entorno-web/
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>unidades/UT2/practica-1/
+</code></pre></div>
+<p>Si una rama ya existe porque vas a continuar trabajo anterior, no la crees otra vez. Entra directamente en ella:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>ut2-practica-1-presupuesto
+</code></pre></div>
+<hr />
+<h2 id="7-hacer-commits-frecuentes">7. Hacer commits frecuentes<a class="headerlink" href="#7-hacer-commits-frecuentes" title="Permanent link">&para;</a></h2>
+<p>No subas todo el trabajo de golpe al final.</p>
+<p>Haz commits pequeños cada vez que completes una parte:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>status
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Completa mini ejercicios de formularios de UT2"</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>ut2-ejercicios
+</code></pre></div>
+<p>Ejemplos de buenos mensajes de commit:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Completa ejercicios iniciales de UT1
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Añade README y compose de la práctica de UT1
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Implementa validación del formulario de presupuesto
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Documenta prueba de aislamiento de la práctica 2 de UT2
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>Corrige DSN y filtro por estado de la práctica 2 de UT3
+</code></pre></div>
+<p>Ejemplos de malos mensajes de commit:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>cosas
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>final
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>cambios
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>arreglo
+</code></pre></div>
+<p>Un historial de commits razonable forma parte del trabajo. No se valorará igual una entrega construida poco a poco que una entrega subida completa en un único commit final.</p>
+<hr />
+<h2 id="8-abrir-una-pull-request">8. Abrir una Pull Request<a class="headerlink" href="#8-abrir-una-pull-request" title="Permanent link">&para;</a></h2>
+<p>Cuando termines un bloque de trabajo, por ejemplo el <code>ejercicios.md</code> de una unidad o una práctica concreta:</p>
+<ol>
+<li>Entra en GitHub.</li>
+<li>Abre una <strong>Pull Request</strong> desde tu rama hacia <code>main</code>.</li>
+<li>En la Pull Request → panel derecho → Reviewers → selecciona el usuario de tu profesor.</li>
+<li>En la descripción indica qué bloque has completado, en qué ruta está y cómo se comprueba.</li>
+<li>Indica si has usado IA y para qué.</li>
+<li>No hagas merge hasta que el profesor lo indique.</li>
+</ol>
+<p>La Pull Request permite al profesor ver los cambios realizados, revisar el código y dejar comentarios si es necesario.</p>
+<p>Mientras la Pull Request esté abierta, el profesor podrá revisarla y pedir correcciones. Si eso ocurre, debes seguir trabajando en la misma rama, hacer nuevos commits y subirlos con <code>git push</code>; la Pull Request se actualizará sola. No la cierres ni hagas merge por tu cuenta salvo que el profesor te lo indique.</p>
+<p>Si no tienes claro cómo abrirla exactamente o cuándo reutilizar una ya abierta, consulta <a href="../git-github-entregas/#57-abre-o-actualiza-una-pull-request">Tutorial previo: Git y GitHub para tu repositorio de entregas</a>.</p>
+<hr />
+<h2 id="9-como-documentar-ejerciciosmd">9. Cómo documentar <code>ejercicios.md</code><a class="headerlink" href="#9-como-documentar-ejerciciosmd" title="Permanent link">&para;</a></h2>
+<p>Cada unidad tendrá un archivo llamado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ejercicios.md
+</code></pre></div>
+<p>Debes usarlo para recoger los mini ejercicios y ejercicios finales que vayan apareciendo en <code>apuntes.md</code>.</p>
+<p>Ese archivo debe dejar claro, como mínimo:</p>
+<ul>
+<li>qué ejercicios has resuelto;</li>
+<li>qué comandos, fragmentos de código o respuestas has usado;</li>
+<li>qué comprobaciones has hecho;</li>
+<li>qué dificultades has tenido;</li>
+<li>si has usado IA y para qué.</li>
+</ul>
+<p>Una estructura sencilla y recomendable es esta:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gh"># Ejercicios de la UT2</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="gu">## Mini ejercicios</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="gu">### Ejercicio 1</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>Enunciado breve o referencia al apartado.
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>Solución o comandos usados.
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="gu">### Ejercicio 2</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>...
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="gu">## Ejercicios finales</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="gu">### Ejercicio final 1</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>...
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="gu">## Comprobaciones realizadas</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="k">-</span><span class="w"> </span>caso correcto
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="k">-</span><span class="w"> </span>caso con error
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="gu">## Dificultades encontradas</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="k">-</span><span class="w"> </span>...
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="gu">## Uso de IA</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="k">-</span><span class="w"> </span>La he usado para ...
+</code></pre></div>
+<p>No hace falta escribir texto de relleno. Lo importante es que el documento permita seguir tu trabajo con claridad.</p>
+<hr />
+<h2 id="10-que-debe-incluir-una-practica">10. Qué debe incluir una práctica<a class="headerlink" href="#10-que-debe-incluir-una-practica" title="Permanent link">&para;</a></h2>
+<p>Cada práctica debe entregarse dentro de su carpeta de proyecto y debe permitir al profesor entender rápidamente:</p>
+<ul>
+<li>qué archivos forman el proyecto;</li>
+<li>cómo se ejecuta;</li>
+<li>qué puerto o URL debe probar;</li>
+<li>qué credenciales o datos de prueba necesita, si procede;</li>
+<li>qué decisiones técnicas has tomado;</li>
+<li>qué evidencias mínimas demuestran que funciona.</li>
+</ul>
+<p>Como norma general, cada práctica debe incluir:</p>
+<ul>
+<li>código fuente completo;</li>
+<li><code>README.md</code> propio;</li>
+<li>capturas o evidencias cuando la práctica las pida;</li>
+<li><code>compose.yaml</code> y <code>.env.example</code> cuando hagan falta para la reproducibilidad;</li>
+<li>cualquier archivo adicional imprescindible para arrancarla.</li>
+</ul>
+<p>Si en el repositorio conviven varias aplicaciones web, cada una debe poder arrancarse desde su propia carpeta. Si dos prácticas usan Docker Compose, documenta en cada <code>README.md</code> qué puerto usa cada una.</p>
+<hr />
+<h2 id="11-normas-sobre-el-uso-de-ia">11. Normas sobre el uso de IA<a class="headerlink" href="#11-normas-sobre-el-uso-de-ia" title="Permanent link">&para;</a></h2>
+<p>Puedes usar IA como apoyo para aprender, pero no para sustituir tu trabajo.</p>
+<p>Puedes usar IA para:</p>
+<ul>
+<li>pedir una explicación;</li>
+<li>entender un error;</li>
+<li>comparar dos formas de resolver algo;</li>
+<li>pedir ejemplos parecidos;</li>
+<li>mejorar documentación;</li>
+<li>repasar conceptos;</li>
+<li>recibir pistas cuando estés bloqueado.</li>
+</ul>
+<p>No debes usar IA para entregar código que no entiendes.</p>
+<p>Normas obligatorias:</p>
+<ol>
+<li>Debes entender todo el código que entregas.</li>
+<li>Debes poder explicarlo oralmente o por escrito.</li>
+<li>Debes indicar el uso de IA en <code>ejercicios.md</code> o en el <code>README.md</code> de la práctica correspondiente.</li>
+<li>No se aceptará una entrega que no puedas modificar o explicar.</li>
+<li>Es obligatorio mantener un historial de commits razonable.</li>
+</ol>
+<p>Ejemplo aceptable:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>He usado IA para contrastar la validación de un formulario y para entender un error de sesión. Después he adaptado la solución y la he probado con varios casos.
+</code></pre></div>
+<p>Ejemplo no aceptable:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Le he pedido a la IA que hiciera toda la práctica y he copiado el resultado sin revisarlo.
+</code></pre></div>
+<hr />
+<h2 id="12-defensa-del-trabajo">12. Defensa del trabajo<a class="headerlink" href="#12-defensa-del-trabajo" title="Permanent link">&para;</a></h2>
+<p>El profesor podrá pedirte en cualquier momento que expliques tu código, que modifiques una parte o que resuelvas una variante sencilla.</p>
+<p>Una entrega no se considera válida si no puedes explicar razonablemente lo que has subido.</p>
+<p>Por ejemplo, el profesor podrá pedirte que:</p>
+<ul>
+<li>expliques qué hace una variable concreta;</li>
+<li>cambies un mensaje mostrado por pantalla;</li>
+<li>añadas una comprobación adicional;</li>
+<li>modifiques un cálculo;</li>
+<li>corrijas un error;</li>
+<li>adaptes tu solución a un caso parecido.</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

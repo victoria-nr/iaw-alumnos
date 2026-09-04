@@ -1,0 +1,1913 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y practicas del modulo Implantacion de Aplicaciones Web">
+      
+      
+      
+        <link rel="canonical" href="https://TU_USUARIO.github.io/iaw-alumnos/git-github-entregas/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../entregas/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Git y GitHub para entregas - IAW - ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-previo-git-y-github-para-tu-repositorio-de-entregas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="IAW - ASIR" class="md-header__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git y GitHub para entregas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IAW - ASIR" class="md-nav__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IAW - ASIR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git y GitHub para entregas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git y GitHub para entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-git-y-que-es-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué es Git y qué es GitHub
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-vocabulario-minimo-que-necesitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Vocabulario mínimo que necesitas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-preparacion-inicial-en-tu-ordenador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Preparación inicial en tu ordenador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-que-haras-una-sola-vez-al-principio-del-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Qué harás una sola vez al principio del curso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Qué harás una sola vez al principio del curso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-crear-el-repositorio-desde-la-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Crear el repositorio desde la plantilla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-invitar-al-profesor-como-colaborador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Invitar al profesor como colaborador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-clonar-el-repositorio-en-tu-ordenador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Clonar el repositorio en tu ordenador
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-flujo-de-trabajo-habitual-durante-el-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Flujo de trabajo habitual durante el curso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Flujo de trabajo habitual durante el curso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-antes-de-empezar-actualiza-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Antes de empezar, actualiza main
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-crea-una-rama-para-el-bloque-en-el-que-vas-a-trabajar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Crea una rama para el bloque en el que vas a trabajar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-trabaja-en-la-carpeta-correcta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. Trabaja en la carpeta correcta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-revisa-que-ha-cambiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4. Revisa qué ha cambiado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-haz-un-commit-con-un-mensaje-claro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5. Haz un commit con un mensaje claro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-sube-la-rama-a-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6. Sube la rama a GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-abre-o-actualiza-una-pull-request-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7. Abre o actualiza una Pull Request (PR)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7. Abre o actualiza una Pull Request (PR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-debes-abrirla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo debes abrirla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-hacer-antes-de-abrirla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué debes hacer antes de abrirla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-abrirla-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo abrirla en GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-escribir-en-la-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué escribir en la Pull Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-pasa-despues-de-abrirla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué pasa después de abrirla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-hacer-cuando-el-profesor-solicita-cambios-request-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hacer cuando el profesor solicita cambios (Request changes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué hacer cuando el profesor solicita cambios (Request changes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-lee-los-comentarios-del-profesor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Lee los comentarios del profesor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-corrige-el-codigo-en-tu-ordenador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Corrige el código en tu ordenador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-haz-commit-y-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Haz commit y push
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-la-pull-request-se-actualiza-automaticamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. La Pull Request se actualiza automáticamente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-responde-a-los-comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Responde a los comentarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-espera-una-nueva-revision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Espera una nueva revisión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-merge-y-que-significa-cerrar-una-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué es un merge y qué significa cerrar una Pull Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-hacer-tu-en-este-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué debes hacer tú en este curso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-seguir-con-la-misma-pull-request-y-cuando-abrir-otra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo seguir con la misma Pull Request y cuándo abrir otra
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-no-debes-hacer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué no debes hacer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-que-haras-muchas-veces-y-que-solo-haras-una-vez" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Qué harás muchas veces y qué solo harás una vez
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-problemas-habituales-y-que-significan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Problemas habituales y qué significan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Problemas habituales y qué significan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-nothing-to-commit-working-tree-clean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1. "nothing to commit, working tree clean"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-a-branch-named-already-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2. "a branch named ... already exists"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-he-hecho-commit-pero-no-veo-los-cambios-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3. He hecho commit, pero no veo los cambios en GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-he-empezado-a-trabajar-por-error-en-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4. He empezado a trabajar por error en main
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-git-me-muestra-un-conflicto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5. Git me muestra un conflicto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-normas-para-no-romper-tu-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Normas para no romper tu repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-chuleta-minima-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Chuleta mínima de comandos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-que-informacion-debes-dar-si-pides-ayuda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Qué información debes dar si pides ayuda
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planificacion del curso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-git-y-que-es-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué es Git y qué es GitHub
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-vocabulario-minimo-que-necesitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Vocabulario mínimo que necesitas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-preparacion-inicial-en-tu-ordenador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Preparación inicial en tu ordenador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-que-haras-una-sola-vez-al-principio-del-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Qué harás una sola vez al principio del curso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Qué harás una sola vez al principio del curso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-crear-el-repositorio-desde-la-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Crear el repositorio desde la plantilla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-invitar-al-profesor-como-colaborador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Invitar al profesor como colaborador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-clonar-el-repositorio-en-tu-ordenador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Clonar el repositorio en tu ordenador
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-flujo-de-trabajo-habitual-durante-el-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Flujo de trabajo habitual durante el curso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Flujo de trabajo habitual durante el curso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-antes-de-empezar-actualiza-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Antes de empezar, actualiza main
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-crea-una-rama-para-el-bloque-en-el-que-vas-a-trabajar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Crea una rama para el bloque en el que vas a trabajar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-trabaja-en-la-carpeta-correcta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. Trabaja en la carpeta correcta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-revisa-que-ha-cambiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4. Revisa qué ha cambiado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-haz-un-commit-con-un-mensaje-claro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5. Haz un commit con un mensaje claro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-sube-la-rama-a-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6. Sube la rama a GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-abre-o-actualiza-una-pull-request-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7. Abre o actualiza una Pull Request (PR)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7. Abre o actualiza una Pull Request (PR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-debes-abrirla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo debes abrirla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-hacer-antes-de-abrirla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué debes hacer antes de abrirla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-abrirla-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo abrirla en GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-escribir-en-la-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué escribir en la Pull Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-pasa-despues-de-abrirla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué pasa después de abrirla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-hacer-cuando-el-profesor-solicita-cambios-request-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué hacer cuando el profesor solicita cambios (Request changes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué hacer cuando el profesor solicita cambios (Request changes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-lee-los-comentarios-del-profesor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Lee los comentarios del profesor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-corrige-el-codigo-en-tu-ordenador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Corrige el código en tu ordenador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-haz-commit-y-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Haz commit y push
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-la-pull-request-se-actualiza-automaticamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. La Pull Request se actualiza automáticamente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-responde-a-los-comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Responde a los comentarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-espera-una-nueva-revision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Espera una nueva revisión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-merge-y-que-significa-cerrar-una-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué es un merge y qué significa cerrar una Pull Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-hacer-tu-en-este-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué debes hacer tú en este curso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-seguir-con-la-misma-pull-request-y-cuando-abrir-otra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo seguir con la misma Pull Request y cuándo abrir otra
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-no-debes-hacer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué no debes hacer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-que-haras-muchas-veces-y-que-solo-haras-una-vez" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Qué harás muchas veces y qué solo harás una vez
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-problemas-habituales-y-que-significan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Problemas habituales y qué significan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Problemas habituales y qué significan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-nothing-to-commit-working-tree-clean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1. "nothing to commit, working tree clean"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-a-branch-named-already-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2. "a branch named ... already exists"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-he-hecho-commit-pero-no-veo-los-cambios-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3. He hecho commit, pero no veo los cambios en GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-he-empezado-a-trabajar-por-error-en-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4. He empezado a trabajar por error en main
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-git-me-muestra-un-conflicto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5. Git me muestra un conflicto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-normas-para-no-romper-tu-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Normas para no romper tu repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-chuleta-minima-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Chuleta mínima de comandos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-que-informacion-debes-dar-si-pides-ayuda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Qué información debes dar si pides ayuda
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tutorial-previo-git-y-github-para-tu-repositorio-de-entregas">Tutorial previo: Git y GitHub para tu repositorio de entregas<a class="headerlink" href="#tutorial-previo-git-y-github-para-tu-repositorio-de-entregas" title="Permanent link">&para;</a></h1>
+<p>Si nunca has usado Git ni GitHub, lee esta guía antes de empezar con <a href="../entregas/">Entregas del curso</a>.</p>
+<p>El objetivo no es que te conviertas en experto en Git, sino que seas capaz de:</p>
+<ul>
+<li>crear tu repositorio privado desde una plantilla;</li>
+<li>mantener una copia en tu ordenador;</li>
+<li>guardar tu trabajo con commits pequeños;</li>
+<li>subirlo a GitHub sin perder cambios;</li>
+<li>abrir Pull Requests para que el profesor pueda revisarlo.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Qué leer después</p>
+<p>Cuando termines esta guía, continúa con <a href="../entregas/">Entregas del curso</a>, donde se explican las normas concretas del trabajo durante el curso.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Idea importante</p>
+<p>Git no guarda automáticamente tus cambios en el historial. Hasta que no haces <code>commit</code>, el trabajo solo está en tus archivos locales. Hasta que no haces <code>push</code>, GitHub no ve esos cambios.</p>
+</div>
+<h2 id="1-que-es-git-y-que-es-github">1. Qué es Git y qué es GitHub<a class="headerlink" href="#1-que-es-git-y-que-es-github" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Git</strong> es la herramienta que registra cambios en tus archivos.</li>
+<li><strong>GitHub</strong> es la plataforma web donde alojarás tu repositorio privado y compartirás ese trabajo con el profesor.</li>
+</ul>
+<p>Piensa en ello así:</p>
+<ul>
+<li>Git trabaja sobre todo en tu ordenador.</li>
+<li>GitHub muestra una copia remota de tu repositorio en Internet.</li>
+</ul>
+<h2 id="2-vocabulario-minimo-que-necesitas">2. Vocabulario mínimo que necesitas<a class="headerlink" href="#2-vocabulario-minimo-que-necesitas" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repositorio</td>
+<td>Carpeta de trabajo controlada por Git. Guarda archivos e historial de cambios.</td>
+</tr>
+<tr>
+<td>Repositorio remoto</td>
+<td>La copia del repositorio en GitHub.</td>
+</tr>
+<tr>
+<td>Clonar</td>
+<td>Descargar en tu ordenador una copia completa del repositorio remoto.</td>
+</tr>
+<tr>
+<td><code>main</code></td>
+<td>Rama principal del repositorio.</td>
+</tr>
+<tr>
+<td>Rama</td>
+<td>Línea de trabajo separada dentro del mismo repositorio.</td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>Punto de guardado con mensaje. Explica qué has cambiado.</td>
+</tr>
+<tr>
+<td><code>push</code></td>
+<td>Subir commits desde tu ordenador a GitHub.</td>
+</tr>
+<tr>
+<td><code>pull</code></td>
+<td>Traer cambios desde GitHub a tu ordenador.</td>
+</tr>
+<tr>
+<td>Pull Request</td>
+<td>Solicitud para revisar una rama antes de integrarla en <code>main</code>.</td>
+</tr>
+<tr>
+<td>Repositorio privado</td>
+<td>Repositorio que no puede ver cualquiera. Solo acceden las personas invitadas.</td>
+</tr>
+<tr>
+<td>Colaborador</td>
+<td>Persona con permiso para entrar en tu repositorio privado.</td>
+</tr>
+</tbody>
+</table>
+<p>No necesitas memorizar términos más avanzados para seguir el curso.</p>
+<h2 id="3-preparacion-inicial-en-tu-ordenador">3. Preparación inicial en tu ordenador<a class="headerlink" href="#3-preparacion-inicial-en-tu-ordenador" title="Permanent link">&para;</a></h2>
+<p>Si todavía no has instalado Git, revisa primero <a href="instalacion.md">Instalación</a>.</p>
+<p>Una vez instalado, abre una terminal y configura tu nombre y correo una sola vez:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"Nombre Apellido"</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"tu_correo@example.com"</span>
+</code></pre></div>
+<p>Puedes comprobarlo con:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--list
+</code></pre></div>
+<p>Usa un correo que reconozcas y que puedas asociar con tu cuenta de GitHub.</p>
+<p>Si al clonar o al hacer <code>push</code> GitHub te pide iniciar sesión, es normal. Sigue la ventana del navegador o de Visual Studio Code y completa el acceso.</p>
+<h2 id="4-que-haras-una-sola-vez-al-principio-del-curso">4. Qué harás una sola vez al principio del curso<a class="headerlink" href="#4-que-haras-una-sola-vez-al-principio-del-curso" title="Permanent link">&para;</a></h2>
+<h3 id="41-crear-el-repositorio-desde-la-plantilla">4.1. Crear el repositorio desde la plantilla<a class="headerlink" href="#41-crear-el-repositorio-desde-la-plantilla" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Entra en el repositorio plantilla indicado por el profesor.</li>
+<li>Pulsa <strong>Use this template</strong>.</li>
+<li>Elige <strong>Create a new repository</strong>.</li>
+<li>Asigna un nombre con este patrón:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>iaw-entregas-nombre-apellido
+</code></pre></div>
+<ol>
+<li>Marca el repositorio como <strong>Private</strong>.</li>
+<li>Crea el repositorio.</li>
+</ol>
+<p>No uses <strong>Fork</strong> salvo que el profesor te lo pida expresamente. En este curso el flujo previsto es crear un repositorio nuevo a partir de la plantilla.</p>
+<h3 id="42-invitar-al-profesor-como-colaborador">4.2. Invitar al profesor como colaborador<a class="headerlink" href="#42-invitar-al-profesor-como-colaborador" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Entra en tu repositorio.</li>
+<li>Ve a <strong>Settings</strong>.</li>
+<li>Entra en <strong>Collaborators</strong> o <strong>Collaborators and teams</strong>.</li>
+<li>Pulsa <strong>Add people</strong>.</li>
+<li>Busca el usuario de GitHub del profesor.</li>
+<li>Envía la invitación.</li>
+</ol>
+<p>Mientras el profesor no tenga acceso, no podrá revisar tu trabajo en un repositorio privado.</p>
+<h3 id="43-clonar-el-repositorio-en-tu-ordenador">4.3. Clonar el repositorio en tu ordenador<a class="headerlink" href="#43-clonar-el-repositorio-en-tu-ordenador" title="Permanent link">&para;</a></h3>
+<p>Clonar significa descargar una copia completa del repositorio para trabajar localmente.</p>
+<p>Esto se hace una sola vez:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>URL_DE_TU_REPOSITORIO
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>iaw-entregas-nombre-apellido
+</code></pre></div>
+<p>Después, abre esa carpeta con Visual Studio Code.</p>
+<h2 id="5-flujo-de-trabajo-habitual-durante-el-curso">5. Flujo de trabajo habitual durante el curso<a class="headerlink" href="#5-flujo-de-trabajo-habitual-durante-el-curso" title="Permanent link">&para;</a></h2>
+<p>Este será el ciclo que repetirás muchas veces.</p>
+<h3 id="51-antes-de-empezar-actualiza-main">5.1. Antes de empezar, actualiza <code>main</code><a class="headerlink" href="#51-antes-de-empezar-actualiza-main" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>pull
+</code></pre></div>
+<p>Con esto te aseguras de partir de la rama principal actualizada.</p>
+<h3 id="52-crea-una-rama-para-el-bloque-en-el-que-vas-a-trabajar">5.2. Crea una rama para el bloque en el que vas a trabajar<a class="headerlink" href="#52-crea-una-rama-para-el-bloque-en-el-que-vas-a-trabajar" title="Permanent link">&para;</a></h3>
+<p>Ejemplo para el documento de ejercicios de la UT1:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>ut1-ejercicios
+</code></pre></div>
+<p>Ejemplo para una práctica concreta:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>ut2-practica-1-presupuesto
+</code></pre></div>
+<p>Si esa rama ya existe porque vas a continuar trabajo anterior, no la crees otra vez. Entra directamente en ella:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>ut2-practica-1-presupuesto
+</code></pre></div>
+<h3 id="53-trabaja-en-la-carpeta-correcta">5.3. Trabaja en la carpeta correcta<a class="headerlink" href="#53-trabaja-en-la-carpeta-correcta" title="Permanent link">&para;</a></h3>
+<p>Ejemplos habituales:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>unidades/UT1/ejercicios.md
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>unidades/UT1/ut1-entorno-web/
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>unidades/UT2/practica-1/
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>unidades/UT3/practica-ut3-incidencias/
+</code></pre></div>
+<p>Guarda los archivos normalmente desde VS Code.</p>
+<p>Si una práctica convive con otras aplicaciones dentro del mismo repositorio, no pasa nada: cada proyecto debe estar aislado dentro de su carpeta y su <code>README.md</code> debe indicar cómo arrancarlo.</p>
+<h3 id="54-revisa-que-ha-cambiado">5.4. Revisa qué ha cambiado<a class="headerlink" href="#54-revisa-que-ha-cambiado" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<p>Este comando te dice:</p>
+<ul>
+<li>en qué rama estás;</li>
+<li>qué archivos han cambiado;</li>
+<li>qué archivos están preparados para commit;</li>
+<li>si te falta hacer <code>push</code>.</li>
+</ul>
+<p>Si solo aprendes un comando para orientarte cuando algo te confunde, que sea <code>git status</code>.</p>
+<h3 id="55-haz-un-commit-con-un-mensaje-claro">5.5. Haz un commit con un mensaje claro<a class="headerlink" href="#55-haz-un-commit-con-un-mensaje-claro" title="Permanent link">&para;</a></h3>
+<p>Cuando completes una parte pequeña del trabajo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Completa mini ejercicios de UT1"</span>
+</code></pre></div>
+<p>Si prefieres ser más preciso, puedes añadir solo un archivo o carpeta concretos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>add<span class="w"> </span>unidades/UT2/ejercicios.md
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>git<span class="w"> </span>add<span class="w"> </span>unidades/UT3/practica-ut3-agenda/
+</code></pre></div>
+<p>Haz commits pequeños y frecuentes. Un commit debe representar un avance reconocible.</p>
+<h3 id="56-sube-la-rama-a-github">5.6. Sube la rama a GitHub<a class="headerlink" href="#56-sube-la-rama-a-github" title="Permanent link">&para;</a></h3>
+<p>La primera vez que subes una rama:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>ut2-practica-1-presupuesto
+</code></pre></div>
+<p>Después, normalmente bastará con:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>push
+</code></pre></div>
+<h3 id="57-abre-o-actualiza-una-pull-request-pr">5.7. Abre o actualiza una Pull Request (PR)<a class="headerlink" href="#57-abre-o-actualiza-una-pull-request-pr" title="Permanent link">&para;</a></h3>
+<p>Una Pull Request es una solicitud de revisión: sirve para decir "Profesor, revisa esta rama antes de incorporarla a <code>main</code>".</p>
+<h4 id="cuando-debes-abrirla">Cuándo debes abrirla<a class="headerlink" href="#cuando-debes-abrirla" title="Permanent link">&para;</a></h4>
+<p>Abre una Pull Request cuando hayas terminado un bloque claro de trabajo, por ejemplo:</p>
+<ul>
+<li>el <code>ejercicios.md</code> de una unidad;</li>
+<li>una práctica completa;</li>
+<li>una corrección importante pedida por el profesor.</li>
+</ul>
+<p>La norma general es simple:</p>
+<ul>
+<li>una rama para un bloque de trabajo;</li>
+<li>una Pull Request para esa rama.</li>
+</ul>
+<p>No hace falta abrir una Pull Request nueva por cada commit.</p>
+<h4 id="que-debes-hacer-antes-de-abrirla">Qué debes hacer antes de abrirla<a class="headerlink" href="#que-debes-hacer-antes-de-abrirla" title="Permanent link">&para;</a></h4>
+<p>Antes de entrar en GitHub, comprueba que:</p>
+<ul>
+<li>estás en la rama correcta;</li>
+<li>has guardado tus archivos;</li>
+<li>has hecho al menos un <code>commit</code>;</li>
+<li>has subido esa rama con <code>git push</code>.</li>
+</ul>
+<p>Si no haces <code>push</code>, GitHub no verá tus cambios.</p>
+<h4 id="como-abrirla-en-github">Cómo abrirla en GitHub<a class="headerlink" href="#como-abrirla-en-github" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Entra en tu repositorio en GitHub.</li>
+<li>Si aparece el aviso <strong>Compare &amp; pull request</strong>, púlsalo.</li>
+<li>Si no aparece, entra en <strong>Pull requests</strong> y pulsa <strong>New pull request</strong>.</li>
+<li>En la Pull Request → panel derecho → Reviewers → selecciona el usuario de tu profesor. Este paso es muy importante.</li>
+<li>Revisa que la rama base sea <code>main</code> y que la rama de comparación sea tu rama, por ejemplo <code>ut2-practica-1-presupuesto</code>.</li>
+<li>Comprueba que en la vista previa aparecen los archivos correctos.</li>
+<li>Pulsa <strong>Create pull request</strong>.</li>
+</ol>
+<h4 id="que-escribir-en-la-pull-request">Qué escribir en la Pull Request<a class="headerlink" href="#que-escribir-en-la-pull-request" title="Permanent link">&para;</a></h4>
+<p>El título y la descripción deben dejar claro qué estás entregando.</p>
+<p>Ejemplo de título para ejercicios:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>UT2 ejercicios: formularios y validación
+</code></pre></div>
+<p>Ejemplo de descripción:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Unidad: UT2
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Bloque: ejercicios
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Ruta: unidades/UT2/ejercicios.md
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>Uso de IA: sí, para contrastar una validación y entender un error con POST
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Comprobaciones: casos correctos y caso con errores de validación
+</code></pre></div>
+<p>Ejemplo de título para una práctica:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>UT3 práctica 2: gestor de incidencias con MariaDB
+</code></pre></div>
+<p>Ejemplo de descripción:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Unidad: UT3
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Bloque: práctica 2
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>Ruta: unidades/UT3/practica-ut3-incidencias/
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>Ejecución: docker compose up -d --build
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>URL o puerto: http://localhost:8084
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>Uso de IA: no
+</code></pre></div>
+<p>No hace falta escribir mucho, pero sí lo suficiente para que el profesor entienda qué está revisando y cómo comprobarlo.</p>
+<h4 id="que-pasa-despues-de-abrirla">Qué pasa después de abrirla<a class="headerlink" href="#que-pasa-despues-de-abrirla" title="Permanent link">&para;</a></h4>
+<p>Cuando abres la Pull Request empieza la revisión:</p>
+<ol>
+<li>El profesor entra en la Pull Request y revisa archivos, commits y comentarios.</li>
+<li>Si hace falta, te pedirá correcciones.</li>
+<li>Tú corriges en la misma rama, haces <code>commit</code> y <code>push</code>.</li>
+<li>La misma Pull Request se actualiza sola.</li>
+<li>Cuando el trabajo ya está correcto, el profesor decide si se da por válido y qué hacer después.</li>
+</ol>
+<p>Mientras la entrega siga en revisión, la Pull Request debe quedarse abierta.</p>
+<h4 id="que-hacer-cuando-el-profesor-solicita-cambios-request-changes">Qué hacer cuando el profesor solicita cambios (Request changes)<a class="headerlink" href="#que-hacer-cuando-el-profesor-solicita-cambios-request-changes" title="Permanent link">&para;</a></h4>
+<p>Si el profesor revisa tu Pull Request y selecciona <strong>Request changes</strong>, significa que la entrega necesita algunas correcciones antes de darse por válida.</p>
+<p>No debes crear una nueva Pull Request. Debes seguir trabajando sobre la misma.</p>
+<h5 id="1-lee-los-comentarios-del-profesor">1. Lee los comentarios del profesor<a class="headerlink" href="#1-lee-los-comentarios-del-profesor" title="Permanent link">&para;</a></h5>
+<p>En GitHub, entra en tu Pull Request y revisa los comentarios recibidos.</p>
+<p>Los comentarios pueden aparecer:</p>
+<ul>
+<li>En la pestaña <strong>Conversation</strong>.</li>
+<li>Sobre líneas concretas de código en la pestaña <strong>Files changed</strong>.</li>
+</ul>
+<p>Lee todos los comentarios antes de empezar a modificar el código.</p>
+<h5 id="2-corrige-el-codigo-en-tu-ordenador">2. Corrige el código en tu ordenador<a class="headerlink" href="#2-corrige-el-codigo-en-tu-ordenador" title="Permanent link">&para;</a></h5>
+<p>Las correcciones deben realizarse normalmente en tu copia local del proyecto utilizando tu editor habitual (VS Code, IntelliJ, Eclipse, etc.).</p>
+<p>No es necesario modificar el código desde la web de GitHub.</p>
+<p>Realiza los cambios solicitados y comprueba que el programa sigue funcionando correctamente.</p>
+<h5 id="3-haz-commit-y-push">3. Haz commit y push<a class="headerlink" href="#3-haz-commit-y-push" title="Permanent link">&para;</a></h5>
+<p>Cuando hayas terminado las correcciones:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Corrige comentarios de la revisión"</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>git<span class="w"> </span>push
+</code></pre></div>
+<p>Debes hacer el <code>push</code> a la misma rama que utilizaste para crear la Pull Request.</p>
+<h5 id="4-la-pull-request-se-actualiza-automaticamente">4. La Pull Request se actualiza automáticamente<a class="headerlink" href="#4-la-pull-request-se-actualiza-automaticamente" title="Permanent link">&para;</a></h5>
+<p>No necesitas crear una nueva Pull Request.</p>
+<p>Cuando haces <code>push</code>, GitHub añade automáticamente los nuevos commits a la Pull Request que ya estaba abierta.</p>
+<p>El profesor podrá revisar los cambios realizados.</p>
+<h5 id="5-responde-a-los-comentarios">5. Responde a los comentarios<a class="headerlink" href="#5-responde-a-los-comentarios" title="Permanent link">&para;</a></h5>
+<p>Después de subir los cambios, vuelve a la Pull Request y responde a los comentarios indicando qué has corregido.</p>
+<p>Por ejemplo:</p>
+<blockquote>
+<p>Corregido en el último commit.</p>
+</blockquote>
+<p>o</p>
+<blockquote>
+<p>He modificado el método para controlar el caso indicado en la revisión.</p>
+</blockquote>
+<p>Esto ayuda al profesor a localizar rápidamente las correcciones realizadas.</p>
+<h5 id="6-espera-una-nueva-revision">6. Espera una nueva revisión<a class="headerlink" href="#6-espera-una-nueva-revision" title="Permanent link">&para;</a></h5>
+<p>El profesor volverá a revisar la misma Pull Request.</p>
+<p>Puede ocurrir que:</p>
+<ul>
+<li>La entrega quede aprobada.</li>
+<li>Se soliciten nuevas correcciones.</li>
+</ul>
+<p>En este último caso, simplemente repite el mismo proceso: corregir → commit → push → revisión.</p>
+<blockquote>
+<p><strong>Importante:</strong> mientras la entrega esté siendo revisada o corregida, la Pull Request debe permanecer abierta. No cierres la Pull Request ni crees una nueva para la misma entrega.</p>
+</blockquote>
+<h4 id="que-es-un-merge-y-que-significa-cerrar-una-pull-request">Qué es un merge y qué significa cerrar una Pull Request<a class="headerlink" href="#que-es-un-merge-y-que-significa-cerrar-una-pull-request" title="Permanent link">&para;</a></h4>
+<p>Hacer <strong>merge</strong> significa pasar los cambios de tu rama a <code>main</code>, es decir, incorporarlos a la versión principal del repositorio.</p>
+<p>Si en una Pull Request se hace merge:</p>
+<ul>
+<li>los cambios pasan a <code>main</code>;</li>
+<li>GitHub la marca como completada;</li>
+<li>normalmente se cierra automáticamente.</li>
+</ul>
+<p>Cerrar una Pull Request <strong>sin merge</strong> significa terminar esa revisión sin pasar los cambios a <code>main</code>. Eso puede ocurrir, por ejemplo, si la Pull Request se abrió por error, usa la rama equivocada o el profesor solo quería revisar el progreso.</p>
+<p>Si se cierra sin merge, tus cambios no desaparecen: siguen en tu rama.</p>
+<h4 id="que-debes-hacer-tu-en-este-curso">Qué debes hacer tú en este curso<a class="headerlink" href="#que-debes-hacer-tu-en-este-curso" title="Permanent link">&para;</a></h4>
+<p>La regla práctica es esta:</p>
+<ol>
+<li>Abre la Pull Request cuando el bloque esté listo para revisión.</li>
+<li>Déjala abierta.</li>
+<li>Si el profesor pide cambios, corrígelos en la misma rama y haz <code>push</code>.</li>
+<li>No hagas merge tú mismo, salvo que el profesor lo indique.</li>
+<li>No la cierres por tu cuenta, salvo que el profesor te lo diga.</li>
+</ol>
+<h4 id="cuando-seguir-con-la-misma-pull-request-y-cuando-abrir-otra">Cuándo seguir con la misma Pull Request y cuándo abrir otra<a class="headerlink" href="#cuando-seguir-con-la-misma-pull-request-y-cuando-abrir-otra" title="Permanent link">&para;</a></h4>
+<p>Sigue con la misma Pull Request si sigues trabajando en el mismo bloque y en la misma rama.</p>
+<p>Abre una Pull Request nueva si empiezas otro bloque, creas otra rama o cambias de unidad o de práctica.</p>
+<h4 id="que-no-debes-hacer">Qué no debes hacer<a class="headerlink" href="#que-no-debes-hacer" title="Permanent link">&para;</a></h4>
+<ul>
+<li>No abras una Pull Request desde <code>main</code> hacia <code>main</code>.</li>
+<li>No abras varias Pull Requests para la misma rama salvo que te lo pidan.</li>
+<li>No cierres la Pull Request solo porque luego hayas hecho otro commit.</li>
+</ul>
+<h4 id="ejemplo-completo">Ejemplo completo<a class="headerlink" href="#ejemplo-completo" title="Permanent link">&para;</a></h4>
+<p>Ana termina el archivo <code>unidades/UT2/ejercicios.md</code> en la rama <code>ut2-ejercicios</code>. Hace <code>commit</code>, hace <code>push</code> y abre una Pull Request hacia <code>main</code>. El profesor la revisa. Si ve errores, deja comentarios; Ana corrige en esa misma rama, hace otro <code>commit</code> y otro <code>push</code>, y la misma Pull Request se actualiza. Si el trabajo ya es correcto, el profesor la da por válida y, si corresponde, te pide que hagas  merge. En ese momento GitHub cierra la Pull Request automáticamente.</p>
+<h2 id="6-que-haras-muchas-veces-y-que-solo-haras-una-vez">6. Qué harás muchas veces y qué solo harás una vez<a class="headerlink" href="#6-que-haras-muchas-veces-y-que-solo-haras-una-vez" title="Permanent link">&para;</a></h2>
+<p>Solo una vez al principio:</p>
+<ul>
+<li>crear el repositorio desde la plantilla;</li>
+<li>invitar al profesor;</li>
+<li>clonar el repositorio en tu ordenador.</li>
+</ul>
+<p>Muchas veces durante el curso:</p>
+<ul>
+<li><code>git checkout main</code>;</li>
+<li><code>git pull</code>;</li>
+<li><code>git checkout -b ...</code> o <code>git checkout ...</code>;</li>
+<li><code>git status</code>;</li>
+<li><code>git add ...</code>;</li>
+<li><code>git commit -m "..."</code>;</li>
+<li><code>git push</code>;</li>
+<li>abrir o actualizar Pull Requests.</li>
+</ul>
+<h2 id="7-problemas-habituales-y-que-significan">7. Problemas habituales y qué significan<a class="headerlink" href="#7-problemas-habituales-y-que-significan" title="Permanent link">&para;</a></h2>
+<h3 id="71-nothing-to-commit-working-tree-clean">7.1. "nothing to commit, working tree clean"<a class="headerlink" href="#71-nothing-to-commit-working-tree-clean" title="Permanent link">&para;</a></h3>
+<p>Significa que Git no ve cambios pendientes.</p>
+<p>Puede deberse a una de estas causas:</p>
+<ul>
+<li>no has modificado nada todavía;</li>
+<li>has olvidado guardar el archivo en VS Code;</li>
+<li>ya hiciste el commit antes.</li>
+</ul>
+<h3 id="72-a-branch-named-already-exists">7.2. "a branch named ... already exists"<a class="headerlink" href="#72-a-branch-named-already-exists" title="Permanent link">&para;</a></h3>
+<p>Significa que esa rama ya la creaste en otro momento.</p>
+<p>En ese caso entra en ella, en lugar de volver a crearla:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>NOMBRE_DE_LA_RAMA
+</code></pre></div>
+<h3 id="73-he-hecho-commit-pero-no-veo-los-cambios-en-github">7.3. He hecho commit, pero no veo los cambios en GitHub<a class="headerlink" href="#73-he-hecho-commit-pero-no-veo-los-cambios-en-github" title="Permanent link">&para;</a></h3>
+<p>Lo más probable es que te falte hacer:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>git<span class="w"> </span>push
+</code></pre></div>
+<p>Recuerda: <code>commit</code> guarda en tu ordenador; <code>push</code> sube a GitHub.</p>
+<h3 id="74-he-empezado-a-trabajar-por-error-en-main">7.4. He empezado a trabajar por error en <code>main</code><a class="headerlink" href="#74-he-empezado-a-trabajar-por-error-en-main" title="Permanent link">&para;</a></h3>
+<p>Si todavía no has hecho commit, puedes crear la rama en ese momento y tus cambios pasarán a ella:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>NOMBRE_DE_LA_RAMA
+</code></pre></div>
+<p>Haz esto cuanto antes, antes de seguir trabajando.</p>
+<h3 id="75-git-me-muestra-un-conflicto">7.5. Git me muestra un conflicto<a class="headerlink" href="#75-git-me-muestra-un-conflicto" title="Permanent link">&para;</a></h3>
+<p>Un conflicto aparece cuando Git no sabe combinar dos cambios automáticamente.</p>
+<p>Si no entiendes lo que ha pasado:</p>
+<ul>
+<li>no uses <code>git push --force</code>;</li>
+<li>no borres archivos al azar;</li>
+<li>revisa <code>git status</code>;</li>
+<li>pide ayuda al profesor mostrando el mensaje exacto.</li>
+</ul>
+<h2 id="8-normas-para-no-romper-tu-repositorio">8. Normas para no romper tu repositorio<a class="headerlink" href="#8-normas-para-no-romper-tu-repositorio" title="Permanent link">&para;</a></h2>
+<ul>
+<li>No trabajes los ejercicios en el repositorio público de apuntes.</li>
+<li>No borres ni renombres carpetas base de unidades si no se te pide.</li>
+<li>No subas contraseñas, tokens ni datos sensibles.</li>
+<li>No uses <code>git push --force</code> salvo que el profesor te lo indique.</li>
+<li>No dejes todos los cambios para un único commit final.</li>
+<li>Mantén el repositorio como <strong>privado</strong>.</li>
+<li>Documenta en cada práctica cómo se arranca y qué puerto usa si convive con otras aplicaciones en el mismo repositorio.</li>
+</ul>
+<h2 id="9-chuleta-minima-de-comandos">9. Chuleta mínima de comandos<a class="headerlink" href="#9-chuleta-minima-de-comandos" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>git<span class="w"> </span>clone<span class="w"> </span>URL
+</code></pre></div>
+<p>Descarga el repositorio por primera vez.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>git<span class="w"> </span>pull
+</code></pre></div>
+<p>Te coloca en la rama principal y la actualiza.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>nombre-rama
+</code></pre></div>
+<p>Crea una rama nueva y entra en ella.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<p>Muestra el estado actual del repositorio.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"mensaje claro"</span>
+</code></pre></div>
+<p>Prepara cambios y crea un commit.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>nombre-rama
+</code></pre></div>
+<p>Sube la rama por primera vez.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>git<span class="w"> </span>push
+</code></pre></div>
+<p>Sube nuevos commits de una rama ya conectada con GitHub.</p>
+<h2 id="10-que-informacion-debes-dar-si-pides-ayuda">10. Qué información debes dar si pides ayuda<a class="headerlink" href="#10-que-informacion-debes-dar-si-pides-ayuda" title="Permanent link">&para;</a></h2>
+<p>Si algo falla, no digas solo "Git no va".</p>
+<p>Da siempre estos datos:</p>
+<ul>
+<li>el comando exacto que has ejecutado;</li>
+<li>el mensaje de error completo;</li>
+<li>la salida de <code>git status</code>;</li>
+<li>la rama en la que estabas;</li>
+<li>qué querías hacer exactamente.</li>
+</ul>
+<p>Con eso será mucho más fácil ayudarte sin tocar tu repositorio a ciegas.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
