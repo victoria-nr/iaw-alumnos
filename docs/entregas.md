@@ -25,7 +25,7 @@ No debes entregar ejercicios modificando el repositorio público de apuntes. Las
 
 ## 2. Crear el repositorio desde la plantilla
 
-1. Entra en el repositorio plantilla indicado por el profesor.
+1. Entra en el repositorio plantilla indicado por el profesor. En este caso es: https://github.com/victoria-nr/iaw-entregas-template
 2. Pulsa **Use this template**.
 3. Elige **Create a new repository**.
 4. Ponle este nombre:

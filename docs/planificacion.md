@@ -9,7 +9,7 @@ Este documento resume el ritmo de trabajo del módulo para que tengas claro:
 
 ## 1. Vista general del curso
 
-A continuación se muestra una planificación temporales de las Unidades de Trabajo y las evaluaciones a lo largo del curso. Esta planificación queda sujeta a posibles modificaciones.
+A continuación se muestra una planificación temporal de las Unidades de Trabajo y las evaluaciones a lo largo del curso. Esta planificación queda sujeta a posibles modificaciones.
 
 
 ![Planificación IAW](assets/images/planificacion_iaw.png)
@@ -75,16 +75,16 @@ En una entrega de práctica debe quedar claro:
 
 ## 4. Tutorías colectivas del grupo semipresencial
 
-La idea general es hacer una tutoría colectiva cada dos semanas, normalmente los lunes de 15:00 a 16:00. Algunas podrán cambiar de formato o sustituirse por un video del profesor si el calendario lo exige.
+La idea general es hacer una tutoría colectiva cada dos semanas, normalmente los lunes de 15:00 a 16:00. Se dedicarán a desbloquear conceptos, depurar ejemplos y orientar la entrega más próxima; no serán clases teóricas y no sustituyen el trabajo previo que el alumno debe realizar con los apuntes.
 
 | Fecha | Formato previsto | Foco de la sesión | Qué conviene traer preparado |
 |---|---|---|---|
-| 14/09 | Online | Arranque del módulo y de UT1 | Haber leído la guía de entregas si ya estás matriculado y, si puedes, tener creada la cuenta de GitHub y el entorno de trabajo. |
+| 14/09 | Online | Arranque del módulo y de UT1 | Haber leído la guía de entregas si ya estás matriculado y, si puedes, tener creada la cuenta de GitHub y el entorno de trabajo con el repositorio montado. |
 | 28/09 | Online | UT1 práctica 2: Docker Compose, servicios, puertos, volúmenes y logs | Haber avanzado la práctica 1 y haber intentado montar el entorno de la practica 2. |
-| 12/10 | Online | Arranque de UT2: qué hace PHP en servidor, primer ejemplo y explicación de la práctica 1 | Haber mirado la teoría de la UT2. |
+| 15/10 | Online | Arranque de UT2: qué hace PHP en servidor, primer ejemplo y explicación de la práctica 1 | Haber mirado la teoría de la UT2. |
 | 26/10 | Online | UT2 práctica 1: validación en servidor, funciones y errores típicos | Haber entregado o intentado entregar el punto de control de la práctica 1. |
 | 09/11 | Online | UT2 práctica 2: login, sesion, panel privado y aislamiento por usuario | Haber leído la parte de cookies, sesiones y autenticación básica. |
-| 23/11 | Online | Posible tutoría resolución dudas | Dudas concretas antes del examen. |
+| 16/11 | Online | Posible tutoría resolución dudas | Dudas concretas antes del examen. |
 | 10/12 | Online | Arranque de UT3: PDO, DSN, SQLite, MariaDB y explicación de la práctica 1 | Haber mirado las primeras secciones de apuntes de la UT3. |
 | 07/01 | Online | UT3 práctica 2: paso de SQLite a MariaDB/MySQL, usuario de aplicación y consultas preparadas | Haber terminado la práctica 1 de UT3. |
 | 18/01 | Online  | Presentación del proyecto común de UT4, UT5 y UT6 y formación de parejas | Haber revisado la UT4 cuando se publique. |
