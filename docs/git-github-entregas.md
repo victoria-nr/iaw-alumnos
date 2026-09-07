@@ -46,24 +46,217 @@ No necesitas memorizar términos más avanzados para seguir el curso.
 
 ## 3. Preparación inicial en tu ordenador
 
-Si todavía no has instalado Git, revisa primero [Instalación](instalacion.md).
+Antes de empezar a trabajar con Git y GitHub debes instalar Git y configurar tu identidad.
 
-Una vez instalado, abre una terminal y configura tu nombre y correo una sola vez:
+### 3.1 Instalar Git
+
+#### Ubuntu / Linux Mint
+
+```bash
+sudo apt update
+sudo apt install git
+```
+
+#### Windows
+
+Descarga e instala Git desde:
+
+https://git-scm.com/downloads
+
+Durante la instalación puedes dejar las opciones por defecto.
+
+#### Comprobar la instalación
+
+Abre una terminal y ejecuta:
+
+```bash
+git --version
+```
+
+Deberías ver una salida similar a:
+
+```text
+git version 2.43.0
+```
+
+---
+
+### 3.2 Configurar tu nombre y correo
+
+Git guarda en cada commit el nombre y correo de la persona que lo realiza.
+
+Configura estos datos una sola vez:
 
 ```bash
 git config --global user.name "Nombre Apellido"
 git config --global user.email "tu_correo@example.com"
 ```
 
-Puedes comprobarlo con:
+Por ejemplo:
+
+```bash
+git config --global user.name "Ana García"
+git config --global user.email "ana.garcia@gmail.com"
+```
+
+Puedes comprobar la configuración con:
 
 ```bash
 git config --global --list
 ```
 
-Usa un correo que reconozcas y que puedas asociar con tu cuenta de GitHub.
+---
 
-Si al clonar o al hacer `push` GitHub te pide iniciar sesión, es normal. Sigue la ventana del navegador o de Visual Studio Code y completa el acceso.
+### 3.3 Configurar autenticación SSH con GitHub
+
+Para trabajar con GitHub utilizaremos claves SSH.
+
+De esta forma no tendrás que introducir usuario y contraseña cada vez que hagas `push` o `pull`.
+
+#### Comprobar si ya tienes una clave SSH
+
+Ejecuta:
+
+```bash
+ls -la ~/.ssh
+```
+
+Si aparecen archivos como:
+
+```text
+id_ed25519
+id_ed25519.pub
+```
+
+ya tienes una clave SSH creada.
+
+Si no existen, crea una nueva.
+
+---
+
+#### Crear una nueva clave SSH
+
+Ejecuta:
+
+```bash
+ssh-keygen -t ed25519 -C "tu_correo@example.com"
+```
+
+Por ejemplo:
+
+```bash
+ssh-keygen -t ed25519 -C "ana.garcia@gmail.com"
+```
+
+Cuando pregunte dónde guardar la clave, pulsa simplemente Enter.
+
+Cuando pregunte una contraseña para la clave:
+
+- Puedes dejarla vacía pulsando Enter.
+- O establecer una contraseña adicional para mayor seguridad.
+
+Al finalizar se crearán dos archivos:
+
+```text
+~/.ssh/id_ed25519
+~/.ssh/id_ed25519.pub
+```
+
+---
+
+#### Iniciar el agente SSH
+
+Ejecuta:
+
+```bash
+eval "$(ssh-agent -s)"
+```
+
+Después añade la clave:
+
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+---
+
+#### Copiar la clave pública
+
+Muestra el contenido de la clave pública:
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+Obtendrás una línea similar a:
+
+```text
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... ana.garcia@gmail.com
+```
+
+Copia toda la línea.
+
+---
+
+#### Añadir la clave a GitHub
+
+En GitHub:
+
+1. Haz clic sobre tu foto de perfil.
+2. Ve a **Settings**.
+3. Selecciona **SSH and GPG keys**.
+4. Pulsa **New SSH key**.
+5. Escribe un nombre descriptivo (por ejemplo: *Portátil personal*).
+6. Pega la clave copiada anteriormente.
+7. Pulsa **Add SSH key**.
+
+---
+
+#### Comprobar que funciona
+
+Ejecuta:
+
+```bash
+ssh -T git@github.com
+```
+
+La primera vez aparecerá un mensaje similar a:
+
+```text
+Are you sure you want to continue connecting (yes/no)?
+```
+
+Escribe:
+
+```text
+yes
+```
+
+Si todo está correcto verás algo parecido a:
+
+```text
+Hi usuario! You've successfully authenticated.
+```
+
+---
+
+### 3.4 Clonar repositorios usando SSH
+
+Asegúrate de utilizar la URL SSH del repositorio.
+
+Ejemplo:
+
+```bash
+git clone git@github.com:usuario/repositorio.git
+```
+
+No utilices la URL HTTPS:
+
+```text
+https://github.com/usuario/repositorio.git
+```
+
+Si utilizas la URL SSH correctamente configurada, podrás realizar `clone`, `pull` y `push` sin necesidad de introducir credenciales.
 
 ## 4. Qué harás una sola vez al principio del curso
 
