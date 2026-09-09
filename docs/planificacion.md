@@ -101,7 +101,9 @@ La idea general es hacer una tutoría colectiva cada dos semanas, normalmente lo
 | 20/09 | Ejercicios iniciales de UT1 | `ut1-ejercicios` | `unidades/UT1/ejercicios.md` | Primera entrega del curso. Debe incluir la creación o regularización de tu repositorio privado del módulo, la invitación al profesor como colaborador, la estructura base del repositorio y los ejercicios iniciales de UT1 sobre qué es una aplicación web, diferencia entre estático y dinámico, componentes de una aplicación web y nociones básicas de HTTP. Si todavía no habías podido arrancar por matrícula tardía, esta entrega sirve para ponerte al día. |
 | 27/09 | Práctica 1 final | `ut1-practica-entorno-web` | `unidades/UT1/ut1-entorno-web/` | Proyecto base de UT1 completado: estructura del proyecto, `README.md`, `estado_entorno.txt`, organización correcta de carpetas y primeros commits documentando el trabajo. |
 | 04/10 | Punto de control de práctica 2 | `ut1-practica-entorno-web` | `unidades/UT1/ut1-entorno-web/` | Entorno multicontenedor en progreso. Debes dejar visible al menos el esqueleto funcional de `compose.yaml`, `php/Dockerfile`, `nginx/default.conf`, `.env.example`, `sql/init.sql` y `app/index.php`, con explicación en el `README.md` de qué parte funciona ya y qué parte te falta. |
-| 11/10 | Práctica 2 final | `ut1-practica-entorno-web` | `unidades/UT1/ut1-entorno-web/` | Entorno reproducible completo y comprobable: `nginx`, `php` y `db` funcionando, acceso por navegador, conexión a MariaDB correcta, tabla `prueba` inicializada y documentación suficiente para levantar y verificar el proyecto. |
+| 11/10 | Práctica 2 final: En GitHub, abre una PR desde tu rama hacia main | `ut1-practica-entorno-web` | `unidades/UT1/ut1-entorno-web/` | Entorno reproducible completo y comprobable: `nginx`, `php` y `db` funcionando, acceso por navegador, conexión a MariaDB correcta, tabla `prueba` inicializada y documentación suficiente para levantar y verificar el proyecto. |
+| 11/10 | Ejercicios terminados: En GitHub, abre una PR desde tu rama hacia main | `ut1-ejercicios` | `unidades/UT1/ejercicios.md` | Ejercicios de los apuntes terminados. |
+
 
 ## UT2
 
