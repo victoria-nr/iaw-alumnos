@@ -899,29 +899,6 @@ En vez de arrancar a mano cada pieza por separado, definimos:
 
 Todo eso queda centralizado.
 
-### Cómo encaja esto con Docker Compose
-
-En Docker Compose verás dos ideas relacionadas, que no conviene mezclar:
-
-- el bloque `environment`, que sirve para pasar variables a un servicio;
-- el archivo `.env`, que suele ayudar a guardar o reutilizar esos valores de configuración.
-
-Por ejemplo, un servicio PHP puede recibir variables como estas:
-
-```yaml
-services:
-  php:
-    environment:
-      DB_HOST: db
-      DB_NAME: ut1db
-      DB_USER: ut1user
-      DB_PASSWORD: ut1pass
-```
-
-Eso significa que el contenedor de PHP tendrá disponibles esas variables y la aplicación podrá leerlas.
-
-No hace falta que memorices todos los detalles de implementación: lo importante aquí es entender que Docker Compose puede pasar esas variables a los servicios del stack.
-
 ### Elementos básicos que debes reconocer
 
 ```yaml
@@ -941,13 +918,83 @@ Además vas a ver:
 - `environment`
 - `depends_on`
 
-### Comandos básicos
+
+### Variables de entorno en Docker Compose
+
+Docker Compose ofrece varias formas de trabajar con variables de entorno. Aunque los nombres pueden resultar parecidos, es importante entender que **`environment`**, **`.env`** y **`env_file`** tienen funciones diferentes.
+
+#### Definir variables con `environment`
+
+La forma más habitual consiste en utilizar el bloque `environment` para indicar qué variables de entorno tendrá disponibles el contenedor:
+
+```yaml
+services:
+  db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: secreto123
+      MYSQL_DATABASE: empresa
+```
+
+En este caso, las variables se envían directamente al contenedor.
+
+#### Utilizar un archivo `.env`
+
+También es posible guardar valores de configuración en un archivo llamado `.env`:
+
+```text
+MYSQL_ROOT_PASSWORD=secreto123
+MYSQL_DATABASE=empresa
+```
+
+Docker Compose puede utilizar estos valores dentro del archivo `compose.yaml` mediante la sintaxis `${VARIABLE}`:
+
+```yaml
+services:
+  db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+```
+
+Al procesar el archivo `compose.yaml`, Docker Compose sustituirá cada expresión `${VARIABLE}` por el valor correspondiente definido en `.env`.
+
+> El archivo `.env` no envía variables al contenedor por sí mismo. Su función principal es proporcionar valores que luego pueden utilizarse en `compose.yaml`.
+
+#### Cargar variables con `env_file`
+
+Si queremos que todas las variables de un archivo se envíen directamente al contenedor, podemos utilizar `env_file`:
+
+```yaml
+services:
+  db:
+    image: mariadb
+    env_file:
+      - .env
+```
+
+En este caso, las variables definidas en `.env` pasarán automáticamente al contenedor.
+
+#### Resumen
+
+| Elemento | Función |
+|-----------|----------|
+| `environment` | Define las variables de entorno que recibirá el contenedor. |
+| `.env` | Almacena valores que Docker Compose puede utilizar al procesar `compose.yaml`. |
+| `env_file` | Carga variables desde un archivo y las envía al contenedor. |
+
+En proyectos reales es muy frecuente combinar `environment` y `.env`: los valores se guardan en `.env` y el bloque `environment` indica qué variables recibirá cada servicio.
+
+
+### Comandos básicos en Docker Compose
 
 ```bash
 docker compose up -d
 docker compose ps
 docker compose logs
 docker compose down
+docker compose down -v
 ```
 
 ### Idea crítica: el nombre del servicio importa
