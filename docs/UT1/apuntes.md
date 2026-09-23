@@ -1023,6 +1023,11 @@ services:
     image: php:8.3-fpm
     volumes:
       - ./app:/var/www/html
+    environment:
+      DB_HOST: db
+      DB_NAME: ut1app
+      DB_USER: ut1user
+      DB_PASSWORD: ut1pass
 
   db:
     image: mariadb:11
@@ -1080,7 +1085,7 @@ Compara estos dos casos cerrados:
 
 ### Caso B. Nextcloud autogestionado
 - servidor web: Apache
-- servicio que ejecuta la aplicación (runtime): PHP
+- servicio que ejecuta la aplicación (runtime): PHP (integrado en Apache mediante mod_php)
 - base de datos: MariaDB
 
 Responde:
