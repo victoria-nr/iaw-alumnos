@@ -1,5 +1,7 @@
 # Práctica 2 · Entorno web reproducible guiado con `Docker Compose`
 
+Antes de modificar archivos, lee atentamente toda la práctica para tener una visión global de lo que se pretende conseguir. Construye el entorno de forma incremental: realiza un cambio pequeño, pruébalo y corrígelo si es necesario antes de añadir el siguiente servicio.
+
 ## 1. Qué vas a construir
 
 En esta práctica vas a completar el proyecto `ut1-entorno-web` preparado en la práctica 1 dentro de `unidades/UT1/` para convertirlo en un entorno web reproducible con tres servicios coordinados:
@@ -283,9 +285,20 @@ Debes decidir y ejecutar, al menos, los comandos necesarios para:
 
 En el `README.md` debes anotar los comandos exactos que finalmente has usado.
 
+
+## 7. Secuencia recomendada
+
+No completes todo el `compose.yaml` de una vez. Puedes levantar servicios concretos con `docker compose up` e ir ampliando la configuración solo cuando la etapa anterior funcione.
+
+1. **Empieza por Nginx.** Configura el servicio `nginx`, el puerto `8080`, el montaje de `app/` y su archivo `nginx/default.conf`. Crea temporalmente un `app/index.html` sencillo y comprueba en `http://localhost:8080` que Nginx responde y sirve ese archivo. Revisa sus logs si no aparece la página esperada.
+2. **Añade PHP.** Crea el `Dockerfile`, incorpora el servicio `php` y configura en Nginx el reenvío de los archivos `.php`. Sustituye el archivo temporal por un `app/index.php` mínimo que muestre un mensaje. Comprueba en el navegador que PHP se ejecuta antes de intentar la conexión con la base de datos.
+3. **Incorpora MariaDB.** Añade el servicio `db`, las variables de entorno, el volumen y el montaje de `sql/init.sql`. Levanta o reconstruye lo necesario, revisa que MariaDB termine su inicialización en los logs y comprueba con `docker compose ps` que los tres servicios están activos. Solo entonces completa en `app/index.php` la conexión PDO y la consulta a la tabla `prueba`.
+
+En cada etapa, conserva los comandos y los problemas resueltos en el `README.md`. Si algo falla, revisa primero `docker compose ps` y los logs del servicio implicado; no añadas cambios de otros servicios hasta entender el fallo actual.
+
 ---
 
-## 7. Evidencias mínimas que debes obtener
+## 8. Evidencias mínimas que debes obtener
 
 Antes de dar la práctica por terminada, debes poder demostrar todo esto:
 
@@ -301,7 +314,7 @@ Antes de dar la práctica por terminada, debes poder demostrar todo esto:
 
 ---
 
-## 8. Entrega
+## 9. Entrega
 
 Debes subir los cambios al mismo repositorio privado del módulo usado en la práctica 1, manteniendo el proyecto dentro de `unidades/UT1/ut1-entorno-web/`.
 
@@ -319,7 +332,7 @@ La entrega mínima debe incluir:
 
 ---
 
-## 9. Errores típicos a evitar
+## 10. Errores típicos a evitar
 
 ### Usar `localhost` entre contenedores
 Dentro del stack, PHP no debe conectarse a MariaDB usando `localhost`, sino el nombre del servicio `db`.
@@ -335,7 +348,7 @@ En implantación web también cuenta dejar rastro de qué problema hubo y cómo 
 
 ---
 
-## 10. Cómo se evaluará esta práctica
+## 11. Cómo se evaluará esta práctica
 
 El profesor valorará especialmente estas evidencias:
 
@@ -349,7 +362,7 @@ No se busca que memorices una receta, sino que seas capaz de montar un entorno g
 
 ---
 
-## 11. Checklist rápido del alumno
+## 12. Checklist rápido del alumno
 
 - [ ] He completado `compose.yaml` sin copiar una solución cerrada línea por línea.
 - [ ] He investigado qué necesita PHP para conectar con MariaDB.
