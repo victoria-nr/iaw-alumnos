@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="340" viewBox="0 0 960 340">
+  <style>
+    .title{font:700 22px Arial,sans-serif; fill:#1f2937}
+    .label{font:700 18px Arial,sans-serif; fill:#111827}
+    .text{font:14px Arial,sans-serif; fill:#374151}
+    .small{font:13px Arial,sans-serif; fill:#4b5563}
+    .box{rx:18; ry:18; stroke:#475569; stroke-width:2}
+    .arrow{stroke:#475569; stroke-width:3; fill:none; marker-end:url(#m)}
+  </style>
+  <defs>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <text x="40" y="40" class="title">Evolución simplificada de la implantación web</text>
+  <rect x="40" y="90" width="250" height="180" class="box" fill="#fef3c7"/>
+  <text x="165" y="125" text-anchor="middle" class="label">Modelo clásico</text>
+  <text x="165" y="155" text-anchor="middle" class="text">Todo instalado en el servidor</text>
+  <text x="165" y="182" text-anchor="middle" class="small">LAMP / XAMPP / paquetes del SO</text>
+  <text x="165" y="205" text-anchor="middle" class="small">Rápido para empezar</text>
+  <text x="165" y="228" text-anchor="middle" class="small">Difícil de reproducir</text>
+  <text x="165" y="251" text-anchor="middle" class="small">Muchas diferencias entre equipos</text>
+
+  <rect x="355" y="90" width="250" height="180" class="box" fill="#dbeafe"/>
+  <text x="480" y="125" text-anchor="middle" class="label">Modelo intermedio</text>
+  <text x="480" y="155" text-anchor="middle" class="text">Scripts, VMs y plantillas</text>
+  <text x="480" y="182" text-anchor="middle" class="small">Más control</text>
+  <text x="480" y="205" text-anchor="middle" class="small">Menos caos</text>
+  <text x="480" y="228" text-anchor="middle" class="small">Pero sigue siendo pesado</text>
+  <text x="480" y="251" text-anchor="middle" class="small">y lento de replicar</text>
+
+  <rect x="670" y="90" width="250" height="180" class="box" fill="#dcfce7"/>
+  <text x="795" y="125" text-anchor="middle" class="label">Modelo actual básico</text>
+  <text x="795" y="155" text-anchor="middle" class="text">Contenedores + Compose + Git</text>
+  <text x="795" y="182" text-anchor="middle" class="small">Reproducible</text>
+  <text x="795" y="205" text-anchor="middle" class="small">Más fácil de compartir</text>
+  <text x="795" y="228" text-anchor="middle" class="small">Más rápido de reiniciar</text>
+  <text x="795" y="251" text-anchor="middle" class="small">Más cercano al trabajo actual</text>
+
+  <path d="M290 180 H355" class="arrow"/>
+  <path d="M605 180 H670" class="arrow"/>
+</svg>
