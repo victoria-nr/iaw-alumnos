@@ -81,9 +81,9 @@ La idea general es hacer una tutoría colectiva cada dos semanas, normalmente lo
 |---|---|---|---|
 | 14/09 | Online | Arranque del módulo y de UT1 | Haber leído la guía de entregas si ya estás matriculado y, si puedes, tener creada la cuenta de GitHub y el entorno de trabajo con el repositorio montado. |
 | 28/09 | Online | UT1 práctica 2: Docker Compose, servicios, puertos, volúmenes y logs | Haber avanzado la práctica 1 y haber intentado montar el entorno de la practica 2. |
-| 15/10 | Online | Arranque de UT2: qué hace PHP en servidor, primer ejemplo y explicación de la práctica 1 | Haber mirado la teoría de la UT2. |
-| 26/10 | Online | UT2 práctica 1: validación en servidor, funciones y errores típicos | Haber entregado o intentado entregar el punto de control de la práctica 1. |
-| 09/11 | Online | UT2 práctica 2: login, sesion, panel privado y aislamiento por usuario | Haber leído la parte de cookies, sesiones y autenticación básica. |
+| 15/10 | Online | Arranque de UT2: qué hace PHP en servidor, primer ejemplo y cómo hacer los mini ejercicios | Haber mirado por encima la teoría de la UT2. |
+| 26/10 | Online | UT2 práctica 1: explicación de la práctica, validación en servidor | Haber leído el enunciado de la práctica. |
+| 09/11 | Online | UT2 práctica 2: explicación de la práctica (login, sesion, panel privado y aislamiento por usuario) | Haber leído la parte de cookies, sesiones y autenticación básica. |
 | 16/11 | Online | Posible tutoría resolución dudas | Dudas concretas antes del examen. |
 | 10/12 | Online | Arranque de UT3: PDO, DSN, SQLite, MariaDB y explicación de la práctica 1 | Haber mirado las primeras secciones de apuntes de la UT3. |
 | 07/01 | Online | UT3 práctica 2: paso de SQLite a MariaDB/MySQL, usuario de aplicación y consultas preparadas | Haber terminado la práctica 1 de UT3. |
