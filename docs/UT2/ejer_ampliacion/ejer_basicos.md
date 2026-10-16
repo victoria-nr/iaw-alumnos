@@ -21,9 +21,7 @@ Escribe un programa que cada vez que se ejecute muestre dos números al azar, un
 
 Se recuerda que el IMC se calcula con la fórmula:
 
-\[
-IMC = \frac{\text{peso (kg)}}{\text{altura (m)}^2}
-\]
+IMC = peso / (altura * altura)
 
 ## Ejercicio 4
 
