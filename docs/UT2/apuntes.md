@@ -532,6 +532,10 @@ De momento, los booleanos se muestran como el valor 1 (true) y el valor 0 (false
 
 ---
 
+OPCIONAL: Si quieres seguir practicando ejercicios sobre tipos básicos, accede al siguiente [Enlace](ejer_ampliacion/ejer_basicos.md)
+
+---
+
 ## 8. Estructuras de control
 
 Las estructuras de control permiten que el programa tome decisiones o repita acciones.
