@@ -679,6 +679,10 @@ Guarda en `$accion` una de estas operaciones de administración: `reiniciar`, `d
 
 ---
 
+OPCIONAL: Si quieres seguir practicando ejercicios condicionales, accede al siguiente [Enlace](ejer_ampliacion/ejer_cond_bucles_arrays.md)
+
+---
+
 ## 8.3. `for`
 
 El bucle `for` es útil cuando conoces bien cuántas repeticiones quieres.
@@ -774,6 +778,11 @@ Crea un array con tres mensajes de error y muéstralos dentro de una lista HTML 
 
 ### Mini ejercicio 14
 Crea un array asociativo con la configuración de una aplicación web: `entorno`, `depuracion` y `puerto`. Recorre el array con `foreach` y muestra cada clave y su valor dentro de un párrafo HTML. Define `depuracion` como un booleano y utiliza el operador ternario `? :` para mostrar los valores "Sí" o "No".
+
+---
+
+
+OPCIONAL: Si quieres seguir practicando ejercicios con bucles y con arrays accede al siguiente [Enlace](ejer_ampliacion/ejer_cond_bucles_arrays.md)
 
 ---
 
@@ -929,6 +938,11 @@ Escribe una función llamada `obtenerMensajePlan()` que reciba el nombre de un p
 - Básico,
 - Profesional,
 - Empresa.
+
+---
+
+
+OPCIONAL: Si quieres seguir practicando ejercicios de funciones, accede al siguiente [Enlace](ejer_ampliacion/ejer_funciones_formularios.md)
 
 ---
 
@@ -1240,6 +1254,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ### Mini ejercicio 16
 Amplía el ejemplo anterior con un nuevo campo `meses` y valida que sea un número entre 1 y 24.
+
+---
+
+
+OPCIONAL: Si quieres seguir practicando ejercicios de formularios, accede al siguiente [Enlace](ejer_ampliacion/ejer_funciones_formularios.md)
 
 ---
 
