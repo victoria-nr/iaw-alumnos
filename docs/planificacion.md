@@ -82,7 +82,7 @@ La idea general es hacer una tutoría colectiva cada dos semanas, normalmente lo
 | 14/09 | Online | Arranque del módulo y de UT1 | Haber leído la guía de entregas si ya estás matriculado y, si puedes, tener creada la cuenta de GitHub y el entorno de trabajo con el repositorio montado. |
 | 28/09 | Online | UT1 práctica 2: Docker Compose, servicios, puertos, volúmenes y logs | Haber avanzado la práctica 1 y haber intentado montar el entorno de la practica 2. |
 | 15/10 | Online | Arranque de UT2: qué hace PHP en servidor, primer ejemplo y cómo hacer los mini ejercicios | Haber mirado por encima la teoría de la UT2. |
-| 26/10 | Online | UT2 práctica 1: explicación de la práctica, validación en servidor | Haber leído el enunciado de la práctica. |
+| 26/10 | Online | 1) UT2 dudas y repaso teoría <br> 2) UT2 práctica 1: explicación de la práctica, validación en servidor | Haber leído la teoría y el enunciado de la práctica 1. |
 | 09/11 | Online | UT2 práctica 2: explicación de la práctica (login, sesion, panel privado y aislamiento por usuario) | Haber leído la parte de cookies, sesiones y autenticación básica. |
 | 16/11 | Online | Posible tutoría resolución dudas | Dudas concretas antes del examen. |
 | 10/12 | Online | Arranque de UT3: PDO, DSN, SQLite, MariaDB y explicación de la práctica 1 | Haber mirado las primeras secciones de apuntes de la UT3. |
@@ -110,7 +110,7 @@ La idea general es hacer una tutoría colectiva cada dos semanas, normalmente lo
 | Fecha | Tipo | Rama orientativa | Ruta principal | Qué debes entregar exactamente |
 |---|---|---|---|---|
 | 18/10 | Ejercicios iniciales de UT2 | `ut2-ejercicios` | `unidades/UT2/ejercicios.md` | Primeros ejercicios de teoría de UT2 relacionados con cliente y servidor, primer contacto con PHP, etc. La idea es que esta entrega demuestre que ya has entrado en la unidad y has empezado con los ejercicios. |
-| 25/10 | Ejercicios teoría terminados | `ut2-ejercicios` | `unidades/UT2/ejercicios.md` | Actualización del archivo de ejercicios con los ejercicios terminados. Pull Request |
+| 01/11 | Ejercicios teoría terminados | `ut2-ejercicios` | `unidades/UT2/ejercicios.md` | Actualización del archivo de ejercicios con los ejercicios terminados. Pull Request |
 | 01/11 | Punto de control de práctica 1 | `ut2-practica-1` | `unidades/UT2/practica-1/` | Formulario de presupuesto en progreso. Debe verse ya el formulario, el envío por `POST`, y una primera validación en servidor. En el `README.md` deja claro qué está hecho y qué te falta para cerrar la práctica. |
 | 08/11 | Práctica 1 final | `ut2-practica-1` | `unidades/UT2/practica-1/` | Práctica 1 terminada: formulario funcional, mensajes de error claros, conservación de valores si hay errores, cálculo del presupuesto y capturas o pruebas de un caso correcto y un caso erróneo. Pull Request.|
 | 15/11 | Punto de control de práctica 2 | `ut2-practica-2` | `unidades/UT2/practica-2/` | Aplicación de login en progreso. Debe estar ya montado el acceso, el arranque de sesión, el panel privado inicial y el planteamiento de la prueba de aislamiento. Todavía no hace falta que todo esté pulido, pero si que se vea el flujo principal. |
