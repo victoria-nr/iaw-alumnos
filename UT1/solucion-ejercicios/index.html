@@ -1,0 +1,1560 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y practicas del modulo Implantacion de Aplicaciones Web">
+      
+      
+      
+        <link rel="canonical" href="https://TU_USUARIO.github.io/iaw-alumnos/UT1/solucion-ejercicios/">
+      
+      
+        <link rel="prev" href="../practica-2/">
+      
+      
+        <link rel="next" href="../practica-2-sol/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Solucion ejercicios - IAW - ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#solucion-de-los-mini-ejercicios-ut1-entorno-reproducible-de-implantacion-web" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="IAW - ASIR" class="md-header__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solucion ejercicios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IAW - ASIR" class="md-nav__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IAW - ASIR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-github-entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git y GitHub para entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planificacion del curso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1. Entorno de implantacion web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1. Entorno de implantacion web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solucion ejercicios
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solucion ejercicios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 12
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 14
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 15
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-2-sol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solucion practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT2. Programacion web en servidor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT2. Programacion web en servidor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT2/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 12
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 14
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 15
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="solucion-de-los-mini-ejercicios-ut1-entorno-reproducible-de-implantacion-web">Solución de los mini ejercicios · UT1 · Entorno reproducible de implantación web<a class="headerlink" href="#solucion-de-los-mini-ejercicios-ut1-entorno-reproducible-de-implantacion-web" title="Permanent link">&para;</a></h1>
+<p>Este documento recoge las posibles soluciones de los mini ejercicios de los apuntes.</p>
+<hr />
+<h2 id="mini-ejercicio-1">Mini ejercicio 1<a class="headerlink" href="#mini-ejercicio-1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aplicación web</th>
+<th>¿El usuario ve HTML, datos o ambas cosas?</th>
+<th>Explicación breve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aules</td>
+<td>ambas cosas</td>
+<td>El navegador recibe HTML para la interfaz y también datos generados por la aplicación según el usuario y la asignatura.</td>
+</tr>
+<tr>
+<td>Gmail web</td>
+<td>ambas cosas</td>
+<td>La bandeja se muestra como interfaz web, pero el contenido procede de datos dinámicos del correo del usuario.</td>
+</tr>
+<tr>
+<td>OpenStreetMap</td>
+<td>ambas cosas</td>
+<td>La página carga interfaz HTML y después muestra datos cartográficos que se solicitan al servidor.</td>
+</tr>
+</tbody>
+</table>
+<p>Respuesta en dos frases:</p>
+<p>Una aplicación web funciona con un modelo cliente-servidor en el que el navegador pide recursos a un sistema remoto. Un programa de escritorio ejecuta la mayor parte de su lógica directamente en el equipo del usuario y no depende de HTTP para funcionar.</p>
+<hr />
+<h2 id="mini-ejercicio-2">Mini ejercicio 2<a class="headerlink" href="#mini-ejercicio-2" title="Permanent link">&para;</a></h2>
+<ol>
+<li><code>https://intranet-centro.example/assets/logo-centro.png</code> → <strong>estático</strong>. Es un archivo de imagen que el servidor entrega tal como está guardado.</li>
+<li><code>https://ut1.example/index.html</code> → <strong>estático</strong>. Es un archivo HTML fijo que no necesita generar contenido en tiempo real.</li>
+<li><code>https://ut1.example/noticias.php?id=8</code> → <strong>dinámico</strong>. La respuesta depende de código servidor y del parámetro <code>id=8</code>.</li>
+<li><code>https://api.ut1.example/productos</code> → <strong>dinámico</strong>. La API genera y devuelve datos en función de la lógica de la aplicación.</li>
+<li><code>https://ut1.example/catalogo.html</code> con carga posterior desde <code>/api/productos</code> → <strong>mixto</strong>. El HTML inicial es estático, pero los productos se incorporan después mediante una llamada dinámica.</li>
+</ol>
+<hr />
+<h2 id="mini-ejercicio-3">Mini ejercicio 3<a class="headerlink" href="#mini-ejercicio-3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Tipo de componente</th>
+<th>Tarea principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nginx</td>
+<td>servidor web</td>
+<td>Recibir peticiones HTTP y servir recursos o delegar el procesamiento.</td>
+</tr>
+<tr>
+<td>Apache HTTP Server</td>
+<td>servidor web</td>
+<td>Recibir peticiones HTTP y entregar contenido web.</td>
+</tr>
+<tr>
+<td>Caddy</td>
+<td>servidor web</td>
+<td>Servir sitios web y actuar como servidor o proxy.</td>
+</tr>
+<tr>
+<td>PHP-FPM</td>
+<td>runtime o servidor de aplicaciones</td>
+<td>Ejecutar código PHP del lado servidor.</td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>runtime o servidor de aplicaciones</td>
+<td>Ejecutar aplicaciones JavaScript en servidor.</td>
+</tr>
+<tr>
+<td>Tomcat</td>
+<td>servidor de aplicaciones</td>
+<td>Ejecutar aplicaciones web Java.</td>
+</tr>
+<tr>
+<td>MariaDB</td>
+<td>base de datos</td>
+<td>Guardar y recuperar datos persistentes.</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>base de datos</td>
+<td>Guardar y consultar datos relacionales.</td>
+</tr>
+<tr>
+<td>MongoDB</td>
+<td>base de datos</td>
+<td>Guardar y consultar documentos no relacionales.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>El alumno estaría confundiendo un servidor web con una base de datos, porque Nginx no almacena registros ni ejecuta consultas SQL.</li>
+<li>La tienda online no podría conservar usuarios, productos, pedidos ni carritos entre una petición y la siguiente.</li>
+</ol>
+<hr />
+<h2 id="mini-ejercicio-4">Mini ejercicio 4<a class="headerlink" href="#mini-ejercicio-4" title="Permanent link">&para;</a></h2>
+<ol>
+<li><code>http://localhost:8080/logo.png</code>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>navegador -&gt; Nginx -&gt; navegador
+</code></pre></div>
+<ol>
+<li><code>http://localhost:8080/index.php?seccion=inicio</code>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>navegador -&gt; Nginx -&gt; PHP-FPM -&gt; Nginx -&gt; navegador
+</code></pre></div>
+<ol>
+<li><code>POST http://localhost:8080/crear.php</code> con inserción en base de datos:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>navegador -&gt; Nginx -&gt; PHP-FPM -&gt; MariaDB -&gt; PHP-FPM -&gt; Nginx -&gt; navegador
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-5">Mini ejercicio 5<a class="headerlink" href="#mini-ejercicio-5" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Método HTTP: <code>GET</code></li>
+<li>Ruta pedida: <code>/productos</code></li>
+<li>Código de estado: <code>200 OK</code></li>
+<li>Cabeceras:<ul>
+<li>petición: <code>User-Agent: curl/8.7.1</code></li>
+<li>respuesta: <code>Content-Type: application/json</code></li>
+</ul>
+</li>
+<li>El servidor está devolviendo <strong>datos</strong>, en concreto JSON.</li>
+</ol>
+<hr />
+<h2 id="mini-ejercicio-6">Mini ejercicio 6<a class="headerlink" href="#mini-ejercicio-6" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>Opción correcta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cada alumno instala manualmente Apache, PHP y MariaDB en su sistema operativo.</td>
+<td>LAMP clásico</td>
+</tr>
+<tr>
+<td>Todo el grupo usa el mismo <code>compose.yaml</code> y los mismos nombres de servicio.</td>
+<td>Entorno reproducible con Git + Docker Compose</td>
+</tr>
+<tr>
+<td>Cambiar de ordenador obliga a repetir la instalación paso a paso.</td>
+<td>LAMP clásico</td>
+</tr>
+<tr>
+<td>El proyecto se puede clonar y levantar con <code>docker compose up -d</code>.</td>
+<td>Entorno reproducible con Git + Docker Compose</td>
+</tr>
+<tr>
+<td>Dos alumnos pueden tener versiones distintas de PHP sin darse cuenta.</td>
+<td>LAMP clásico</td>
+</tr>
+<tr>
+<td>La configuración principal del entorno queda descrita en ficheros del proyecto.</td>
+<td>Entorno reproducible con Git + Docker Compose</td>
+</tr>
+</tbody>
+</table>
+<p>Conclusión en una frase:</p>
+<p>El entorno reproducible con Git y Docker Compose encaja mejor con esta UT porque permite que toda la clase trabaje con la misma configuración y reduce diferencias entre equipos.</p>
+<hr />
+<h2 id="mini-ejercicio-7">Mini ejercicio 7<a class="headerlink" href="#mini-ejercicio-7" title="Permanent link">&para;</a></h2>
+<p>Comandos exactos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mkdir<span class="w"> </span>ut1-git-prueba
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>ut1-git-prueba
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git<span class="w"> </span>init
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>README.md<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="s"># UT1 entorno de prueba</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s">Proyecto de prueba para practicar Git en Implantación de Aplicaciones Web.</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="s">EOF</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>git<span class="w"> </span>add<span class="w"> </span>README.md
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Inicializa entorno de prueba UT1"</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>cat<span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="s">Estado actual: repositorio listo para la práctica.</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="s">EOF</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>git<span class="w"> </span>status
+</code></pre></div>
+<p>Resultado esperado de <code>git status</code> después de modificar el archivo y antes de hacer otro <code>git add</code>:</p>
+<ul>
+<li>Archivos preparados para commit: ninguno.</li>
+<li>Archivos modificados: <code>README.md</code>.</li>
+</ul>
+<hr />
+<h2 id="mini-ejercicio-8">Mini ejercicio 8<a class="headerlink" href="#mini-ejercicio-8" title="Permanent link">&para;</a></h2>
+<p>Comandos exactos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>ut1-nginx-prueba<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8081</span>:80<span class="w"> </span>nginx:stable
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>docker<span class="w"> </span>ps
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>docker<span class="w"> </span>stop<span class="w"> </span>ut1-nginx-prueba
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>docker<span class="w"> </span>rm<span class="w"> </span>ut1-nginx-prueba
+</code></pre></div>
+<ol>
+<li>Imagen usada: <code>nginx:stable</code></li>
+<li>Nombre del contenedor: <code>ut1-nginx-prueba</code></li>
+<li>Puerto publicado en el equipo: <code>8081</code></li>
+<li>Frase correcta: una imagen es la plantilla <code>nginx:stable</code> a partir de la que se crea el servicio, y el contenedor es la instancia ejecutada con el nombre <code>ut1-nginx-prueba</code>.</li>
+</ol>
+<hr />
+<h2 id="mini-ejercicio-9">Mini ejercicio 9<a class="headerlink" href="#mini-ejercicio-9" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Imagen: <code>nginx:stable</code>. Nombre del contenedor: <code>web-prueba</code>. Se abriría <code>http://localhost:8090</code>.</li>
+<li><code>8090</code> es el puerto del equipo desde el que se accede; <code>80</code> es el puerto en el que Nginx escucha dentro del contenedor.</li>
+<li>No. Docker no podrá publicar un puerto que ya está ocupado. Se puede cambiar, por ejemplo, a <code>-p 8091:80</code>.</li>
+<li>Comando exacto:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>web-prueba
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-10">Mini ejercicio 10<a class="headerlink" href="#mini-ejercicio-10" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Nginx obtiene <code>index.html</code> de la carpeta local actual, representada por <code>$PWD</code> en el comando.</li>
+<li>La carpeta aparece en <code>/usr/share/nginx/html</code> dentro del contenedor.</li>
+<li><code>:ro</code> evita que el contenedor modifique los archivos de la carpeta local montada.</li>
+<li>El archivo se comparte mediante el volumen: Nginx lee directamente la versión actual de la carpeta local. Por eso basta guardar el cambio en <code>index.html</code> y recargar el navegador.</li>
+</ol>
+<hr />
+<h2 id="mini-ejercicio-11">Mini ejercicio 11<a class="headerlink" href="#mini-ejercicio-11" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Hay <strong>3 servicios</strong>: <code>nginx</code>, <code>php</code> y <code>db</code>.</li>
+<li>Imágenes:<ul>
+<li><code>nginx</code> usa <code>nginx:stable</code></li>
+<li><code>php</code> usa <code>php:8.3-fpm</code></li>
+<li><code>db</code> usa <code>mariadb:11</code></li>
+</ul>
+</li>
+<li>Puerto publicado: <code>8080:80</code> en el servicio <code>nginx</code>.</li>
+<li>Si cambias el nombre del servicio <code>db</code> y no actualizas la conexión en PHP, la aplicación no encontrará el host de base de datos y fallará la conexión.</li>
+<li>Comandos exactos:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<p>Se usa <code>docker compose down</code> y no <code>docker compose stop</code> porque aquí interesa desmontar el stack y volver a crearlo para comprobar mejor la reproducibilidad del entorno. <code>stop</code> solo detiene los contenedores, mientras que <code>down</code> detiene y elimina los contenedores y la red del proyecto.</p>
+<hr />
+<h2 id="mini-ejercicio-12">Mini ejercicio 12<a class="headerlink" href="#mini-ejercicio-12" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Servidor web:<ul>
+<li>Caso A: <code>Nginx</code></li>
+<li>Caso B: <code>Apache</code></li>
+</ul>
+</li>
+<li>Runtime o servidor de aplicaciones:<ul>
+<li>Caso A: <code>PHP-FPM</code></li>
+<li>Caso B: <code>Apache</code> + <code>PHP</code> integrado mediante un módulo</li>
+</ul>
+</li>
+<li>Base de datos:<ul>
+<li>Caso A: <code>MariaDB</code></li>
+<li>Caso B: <code>MariaDB</code></li>
+</ul>
+</li>
+<li>Comparación con el stack de la UT:</li>
+</ol>
+<p>El caso A coincide exactamente con el stack de la UT porque usa <code>Nginx + PHP-FPM + MariaDB</code>. El caso B se parece en que sigue usando PHP y MariaDB, pero se diferencia en que sustituye Nginx por Apache y no separa el runtime como <code>PHP-FPM</code>.</p>
+<p>La diferencia importante es que Apache puede ejecutar PHP directamente mediante un módulo, mientras que Nginx necesita un servicio adicional (PHP-FPM) para ejecutar código PHP.</p>
+<hr />
+<h2 id="mini-ejercicio-13">Mini ejercicio 13<a class="headerlink" href="#mini-ejercicio-13" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Cambiar el puerto web: <code>ut1-entorno-web/compose.yaml</code></li>
+<li>Modificar el comportamiento de Nginx: <code>ut1-entorno-web/nginx/default.conf</code></li>
+<li>Cambiar una variable de conexión: <code>ut1-entorno-web/.env.example</code></li>
+<li>Editar la aplicación: <code>ut1-entorno-web/app/index.php</code></li>
+<li>Frase correcta: separar configuración, código y datos en carpetas distintas permite localizar antes cada cambio y reduce errores de mantenimiento.</li>
+</ol>
+<hr />
+<h2 id="mini-ejercicio-14">Mini ejercicio 14<a class="headerlink" href="#mini-ejercicio-14" title="Permanent link">&para;</a></h2>
+<ol>
+<li><code>404 Not Found</code> al abrir <code>http://localhost:8080/logo.png</code> → <code>docker compose logs nginx</code>. La petición la recibe Nginx y el problema suele estar en la ruta o en la publicación del recurso estático.</li>
+<li>Error PHP al abrir <code>http://localhost:8080/index.php</code> → <code>docker compose logs php</code>. El código se ejecuta en PHP-FPM y ahí aparecerá el error de ejecución.</li>
+<li>Mensaje <code>SQLSTATE[HY000] [2002] Connection refused</code> → <code>docker compose logs</code>. La visión global permite comprobar rápidamente si el fallo viene de la aplicación, del arranque de la base de datos o de ambos servicios.</li>
+<li>El servicio <code>db</code> se detiene nada más arrancar → <code>docker compose logs db</code>. El primer lugar donde mirar es el propio servicio de base de datos que está fallando al iniciar.</li>
+</ol>
+<hr />
+<h2 id="mini-ejercicio-15">Mini ejercicio 15<a class="headerlink" href="#mini-ejercicio-15" title="Permanent link">&para;</a></h2>
+<ol>
+<li>No subiría  <code>DB_PASSWORD=ut1pass</code> ni <code>DB_ROOT_PASSWORD=rootpass</code>, porque son credenciales de acceso.</li>
+<li>Se están publicando los puertos <code>8080:80</code> para <code>nginx</code> y <code>3307:3306</code> para <code>db</code>.</li>
+<li>No hace falta publicar todos esos puertos al exterior: para la mayoría de prácticas basta con publicar la web y mantener la base de datos accesible solo dentro del stack.</li>
+<li>Ventaja concreta: una documentación clara permite reproducir el entorno, saber qué servicio expone cada puerto y localizar antes dónde modificar la configuración.</li>
+</ol>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
