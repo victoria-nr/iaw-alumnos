@@ -99,18 +99,18 @@ Tu aplicación debe:
 2. procesar el formulario con PHP;
 3. comprobar que la petición se ha enviado por `POST`;
 4. validar como mínimo:
-   1.  que el nombre no esté vacío;
-   2.  que el correo no esté vacío y tenga un formato válido;
-   3.  que se haya elegido un plan correcto;
-   4.  que los meses sean un número entero entre 1 y 24;
+    1.  que el nombre no esté vacío;
+    2.  que el correo no esté vacío y tenga un formato válido;
+    3.  que se haya elegido un plan correcto;
+    4.  que los meses sean un número entero entre 1 y 24;
   
 5. mostrar mensajes de error claros;
 6. conservar los valores introducidos si existe algún error;
 7. calcular:
-   1. precio del plan;
-   2. precio de los extras;
-   3. total mensual;
-   4. total final;
+    1. precio del plan;
+    2. precio de los extras;
+    3. total mensual;
+    4. total final;
   
 8.  utilizar al menos:
     1.  un `if` / `elseif` / `else`;
