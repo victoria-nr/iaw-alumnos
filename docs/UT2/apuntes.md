@@ -1206,7 +1206,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } 
     ?>
 
-    <form method="post">
+    <form action="procesar.php" method="post">
         <label>
             Nombre
             <input type="text" name="nombre" value="<?php echo htmlspecialchars($nombre); ?>">
