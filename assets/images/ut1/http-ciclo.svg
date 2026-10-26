@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300">
+  <style>
+    .title{font:700 22px Arial,sans-serif; fill:#1f2937}
+    .label{font:700 18px Arial,sans-serif; fill:#111827}
+    .text{font:14px Arial,sans-serif; fill:#374151}
+    .small{font:13px Arial,sans-serif; fill:#4b5563}
+    .box{rx:18; ry:18; stroke:#475569; stroke-width:2}
+    .arrow{stroke:#475569; stroke-width:3; fill:none; marker-end:url(#m)}
+  </style>
+  <defs>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <text x="40" y="40" class="title">Ciclo básico petición / respuesta HTTP</text>
+  <rect x="60" y="95" width="200" height="120" class="box" fill="#dbeafe"/>
+  <text x="160" y="130" text-anchor="middle" class="label">Cliente</text>
+  <text x="160" y="160" text-anchor="middle" class="text">Navegador</text>
+  <text x="160" y="185" text-anchor="middle" class="small">Envía URL, método, cabeceras</text>
+
+  <rect x="380" y="95" width="200" height="120" class="box" fill="#e0e7ff"/>
+  <text x="480" y="130" text-anchor="middle" class="label">Servidor</text>
+  <text x="480" y="160" text-anchor="middle" class="text">Procesa la petición</text>
+  <text x="480" y="185" text-anchor="middle" class="small">Busca recurso o ejecuta código</text>
+
+  <rect x="700" y="95" width="200" height="120" class="box" fill="#dcfce7"/>
+  <text x="800" y="130" text-anchor="middle" class="label">Respuesta</text>
+  <text x="800" y="160" text-anchor="middle" class="text">Código + cabeceras + cuerpo</text>
+  <text x="800" y="185" text-anchor="middle" class="small">HTML, JSON, imagen, error...</text>
+
+  <path d="M260 140 H380" class="arrow"/>
+  <path d="M580 170 H700" class="arrow"/>
+  <text x="320" y="125" text-anchor="middle" class="small">Petición</text>
+  <text x="640" y="155" text-anchor="middle" class="small">Respuesta</text>
+</svg>
