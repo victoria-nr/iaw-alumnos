@@ -1333,112 +1333,436 @@ No conviene usar cookies para guardar información sensible como si fueran una c
 
 ## 13. Sesiones
 
-Las sesiones son el mecanismo principal de esta UT para mantener estado de usuario.
+Las sesiones son el mecanismo principal de esta UT para mantener el estado de un usuario entre distintas peticiones.
 
-### Idea sencilla
-Una sesión permite asociar información a un usuario entre distintas peticiones.
+El objetivo es comprender **qué información llega en una petición, dónde se guarda y cómo se recupera después**.
 
-Normalmente el navegador conserva un identificador de sesión y el servidor usa ese identificador para recuperar los datos correspondientes.
+### ¿Por qué necesitamos sesiones?
 
-### Primera regla
-Antes de trabajar con `$_SESSION`, hay que iniciar sesión:
+HTTP es un protocolo sin estado: una petición no conserva por sí sola lo ocurrido en la anterior.
+
+En los ejemplos de esta UT, cada petición vuelve a ejecutar el fichero PHP. Una variable normal, como `$nombre`, no conserva automáticamente su valor de una ejecución a otra.
+
+| Dato | Qué representa | ¿Se conserva automáticamente para otra petición? |
+| --- | --- | --- |
+| `$nombre` | Una variable de la ejecución actual. | No. |
+| `$_GET['nombre']` | Un parámetro de la URL de esta petición. | No: debe volver a enviarse en la URL. |
+| `$_POST['nombre']` | Un campo enviado en el cuerpo de esta petición. | No: debe volver a enviarse. |
+| `$_SESSION['nombre']` | Un dato guardado en la sesión del servidor. | Puede recuperarse en otra petición asociada a esa sesión. |
+
+**GET y POST transportan datos. La sesión permite conservarlos entre peticiones.** Usar POST no guarda automáticamente un dato en sesión.
+
+### Idea sencilla: identificador y datos
+
+Una sesión permite asociar información a un contexto de navegación, aunque todavía no haya un usuario identificado con nombre y contraseña.
+
+En el funcionamiento habitual de PHP:
+
+1. El servidor crea una sesión y le asigna un identificador.
+2. El navegador guarda ese identificador en una cookie, normalmente llamada `PHPSESSID`.
+3. En las siguientes peticiones correspondientes a esa cookie, el navegador envía el identificador.
+4. PHP lo utiliza para recuperar los datos de la sesión en el servidor.
+
+**La cookie suele guardar el identificador; los datos de `$_SESSION` se guardan en el servidor.**
+
+La sesión no depende de usar GET o POST: ambos tipos de petición pueden enviar la cookie identificadora.
+
+### Primera regla: iniciar o recuperar la sesión
+
+Antes de trabajar con `$_SESSION`, hay que ejecutar:
 
 ```php
 <?php
 session_start();
 ```
+
+`session_start()` inicia una sesión o recupera la existente. **No significa iniciar sesión con usuario y contraseña ni borra los datos anteriores.**
+
+En estos ejemplos se coloca al principio del fichero, antes del HTML, de un `echo` o de cualquier texto de salida, porque puede necesitar enviar cabeceras HTTP.
+
+Cada página que necesite usar la sesión debe ejecutar esta instrucción.
 
 ### Guardar datos en sesión
 
 ```php
 <?php
 session_start();
+
 $_SESSION['usuario'] = 'ana';
 $_SESSION['rol'] = 'cliente';
 ```
 
-### Leer datos de sesión
+Se guarda un valor asociado a cada clave. Asignar otro valor a la misma clave sustituye al anterior.
+
+Para guardar un nombre recibido de un formulario:
 
 ```php
 <?php
 session_start();
-$usuario = $_SESSION['usuario'] ?? 'invitado';
-echo $usuario;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nombre = trim($_POST['nombre'] ?? '');
+
+    if ($nombre !== '') {
+        $_SESSION['usuario'] = $nombre;
+    }
+}
 ```
 
-### Vaciar y destruir la sesión
+Aquí se distinguen tres pasos: **recibir**, **comprobar** y **guardar**. Un envío vacío no sustituye el nombre anterior.
+
+### Leer datos en otra petición
+
+Otro fichero, por ejemplo `perfil.php`, puede recuperar el nombre sin recibir de nuevo el formulario:
 
 ```php
 <?php
 session_start();
+
+$usuario = $_SESSION['usuario'] ?? 'invitado';
+
+echo 'Usuario: ' . htmlspecialchars($usuario);
+```
+
+El operador `??` utiliza `'invitado'` si la clave no existe o su valor es nulo. No guarda ese valor en la sesión.
+
+`htmlspecialchars()` permite mostrar el texto como contenido y evita interpretarlo como HTML.
+
+**Prueba importante:** guarda el nombre y abre `perfil.php` mediante un enlace que no incluya ese nombre. Si aparece, se está recuperando de la sesión.
+
+Ver un texto justo después de enviar un formulario no demuestra por sí solo que se haya guardado: también podría mostrarse directamente desde `$_POST`.
+
+### ¿Hace falta usar dos ficheros?
+
+No. Una sesión funciona entre peticiones al mismo fichero o a distintos ficheros que accedan a esa sesión.
+
+Tampoco hay normalmente una sesión distinta por pestaña: las pestañas del mismo contexto de navegación suelen compartir la cookie. Otro navegador o un contexto privado separado puede tener otra sesión.
+
+> Dos ventanas privadas del mismo navegador pueden compartir las cookies privadas. Para comparar usuarios, utiliza contextos de navegación independientes.
+
+### Borrar datos de sesión
+
+**Borrar solo un dato**, conservando los demás:
+
+```php
+<?php
+session_start();
+
+unset($_SESSION['usuario']);
+```
+
+**Vaciar los datos y destruir la sesión del servidor:**
+
+```php
+<?php
+session_start();
+
 $_SESSION = [];
 session_destroy();
 ```
 
-### ¿Cuándo usar sesión y cuándo cookie?
-Una regla práctica para esta UT:
+- `$_SESSION = [];` vacía los datos accesibles en la ejecución actual.
+- `session_destroy();` destruye los datos asociados a la sesión en el servidor.
 
-- **cookie**: preferencia o dato sencillo que viaja asociado al navegador;
-- **sesión**: estado de usuario que la aplicación necesita para funcionar.
+Este último código no elimina por sí solo la cookie identificadora del navegador. Para estos ejercicios, lo que comprobamos es que los datos anteriores ya no se recuperan.
+
+Si varios ejercicios comparten la misma sesión, vaciarla afecta a los datos de todos ellos. Borrar una sola clave afecta únicamente a esa clave.
+
+### ¿Cuándo usar sesión y cuándo cookie?
+
+| Mecanismo | Dónde se guarda el dato | Ejemplo |
+| --- | --- | --- |
+| Cookie | En el navegador; se envía en las peticiones a las que corresponde. | Una preferencia de color. |
+| Sesión | En el servidor; normalmente se recupera gracias a una cookie identificadora. | Un contador o el usuario reconocido por la aplicación. |
+
+No son mecanismos excluyentes: **las sesiones de PHP suelen utilizar una cookie para funcionar**.
+
+La duración depende de la configuración y de la caducidad. No debe suponerse que cerrar una pestaña borra la sesión.
 
 ### Metáfora útil
-- la cookie es como una etiqueta que el navegador conserva;
-- la sesión es como la ficha del usuario que el servidor recupera usando esa etiqueta.
+
+La cookie identificadora es como una etiqueta que lleva el navegador. La sesión es como una ficha que conserva el servidor y localiza leyendo esa etiqueta.
 
 ---
 
 ## 13.1. Ejemplo: contador en sesión
 
+Fichero `contador.php`:
+
 ```php
 <?php
 session_start();
+
+if (isset($_POST['reiniciar'])) {
+    $_SESSION['contador'] = 0;
+}
 
 if (!isset($_SESSION['contador'])) {
     $_SESSION['contador'] = 0;
 }
 
 $_SESSION['contador']++;
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador en sesión</title>
+</head>
+<body>
+    <h1>Contador de visitas</h1>
+    <p>Has entrado en esta página <?php echo $_SESSION['contador']; ?> veces.</p>
 
-echo 'Has visitado esta página ' . $_SESSION['contador'] . ' veces.';
+    <p><a href="contador.php">Nueva visita</a></p>
+
+    <form method="post">
+        <button type="submit" name="reiniciar" value="1">Reiniciar contador</button>
+    </form>
+</body>
+</html>
 ```
 
-### Qué demuestra este ejemplo
-- que el valor persiste entre peticiones del mismo usuario;
-- que una variable normal no serviría para eso;
-- que el estado queda ligado a la sesión.
+### Cómo leer este código
+
+1. Se recupera la sesión.
+2. Si llega el botón `reiniciar` por POST, el contador se pone a cero.
+3. Si el contador todavía no existe, se inicializa.
+4. Se incrementa una vez por cada petición a esta página.
+
+En una sesión nueva se muestra **1**. Al seguir el enlace se muestra **2**, después **3**, etc.
+
+Al reiniciar también se muestra **1**, porque primero se asigna cero y después se cuenta la petición actual.
+
+El enlace realiza una petición GET. El formulario realiza una petición POST al mismo fichero, porque no tiene un `action` distinto.
+
+### Qué demuestra
+
+El fichero se ejecuta de nuevo en cada petición, pero recupera el contador anterior de la sesión. Si se asignara cero incondicionalmente en cada ejecución, siempre aparecería 1.
+
+Para probar las visitas después de un POST, utiliza el enlace: recargar directamente la respuesta del formulario puede provocar que el navegador proponga reenviar el POST.
 
 ---
 
 ## 13.2. Ejemplo: recordar un color favorito con cookie
 
+En este caso el color se guarda directamente en una cookie del navegador. No se necesita `session_start()`.
+
+Fichero completo `color.php`:
+
 ```php
 <?php
-$color = $_POST['color'] ?? null;
+$color = $_POST['color'] ?? '';
 
-if ($color !== null) {
+if (in_array($color, ['azul', 'verde', 'rojo'], true)) {
     setcookie('color_favorito', $color, time() + 86400 * 30);
-    header('Location: color.php');
+    header('Location: color.php', true, 303);
     exit;
 }
 
 $colorGuardado = $_COOKIE['color_favorito'] ?? 'sin definir';
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Color favorito</title>
+</head>
+<body>
+    <h1>Color favorito</h1>
+    <p>Color guardado: <?php echo htmlspecialchars($colorGuardado); ?></p>
+
+    <form method="post">
+        <select name="color">
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="rojo">Rojo</option>
+        </select>
+        <button type="submit">Guardar color</button>
+    </form>
+</body>
+</html>
 ```
 
-### Qué enseña este ejemplo
-- lectura y escritura de cookies;
-- necesidad de enviar cabeceras antes del HTML;
-- redirección tras procesar un formulario.
+### Qué sucede entre el navegador y el servidor
 
-### La función `header()`
-La función **`header()`** se utiliza en PHP para enviar cabeceras HTTP en crudo al navegador web. En este ejemplo concreto, se usa `header('Location: color.php');` para **redirigir automáticamente al usuario** a otra página (a `color.php`) justo después de guardar la cookie. Es una herramienta fundamental tras procesar formularios (patrón POST-Redirect-GET), ya que evita que el usuario reenvíe los datos accidentalmente si refresca la página.
+| Paso | Petición o respuesta | Qué sucede |
+| --- | --- | --- |
+| 1 | POST a `color.php` | El formulario envía el color. |
+| 2 | Respuesta del servidor | `setcookie()` envía una cabecera `Set-Cookie`. `header()` envía una redirección con `Location`. |
+| 3 | GET a `color.php` | El navegador solicita de nuevo la página y envía la cookie guardada mediante la cabecera `Cookie`. |
+| 4 | Nueva respuesta | PHP lee `$_COOKIE['color_favorito']` y muestra el color. |
 
-> **Importante:** La función `header()` debe llamarse obligatoriamente **antes de que se envíe cualquier tipo de salida HTML o texto** al navegador; de lo contrario, PHP mostrará un error. Por eso se suele acompañar de un `exit;` justo después, interrumpiendo el script para asegurar que la redirección se ejecute de inmediato de forma limpia.
+`86400 * 30` representa 30 días expresados en segundos.
+
+**`setcookie()` no modifica inmediatamente `$_COOKIE` en la petición actual.** El nuevo valor llega cuando el navegador vuelve a enviarlo en una petición posterior.
+
+### La función `header()` y la redirección
+
+`header()` envía una cabecera HTTP en la respuesta. En este ejemplo, `Location` indica al navegador qué dirección debe solicitar.
+
+El código **303** indica que, después del POST, el navegador debe solicitar la página de destino mediante GET.
+
+`exit;` detiene la ejecución del PHP actual: `header()` no la detiene por sí sola.
+
+Este recorrido se llama **POST-Redirect-GET**. Permite que una recarga normal de la página final repita el GET en lugar del envío del formulario. La redirección es útil, pero no es un requisito para utilizar cookies o sesiones.
+
+> Coloca `setcookie()` y `header()` antes de generar HTML o texto, porque las cabeceras deben enviarse antes del cuerpo de la respuesta.
+
+### Observación desde las herramientas del navegador
+
+En la pestaña **Red / Network**, envía el formulario y localiza el POST, la respuesta 303 y el GET posterior. Examina las cabeceras `Set-Cookie`, `Location` y `Cookie`.
+
+En el contador puedes observar también la cookie identificadora de sesión. El valor del contador permanece en el servidor: no aparece como contenido de esa cookie.
 
 ---
 
 ### Mini ejercicio 17
-Haz una página PHP que use sesión para contar cuántas veces entra el usuario. Añade un botón para reiniciar el contador.
 
+Utiliza el contador anterior y realiza estas comprobaciones:
+
+1. Predice qué aparecerá en la primera visita y después de seguir tres veces el enlace.
+2. Comprueba si otra pestaña del mismo navegador continúa el contador.
+3. Compara con otro navegador o contexto de navegación independiente.
+4. Explica por qué reiniciar muestra 1.
+5. Sustituye temporalmente la inicialización condicional por una asignación a cero en cada petición. Explica por qué deja de acumular visitas.
+
+**Idea final:** una variable normal pertenece a una ejecución; GET y POST aportan datos a una petición; la sesión permite recuperar estado entre peticiones.
+
+---
+
+## 13.3. Ejercicios guiados: comprender las sesiones
+
+En estos ejercicios vamos a observar qué sucede con los datos entre distintas peticiones HTTP.
+
+Trabajaremos con cinco ejercicios PHP que puedes encontrar en el siguiente [enlace](ejer_sesiones_guiados.zip). Descarga y descomprime la carpeta y colócala en un servidor con PHP (puedes usar el entorno web de la UT1). Accede a los ejercicios por HTTP desde el navegador. El objetivo no es escribir una aplicación desde cero, sino **ejecutar el código, leerlo y explicar su funcionamiento**.
+
+### Forma de trabajo
+
+Para cada comprobación:
+
+1. Predice qué resultado aparecerá.
+2. Ejecuta la prueba.
+3. Compara el resultado con tu predicción.
+4. Localiza las instrucciones PHP que explican lo ocurrido.
+
+Accede a los ejercicios mediante el servidor web, no abriendo los archivos directamente desde el disco.
+
+> Para comprobar una nueva petición, utiliza los enlaces de los ejercicios. El botón Atrás puede mostrar una página guardada en el historial sin volver a ejecutar PHP.
+
+### Ejercicio 1. Una variable normal: sin sesión
+
+**Archivos:** `01-sin-sesion/formulario.php` y `01-sin-sesion/procesar.php`.
+
+**Objetivo:** comprobar que enviar un dato mediante POST no implica conservarlo para otras peticiones.
+
+1. Abre el formulario. ¿Qué valor tiene `$texto`?
+2. Escribe `Hola clase` y envía. ¿Por qué puede mostrarlo `procesar.php`?
+3. Pulsa **Abrir de nuevo esta página sin enviar el formulario**. Es la misma ruta, pero ahora el enlace hace una petición GET. ¿Sigue disponible el texto?
+4. Vuelve al formulario mediante el enlace. ¿Aparece allí el texto?
+5. Identifica en el código dónde recibe el dato la segunda página y dónde se inicializa la variable de la primera.
+
+**Explica:** ¿comparten los dos ficheros una variable por llamarla igual? ¿Qué significa `$_POST['texto'] ?? ''`?
+
+No uses el botón Atrás como comprobación: el navegador puede mostrar una página anterior conservada en su historial.
+
+
+### Ejercicio 2. Conservar un texto: con sesión
+
+**Archivos:** `02-con-sesion/formulario.php` y `02-con-sesion/procesar.php`.
+
+**Objetivo:** recuperar un dato en otra petición sin volver a enviarlo.
+
+
+1. Abre el formulario y comprueba que todavía no hay texto guardado.
+2. Envía `Hola sesión`.
+3. Pulsa **Abrir de nuevo esta página sin enviar el formulario**. ¿Ha llegado un POST? ¿Sigue disponible el dato de sesión?
+4. Vuelve al formulario mediante el enlace. No se envía ningún texto en ese enlace. ¿De dónde sale el que se muestra?
+5. Guarda `Segundo texto` y repite el recorrido. ¿Se acumulan ambos textos o se sustituye uno por otro?
+6. Envía un campo vacío. ¿Se pierde el texto anterior?
+
+**Localiza y explica:** la instrucción que inicia la sesión, la que guarda el texto y la que lo recupera. ¿Por qué iniciar la sesión en ambos ficheros?
+
+### ¿De quién es la sesión?
+
+1. Abre el formulario del ejercicio 2 en otra pestaña del mismo navegador y contexto de navegación. ¿Ves el mismo texto?
+2. Abre esa misma dirección en otro navegador o en un contexto privado separado del primero. ¿Ves el texto guardado?
+3. Guarda un texto diferente allí y vuelve al contexto original.
+
+**Explica:** ¿hay una sesión por fichero, por pestaña o asociada al navegador mediante un identificador? Dos ventanas de incógnito del mismo navegador pueden compartir la misma sesión privada: no las uses como si fueran dos usuarios distintos.
+
+### Ejercicio 3. Contador en un único archivo
+
+**Archivo:** `03-contador/contador.php`.
+
+**Objetivo:** comprobar que una sesión también funciona entre peticiones al mismo archivo.
+
+
+1. Abre la página. Anota el contador.
+2. Pulsa tres veces **Hacer una nueva visita sin enviar el formulario**.
+3. Abre la misma dirección en otra pestaña del mismo navegador. ¿Continúa el contador?
+4. Comprueba el contador en un contexto de navegación separado.
+5. Pulsa **Reiniciar contador**. Antes de hacerlo, predice si aparecerá 0 o 1.
+6. Tras reiniciar, usa el enlace para continuar las visitas.
+
+**Explica:** ¿por qué se muestra 1 al reiniciar? ¿Cuántas veces se ejecuta PHP si solicitas el mismo fichero varias veces?
+
+**Pequeña modificación:** cambia únicamente la inicialización para que el contador empiece de cero en cada petición, incluso si ya existía. Comprueba que deja de acumular visitas y después restaura el código.
+
+Evita recargar directamente la respuesta de un POST durante estas pruebas: el navegador puede proponer reenviar el formulario de reinicio.
+
+### Ejercicio 4. El intento actual y la última palabra válida
+
+**Archivo:** `04-validacion/palabra.php`.
+
+**Objetivo:** distinguir los datos de la petición actual de los datos que interesa conservar.
+
+Se aceptan palabras con letras A-Z en mayúsculas, sin tildes ni ñ, para mantener la validación original con `ctype_upper()`.
+
+1. Envía `HOLA`. ¿Qué se guarda?
+2. Envía `hola`. ¿Qué aparece en el campo? ¿Qué palabra sigue guardada como válida?
+3. Envía el campo vacío.
+4. Envía `ADIOS`. ¿Desaparece el error? ¿Se actualiza la palabra guardada?
+5. Pulsa **Volver sin enviar el formulario**. ¿Permanecen el intento actual, el error y la última palabra válida?
+
+Completa esta tabla con tus resultados:
+
+| Después de… | Valor del campo | Error visible | Última palabra válida |
+| --- | --- | --- | --- |
+| Enviar HOLA | | | |
+| Enviar hola | | | |
+| Enviar vacío | | | |
+| Enviar ADIOS | | | |
+| Seguir el enlace sin enviar | | | |
+
+**Explica:** ¿por qué `$palabra` y `$error` son variables normales mientras que la última palabra válida se guarda en sesión? ¿Qué ocurriría si la asignación a `$_SESSION['ultimaPalabra']` se hiciera antes de validar?
+
+### Ejercicio 5. Vaciar y destruir la sesión
+
+**Archivos:** `05-cerrar-sesion/usuario.php` y `05-cerrar-sesion/cerrar.php`.
+
+**Objetivo:** comprobar el efecto de borrar los datos de una sesión.
+
+Este ejercicio guarda un nombre para reconocer al usuario durante el ejercicio. No valida contraseñas ni implementa un inicio de sesión real.
+
+1. Guarda antes un texto en el ejercicio 2 y acumula varias visitas en el 3.
+2. Abre `usuario.php` y guarda `Ana`.
+3. Pulsa **Volver sin enviar el formulario**. ¿Por qué sigue apareciendo Ana?
+4. Pulsa **Vaciar y destruir la sesión**.
+5. Sigue el enlace de vuelta. ¿Qué usuario aparece?
+6. Usa los enlaces para revisar el texto del ejercicio 2 y el contador del 3.
+7. Vuelve al ejercicio 4 mediante una petición nueva. ¿Continúa la última palabra válida?
+
+**Explica:** ¿qué hace `$_SESSION = [];`? ¿Qué hace `session_destroy();`? ¿Por qué el borrado afecta a otros ejercicios si los ficheros están en carpetas distintas?
+
+**Ampliación opcional:** en una copia, sustituye el vaciado y la destrucción por `unset($_SESSION['usuario']);`. Comprueba que desaparece el nombre, pero se mantienen el texto y el contador.
+
+## Preguntas finales
+
+1. Si un texto aparece inmediatamente después de enviar un formulario, ¿demuestra eso por sí solo que se ha usado una sesión?
+2. Diseña una prueba que sí demuestre que el dato persiste sin reenviarlo.
+3. ¿Por qué un contador puede usar sesiones con un solo fichero?
+4. ¿En qué se diferencian limpiar un campo del formulario, borrar una variable local y borrar un dato de sesión?
+5. ¿Es necesario guardar todos los mensajes de error en sesión? Justifica con el ejercicio 4.
 ---
 
 ## 14. Autenticación básica
