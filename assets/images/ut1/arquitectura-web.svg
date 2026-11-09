@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320">
+  <style>
+    .title{font:700 22px Arial,sans-serif; fill:#1f2937}
+    .label{font:700 18px Arial,sans-serif; fill:#111827}
+    .text{font:14px Arial,sans-serif; fill:#374151}
+    .small{font:13px Arial,sans-serif; fill:#4b5563}
+    .box{rx:18; ry:18; stroke:#475569; stroke-width:2}
+    .arrow{stroke:#475569; stroke-width:3; fill:none; marker-end:url(#m)}
+  </style>
+  <defs>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <text x="40" y="40" class="title">Arquitectura mínima de la UT1</text>
+  <rect x="40" y="90" width="180" height="150" class="box" fill="#dbeafe"/>
+  <text x="130" y="125" text-anchor="middle" class="label">Cliente</text>
+  <text x="130" y="155" text-anchor="middle" class="text">Navegador web</text>
+  <text x="130" y="180" text-anchor="middle" class="small">Hace peticiones HTTP</text>
+  <text x="130" y="200" text-anchor="middle" class="small">Muestra la respuesta</text>
+
+  <rect x="280" y="90" width="180" height="150" class="box" fill="#e0e7ff"/>
+  <text x="370" y="125" text-anchor="middle" class="label">Servidor web</text>
+  <text x="370" y="155" text-anchor="middle" class="text">Nginx</text>
+  <text x="370" y="180" text-anchor="middle" class="small">Recibe la petición</text>
+  <text x="370" y="200" text-anchor="middle" class="small">Sirve estáticos y reenvía PHP</text>
+
+  <rect x="520" y="90" width="180" height="150" class="box" fill="#dcfce7"/>
+  <text x="610" y="125" text-anchor="middle" class="label">Servidor de aplicaciones</text>
+  <text x="610" y="155" text-anchor="middle" class="text">PHP-FPM</text>
+  <text x="610" y="180" text-anchor="middle" class="small">Ejecuta el código PHP</text>
+  <text x="610" y="200" text-anchor="middle" class="small">Genera HTML o datos</text>
+
+  <rect x="760" y="90" width="160" height="150" class="box" fill="#fef3c7"/>
+  <text x="840" y="125" text-anchor="middle" class="label">Base de datos</text>
+  <text x="840" y="155" text-anchor="middle" class="text">MariaDB</text>
+  <text x="840" y="180" text-anchor="middle" class="small">Guarda datos</text>
+  <text x="840" y="200" text-anchor="middle" class="small">Responde consultas</text>
+
+  <path d="M220 165 H280" class="arrow"/>
+  <path d="M460 165 H520" class="arrow"/>
+  <path d="M700 165 H760" class="arrow"/>
+  <path d="M760 215 H700" class="arrow"/>
+  <path d="M520 215 H460" class="arrow"/>
+  <path d="M280 215 H220" class="arrow"/>
+</svg>

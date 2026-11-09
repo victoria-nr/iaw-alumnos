@@ -1,0 +1,3040 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y practicas del modulo Implantacion de Aplicaciones Web">
+      
+      
+      
+        <link rel="canonical" href="https://TU_USUARIO.github.io/iaw-alumnos/UT2/solucion-ejercicios/">
+      
+      
+        <link rel="prev" href="../practica-2/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Solucion ejercicios - IAW - ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#solucion-de-los-mini-ejercicios-ut2-programacion-web-en-servidor-con-php" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="IAW - ASIR" class="md-header__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solucion ejercicios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IAW - ASIR" class="md-nav__button md-logo" aria-label="IAW - ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IAW - ASIR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TU_USUARIO/iaw-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TU_USUARIO/iaw-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-github-entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git y GitHub para entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planificacion del curso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1. Entorno de implantacion web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1. Entorno de implantacion web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/solucion-ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solucion ejercicios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UT1/practica-2-sol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solucion practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT2. Programacion web en servidor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT2. Programacion web en servidor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes de teoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia rapida de comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solucion ejercicios
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solucion ejercicios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-que-significa-que-un-lenguaje-sea-de-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Qué significa que un lenguaje sea “de servidor”?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-nombra-tres-lenguajes-de-servidor-distintos-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Nombra tres lenguajes de servidor distintos de PHP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-por-que-tiene-sentido-empezar-con-php-en-esta-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ¿Por qué tiene sentido empezar con PHP en esta unidad?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-quien-envia-la-peticion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Quién envía la petición?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-quien-procesa-los-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. ¿Quién procesa los datos?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-quien-muestra-la-pagina-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ¿Quién muestra la página final?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 4
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 5
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 6
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 7
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 8
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 9
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 10
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 11
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 11">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 13
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 13">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 14
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 15
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 15">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 16
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 16">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 17
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-guiados-comprender-las-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicios guiados: comprender las sesiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios guiados: comprender las sesiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sin-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Sin sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-con-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Con sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-contador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-cerrar-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cerrar sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-finales-ideas-que-deben-aparecer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas finales: ideas que deben aparecer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 18
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 19
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 19">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#errores-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades-finales-de-repaso-solucion-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividades finales de repaso (solución orientativa)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividades finales de repaso (solución orientativa)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actividad-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividad 20
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividad 21
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividad 22
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividad 23
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividad 24
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-que-significa-que-un-lenguaje-sea-de-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Qué significa que un lenguaje sea “de servidor”?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-nombra-tres-lenguajes-de-servidor-distintos-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Nombra tres lenguajes de servidor distintos de PHP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-por-que-tiene-sentido-empezar-con-php-en-esta-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ¿Por qué tiene sentido empezar con PHP en esta unidad?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-quien-envia-la-peticion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Quién envía la petición?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-quien-procesa-los-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. ¿Quién procesa los datos?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-quien-muestra-la-pagina-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ¿Quién muestra la página final?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 4
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 5
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 6
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 7
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 8
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 9
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 10
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 11
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 11">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 13
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 13">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 14
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 15
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 15">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 16
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 16">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 17
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-guiados-comprender-las-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicios guiados: comprender las sesiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios guiados: comprender las sesiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sin-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Sin sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-con-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Con sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-contador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-cerrar-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cerrar sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-finales-ideas-que-deben-aparecer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas finales: ideas que deben aparecer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 18
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicio-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini ejercicio 19
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini ejercicio 19">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#errores-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucion-propuesta_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades-finales-de-repaso-solucion-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividades finales de repaso (solución orientativa)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividades finales de repaso (solución orientativa)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actividad-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividad 20
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividad 21
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividad 22
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividad 23
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividad 24
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="solucion-de-los-mini-ejercicios-ut2-programacion-web-en-servidor-con-php">Solución de los mini ejercicios · UT2 · Programación web en servidor con PHP<a class="headerlink" href="#solucion-de-los-mini-ejercicios-ut2-programacion-web-en-servidor-con-php" title="Permanent link">&para;</a></h1>
+<p>Este documento recoge las soluciones propuestas para los ejercicios breves de <code>apuntes.md</code>.</p>
+<blockquote>
+<p><strong>Nota didáctica:</strong> en programación suele haber varias soluciones correctas. Las que aparecen aquí no son las únicas posibles, pero sí son claras, válidas y coherentes con el enfoque de la unidad.</p>
+</blockquote>
+<hr />
+<h2 id="mini-ejercicio-1">Mini ejercicio 1<a class="headerlink" href="#mini-ejercicio-1" title="Permanent link">&para;</a></h2>
+<h3 id="1-que-significa-que-un-lenguaje-sea-de-servidor">1. ¿Qué significa que un lenguaje sea “de servidor”?<a class="headerlink" href="#1-que-significa-que-un-lenguaje-sea-de-servidor" title="Permanent link">&para;</a></h3>
+<p>Significa que el código se ejecuta en el servidor web, no en el navegador del usuario, y que el cliente recibe solo el resultado generado.</p>
+<h3 id="2-nombra-tres-lenguajes-de-servidor-distintos-de-php">2. Nombra tres lenguajes de servidor distintos de PHP<a class="headerlink" href="#2-nombra-tres-lenguajes-de-servidor-distintos-de-php" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Python</li>
+<li>JavaScript en servidor con Node.js</li>
+<li>Java</li>
+</ul>
+<h3 id="3-por-que-tiene-sentido-empezar-con-php-en-esta-unidad">3. ¿Por qué tiene sentido empezar con PHP en esta unidad?<a class="headerlink" href="#3-por-que-tiene-sentido-empezar-con-php-en-esta-unidad" title="Permanent link">&para;</a></h3>
+<p>Porque PHP se integra muy bien con HTML, permite hacer ejemplos web funcionales muy rápido y ayuda a entender con claridad el modelo petición-respuesta.</p>
+<hr />
+<h2 id="mini-ejercicio-2">Mini ejercicio 2<a class="headerlink" href="#mini-ejercicio-2" title="Permanent link">&para;</a></h2>
+<p>Imagina que un formulario pide nombre y correo.</p>
+<h3 id="1-quien-envia-la-peticion">1. ¿Quién envía la petición?<a class="headerlink" href="#1-quien-envia-la-peticion" title="Permanent link">&para;</a></h3>
+<p>La envía el navegador del usuario cuando este rellena el formulario y pulsa el botón de enviar.</p>
+<h3 id="2-quien-procesa-los-datos">2. ¿Quién procesa los datos?<a class="headerlink" href="#2-quien-procesa-los-datos" title="Permanent link">&para;</a></h3>
+<p>Los procesa el servidor, ejecutando el código PHP que recibe la petición.</p>
+<h3 id="3-quien-muestra-la-pagina-final">3. ¿Quién muestra la página final?<a class="headerlink" href="#3-quien-muestra-la-pagina-final" title="Permanent link">&para;</a></h3>
+<p>La página final la muestra el navegador, pero lo hace a partir del HTML que le devuelve el servidor.</p>
+<hr />
+<h2 id="mini-ejercicio-3">Mini ejercicio 3<a class="headerlink" href="#mini-ejercicio-3" title="Permanent link">&para;</a></h2>
+<p>Crea un archivo <code>hola.php</code> que muestre:
+- un título con tu nombre,
+- un párrafo diciendo que la página se genera en servidor,
+- y la fecha del día usando PHP.</p>
+<h3 id="solucion-propuesta">Solución propuesta<a class="headerlink" href="#solucion-propuesta" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">$nombre</span> <span class="o">=</span> <span class="s1">'Victoria'</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nv">$fechaHoy</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s1">'d/m/Y'</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">?&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="x">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="x">&lt;html lang="es"&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="x">&lt;head&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="x">    &lt;meta charset="UTF-8"&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="x">    &lt;title&gt;Hola desde PHP&lt;/title&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="x">&lt;/head&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="x">&lt;body&gt;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="x">    &lt;h1&gt;Hola, soy </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$nombre</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="x">    &lt;p&gt;Esta página se genera en el servidor con PHP.&lt;/p&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="x">    &lt;p&gt;Fecha de hoy: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$fechaHoy</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="x">&lt;/body&gt;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="x">&lt;/html&gt;</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-4">Mini ejercicio 4<a class="headerlink" href="#mini-ejercicio-4" title="Permanent link">&para;</a></h2>
+<p>Crea un array asociativo con datos de un servicio web:
+- nombre,
+- precio mensual,
+- si incluye dominio,
+- si incluye soporte.</p>
+<p>Después muestra esos datos dentro de una lista HTML.</p>
+<h3 id="solucion-propuesta_1">Solución propuesta<a class="headerlink" href="#solucion-propuesta_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nv">$servicio</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="s1">'nombre'</span> <span class="o">=&gt;</span> <span class="s1">'Hosting Profesional'</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="s1">'precio_mensual'</span> <span class="o">=&gt;</span> <span class="mi">9</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="s1">'incluye_dominio'</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="s1">'incluye_soporte'</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">];</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="cp">?&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="x">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="x">&lt;html lang="es"&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="x">&lt;head&gt;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="x">    &lt;meta charset="UTF-8"&gt;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="x">    &lt;title&gt;Servicio web&lt;/title&gt;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="x">&lt;/head&gt;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="x">&lt;body&gt;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="x">    &lt;h1&gt;Ficha del servicio&lt;/h1&gt;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="x">    &lt;ul&gt;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="x">        &lt;li&gt;Nombre: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$servicio</span><span class="p">[</span><span class="s1">'nombre'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="x">        &lt;li&gt;Precio mensual: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$servicio</span><span class="p">[</span><span class="s1">'precio_mensual'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x"> €&lt;/li&gt;</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="x">        &lt;li&gt;Incluye dominio: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$servicio</span><span class="p">[</span><span class="s1">'incluye_dominio'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="x">        &lt;li&gt;Incluye soporte: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$servicio</span><span class="p">[</span><span class="s1">'incluye_soporte'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="x">    &lt;/ul&gt;</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="x">&lt;/body&gt;</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="x">&lt;/html&gt;</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-5">Mini ejercicio 5<a class="headerlink" href="#mini-ejercicio-5" title="Permanent link">&para;</a></h2>
+<p>Crea una variable <code>$espacioLibreGb</code> con el espacio libre de un servidor y muestra un mensaje según el espacio disponible.</p>
+<h3 id="solucion-propuesta_2">Solución propuesta<a class="headerlink" href="#solucion-propuesta_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">$espacioLibreGb</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$espacioLibreGb</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">echo</span> <span class="s1">'Espacio crítico'</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$espacioLibreGb</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="k">echo</span> <span class="s1">'Espacio limitado'</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="k">echo</span> <span class="s1">'Espacio suficiente'</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-6">Mini ejercicio 6<a class="headerlink" href="#mini-ejercicio-6" title="Permanent link">&para;</a></h2>
+<p>Muestra si una aplicación está en mantenimiento según el valor booleano de <code>$mantenimientoActivo</code>.</p>
+<h3 id="solucion-propuesta_3">Solución propuesta<a class="headerlink" href="#solucion-propuesta_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nv">$mantenimientoActivo</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$mantenimientoActivo</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="k">echo</span> <span class="s1">'La aplicación está en mantenimiento'</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="k">echo</span> <span class="s1">'La aplicación está disponible'</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Para probar el otro caso, cambia el valor de <code>$mantenimientoActivo</code> a <code>false</code>.</p>
+</blockquote>
+<hr />
+<h2 id="mini-ejercicio-7">Mini ejercicio 7<a class="headerlink" href="#mini-ejercicio-7" title="Permanent link">&para;</a></h2>
+<p>Muestra un mensaje adecuado para un código HTTP usando <code>switch</code>.</p>
+<h3 id="solucion-propuesta_4">Solución propuesta<a class="headerlink" href="#solucion-propuesta_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nv">$estadoHttp</span> <span class="o">=</span> <span class="mi">404</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">switch</span> <span class="p">(</span><span class="nv">$estadoHttp</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">case</span> <span class="mi">200</span><span class="o">:</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="k">echo</span> <span class="s1">'La petición se ha procesado correctamente.'</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="k">case</span> <span class="mi">404</span><span class="o">:</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="k">echo</span> <span class="s1">'No se ha encontrado el recurso solicitado.'</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        <span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="k">case</span> <span class="mi">500</span><span class="o">:</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        <span class="k">echo</span> <span class="s1">'El servidor ha tenido un error interno.'</span><span class="p">;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        <span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="k">default</span><span class="o">:</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        <span class="k">echo</span> <span class="s1">'Código de estado no previsto.'</span><span class="p">;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-8">Mini ejercicio 8<a class="headerlink" href="#mini-ejercicio-8" title="Permanent link">&para;</a></h2>
+<p>Muestra qué hace el sistema con un servicio web según una acción de administración.</p>
+<h3 id="solucion-propuesta_5">Solución propuesta<a class="headerlink" href="#solucion-propuesta_5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nv">$accion</span> <span class="o">=</span> <span class="s1">'reiniciar'</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">switch</span> <span class="p">(</span><span class="nv">$accion</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">case</span> <span class="s1">'reiniciar'</span><span class="o">:</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="k">echo</span> <span class="s1">'El servicio web se reiniciará.'</span><span class="p">;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="k">case</span> <span class="s1">'detener'</span><span class="o">:</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="k">echo</span> <span class="s1">'El servicio web se detendrá.'</span><span class="p">;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        <span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="k">case</span> <span class="s1">'estado'</span><span class="o">:</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="k">echo</span> <span class="s1">'Se comprobará el estado del servicio web.'</span><span class="p">;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        <span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="k">default</span><span class="o">:</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>        <span class="k">echo</span> <span class="s1">'La acción indicada no es válida.'</span><span class="p">;</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-9">Mini ejercicio 9<a class="headerlink" href="#mini-ejercicio-9" title="Permanent link">&para;</a></h2>
+<p>Muestra cinco nombres de copias de seguridad con un bucle <code>for</code>.</p>
+<h3 id="solucion-propuesta_6">Solución propuesta<a class="headerlink" href="#solucion-propuesta_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">echo</span> <span class="s1">'&lt;ul&gt;'</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">for</span> <span class="p">(</span><span class="nv">$numero</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$numero</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="nv">$numero</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">echo</span> <span class="s2">"&lt;li&gt;backup-</span><span class="si">$numero</span><span class="s2">.sql&lt;/li&gt;"</span><span class="p">;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">}</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="k">echo</span> <span class="s1">'&lt;/ul&gt;'</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-10">Mini ejercicio 10<a class="headerlink" href="#mini-ejercicio-10" title="Permanent link">&para;</a></h2>
+<p>Muestra tres usuarios de prueba con un bucle <code>for</code>.</p>
+<h3 id="solucion-propuesta_7">Solución propuesta<a class="headerlink" href="#solucion-propuesta_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">for</span> <span class="p">(</span><span class="nv">$numero</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$numero</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">;</span> <span class="nv">$numero</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="k">echo</span> <span class="s2">"&lt;p&gt;usuario</span><span class="si">$numero</span><span class="s2">&lt;/p&gt;"</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-11">Mini ejercicio 11<a class="headerlink" href="#mini-ejercicio-11" title="Permanent link">&para;</a></h2>
+<p>Simula tres intentos de conexión a una base de datos con <code>while</code>.</p>
+<h3 id="solucion-propuesta_8">Solución propuesta<a class="headerlink" href="#solucion-propuesta_8" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nv">$intento</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">while</span> <span class="p">(</span><span class="nv">$intento</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="k">echo</span> <span class="s2">"&lt;p&gt;Intento de conexión </span><span class="si">$intento</span><span class="s2">&lt;/p&gt;"</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="nv">$intento</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-12">Mini ejercicio 12<a class="headerlink" href="#mini-ejercicio-12" title="Permanent link">&para;</a></h2>
+<p>Muestra el espacio disponible después de cada copia de seguridad hasta que queden 20 GB o menos.</p>
+<h3 id="solucion-propuesta_9">Solución propuesta<a class="headerlink" href="#solucion-propuesta_9" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nv">$espacioLibreGb</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">while</span> <span class="p">(</span><span class="nv">$espacioLibreGb</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="nv">$espacioLibreGb</span> <span class="o">-=</span> <span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="k">echo</span> <span class="s2">"&lt;p&gt;Espacio disponible: </span><span class="si">$espacioLibreGb</span><span class="s2"> GB&lt;/p&gt;"</span><span class="p">;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-13">Mini ejercicio 13<a class="headerlink" href="#mini-ejercicio-13" title="Permanent link">&para;</a></h2>
+<p>Crea un array con tres mensajes de error y muéstralos dentro de una lista HTML usando <code>foreach</code>.</p>
+<h3 id="solucion-propuesta_10">Solución propuesta<a class="headerlink" href="#solucion-propuesta_10" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nv">$errores</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="s1">'El nombre es obligatorio.'</span><span class="p">,</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="s1">'El correo no es válido.'</span><span class="p">,</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="s1">'Debes seleccionar un plan.'</span><span class="p">,</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">];</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="cp">?&gt;</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="x">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="x">&lt;html lang="es"&gt;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="x">&lt;head&gt;</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="x">    &lt;meta charset="UTF-8"&gt;</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="x">    &lt;title&gt;Errores del formulario&lt;/title&gt;</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="x">&lt;/head&gt;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="x">&lt;body&gt;</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="x">    &lt;h1&gt;Errores detectados&lt;/h1&gt;</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="x">    &lt;ul&gt;</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="x">        </span><span class="cp">&lt;?php</span> 
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>            <span class="k">foreach</span> <span class="p">(</span><span class="nv">$errores</span> <span class="k">as</span> <span class="nv">$error</span><span class="p">){</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>                <span class="k">echo</span> <span class="s2">"&lt;li&gt;</span><span class="si">$error</span><span class="s2">&lt;/li&gt;"</span><span class="p">;</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>            <span class="p">}</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>        <span class="cp">?&gt;</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="x">    &lt;/ul&gt;</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="x">&lt;/body&gt;</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="x">&lt;/html&gt;</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-14">Mini ejercicio 14<a class="headerlink" href="#mini-ejercicio-14" title="Permanent link">&para;</a></h2>
+<p>Crea un array asociativo con la configuración de una aplicación web y muestra cada clave y su valor con <code>foreach</code>.</p>
+<h3 id="solucion-propuesta_11">Solución propuesta<a class="headerlink" href="#solucion-propuesta_11" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nv">$configuracion</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="s1">'entorno'</span> <span class="o">=&gt;</span> <span class="s1">'producción'</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="s1">'depuracion'</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="s1">'puerto'</span> <span class="o">=&gt;</span> <span class="mi">8080</span><span class="p">,</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">];</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="k">foreach</span> <span class="p">(</span><span class="nv">$configuracion</span> <span class="k">as</span> <span class="nv">$clave</span> <span class="o">=&gt;</span> <span class="nv">$valor</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="k">if</span><span class="p">(</span> <span class="nb">is_bool</span><span class="p">(</span><span class="nv">$valor</span><span class="p">)){</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>        <span class="nv">$valor</span> <span class="o">=</span> <span class="nv">$valor</span> <span class="o">?</span> <span class="s2">"Si"</span> <span class="o">:</span> <span class="s2">"No"</span><span class="p">;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    <span class="p">}</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    <span class="k">echo</span> <span class="s2">"&lt;p&gt;</span><span class="si">$clave</span><span class="s2">: </span><span class="si">$valor</span><span class="s2">&lt;/p&gt;"</span><span class="p">;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-15">Mini ejercicio 15<a class="headerlink" href="#mini-ejercicio-15" title="Permanent link">&para;</a></h2>
+<p>Escribe una función llamada <code>obtenerMensajePlan()</code> que reciba el nombre de un plan y devuelva un texto distinto para:
+- Básico,
+- Profesional,
+- Empresa.</p>
+<h3 id="solucion-propuesta_12">Solución propuesta<a class="headerlink" href="#solucion-propuesta_12" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">function</span> <span class="nf">obtenerMensajePlan</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$plan</span><span class="p">)</span><span class="o">:</span> <span class="nx">string</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">{</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="k">switch</span> <span class="p">(</span><span class="nv">$plan</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        <span class="k">case</span> <span class="s1">'Básico'</span><span class="o">:</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>            <span class="k">return</span> <span class="s1">'El plan Básico es adecuado para proyectos sencillos.'</span><span class="p">;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        <span class="k">case</span> <span class="s1">'Profesional'</span><span class="o">:</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>            <span class="k">return</span> <span class="s1">'El plan Profesional ofrece más recursos y mejor soporte.'</span><span class="p">;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>        <span class="k">case</span> <span class="s1">'Empresa'</span><span class="o">:</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>            <span class="k">return</span> <span class="s1">'El plan Empresa está pensado para proyectos con mayores necesidades.'</span><span class="p">;</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>        <span class="k">default</span><span class="o">:</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>            <span class="k">return</span> <span class="s1">'El plan indicado no existe.'</span><span class="p">;</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    <span class="p">}</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="p">}</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="k">echo</span> <span class="nx">obtenerMensajePlan</span><span class="p">(</span><span class="s1">'Profesional'</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-16">Mini ejercicio 16<a class="headerlink" href="#mini-ejercicio-16" title="Permanent link">&para;</a></h2>
+<p>Amplía el ejemplo anterior con un nuevo campo <code>meses</code> y valida que sea un número entre 1 y 24.</p>
+<h3 id="solucion-propuesta_13">Solución propuesta<a class="headerlink" href="#solucion-propuesta_13" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nv">$errores</span> <span class="o">=</span> <span class="p">[];</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nv">$nombre</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="nv">$correo</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="nv">$plan</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="nv">$meses</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'REQUEST_METHOD'</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'POST'</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    <span class="nv">$nombre</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'nombre'</span><span class="p">]</span> <span class="o">??</span> <span class="s1">''</span><span class="p">);</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>    <span class="nv">$correo</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'correo'</span><span class="p">]</span> <span class="o">??</span> <span class="s1">''</span><span class="p">);</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    <span class="nv">$plan</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'plan'</span><span class="p">]</span> <span class="o">??</span> <span class="s1">''</span><span class="p">;</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    <span class="nv">$meses</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'meses'</span><span class="p">]</span> <span class="o">??</span> <span class="s1">''</span><span class="p">);</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    <span class="k">if</span> <span class="p">(</span><span class="nv">$nombre</span> <span class="o">===</span> <span class="s1">''</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>        <span class="nv">$errores</span><span class="p">[]</span> <span class="o">=</span> <span class="s1">'Debes indicar el nombre.'</span><span class="p">;</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>    <span class="p">}</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">filter_var</span><span class="p">(</span><span class="nv">$correo</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_EMAIL</span><span class="p">))</span> <span class="p">{</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>        <span class="nv">$errores</span><span class="p">[]</span> <span class="o">=</span> <span class="s1">'Debes indicar un correo válido.'</span><span class="p">;</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>    <span class="p">}</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$plan</span><span class="p">,</span> <span class="p">[</span><span class="s1">'Básico'</span><span class="p">,</span> <span class="s1">'Profesional'</span><span class="p">,</span> <span class="s1">'Empresa'</span><span class="p">],</span> <span class="k">true</span><span class="p">))</span> <span class="p">{</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>        <span class="nv">$errores</span><span class="p">[]</span> <span class="o">=</span> <span class="s1">'Debes elegir un plan válido.'</span><span class="p">;</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>    <span class="p">}</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>    <span class="k">if</span> <span class="p">(</span><span class="nv">$meses</span> <span class="o">===</span> <span class="s1">''</span> <span class="o">||</span> <span class="o">!</span><span class="nb">ctype_digit</span><span class="p">(</span><span class="nv">$meses</span><span class="p">))</span> <span class="p">{</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>        <span class="nv">$errores</span><span class="p">[]</span> <span class="o">=</span> <span class="s1">'Debes indicar un número de meses válido.'</span><span class="p">;</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>    <span class="p">}</span> <span class="k">elseif</span> <span class="p">((</span><span class="nx">int</span><span class="p">)</span> <span class="nv">$meses</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="p">(</span><span class="nx">int</span><span class="p">)</span> <span class="nv">$meses</span> <span class="o">&gt;</span> <span class="mi">24</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>        <span class="nv">$errores</span><span class="p">[]</span> <span class="o">=</span> <span class="s1">'El número de meses debe estar entre 1 y 24.'</span><span class="p">;</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>    <span class="p">}</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a><span class="p">}</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a><span class="cp">?&gt;</span>
+<a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a><span class="x">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a><span class="x">&lt;html lang="es"&gt;</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a><span class="x">&lt;head&gt;</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a><span class="x">    &lt;meta charset="UTF-8"&gt;</span>
+<a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a><span class="x">    &lt;title&gt;Formulario PHP con meses&lt;/title&gt;</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a><span class="x">&lt;/head&gt;</span>
+<a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a><span class="x">&lt;body&gt;</span>
+<a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a><span class="x">    &lt;h1&gt;Solicitud de plan&lt;/h1&gt;</span>
+<a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a>
+<a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a><span class="x">    </span><span class="cp">&lt;?php</span> 
+<a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$errores</span><span class="p">))</span> <span class="p">{</span> 
+<a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a>        <span class="k">echo</span> <span class="s1">'&lt;ul&gt;'</span><span class="p">;</span>
+<a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a>        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$errores</span> <span class="k">as</span> <span class="nv">$error</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a>            <span class="k">echo</span> <span class="s1">'&lt;li&gt;'</span> <span class="o">.</span> <span class="nv">$error</span> <span class="o">.</span> <span class="s1">'&lt;/li&gt;'</span><span class="p">;</span>
+<a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a>        <span class="p">}</span>
+<a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a>        <span class="k">echo</span> <span class="s1">'&lt;/ul&gt;'</span><span class="p">;</span>
+<a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a>    <span class="p">}</span> 
+<a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a>    <span class="cp">?&gt;</span>
+<a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a>
+<a id="__codelineno-13-51" name="__codelineno-13-51" href="#__codelineno-13-51"></a><span class="x">    &lt;form method="post"&gt;</span>
+<a id="__codelineno-13-52" name="__codelineno-13-52" href="#__codelineno-13-52"></a><span class="x">        &lt;label&gt;</span>
+<a id="__codelineno-13-53" name="__codelineno-13-53" href="#__codelineno-13-53"></a><span class="x">            Nombre</span>
+<a id="__codelineno-13-54" name="__codelineno-13-54" href="#__codelineno-13-54"></a><span class="x">            &lt;input type="text" name="nombre" value="</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$nombre</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
+<a id="__codelineno-13-55" name="__codelineno-13-55" href="#__codelineno-13-55"></a><span class="x">        &lt;/label&gt;</span>
+<a id="__codelineno-13-56" name="__codelineno-13-56" href="#__codelineno-13-56"></a><span class="x">        &lt;br&gt;</span>
+<a id="__codelineno-13-57" name="__codelineno-13-57" href="#__codelineno-13-57"></a><span class="x">        &lt;label&gt;</span>
+<a id="__codelineno-13-58" name="__codelineno-13-58" href="#__codelineno-13-58"></a><span class="x">            Correo</span>
+<a id="__codelineno-13-59" name="__codelineno-13-59" href="#__codelineno-13-59"></a><span class="x">            &lt;input type="email" name="correo" value="</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$correo</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
+<a id="__codelineno-13-60" name="__codelineno-13-60" href="#__codelineno-13-60"></a><span class="x">        &lt;/label&gt;</span>
+<a id="__codelineno-13-61" name="__codelineno-13-61" href="#__codelineno-13-61"></a><span class="x">        &lt;br&gt;</span>
+<a id="__codelineno-13-62" name="__codelineno-13-62" href="#__codelineno-13-62"></a><span class="x">        &lt;label&gt;</span>
+<a id="__codelineno-13-63" name="__codelineno-13-63" href="#__codelineno-13-63"></a><span class="x">            Plan</span>
+<a id="__codelineno-13-64" name="__codelineno-13-64" href="#__codelineno-13-64"></a><span class="x">            &lt;select name="plan"&gt;</span>
+<a id="__codelineno-13-65" name="__codelineno-13-65" href="#__codelineno-13-65"></a><span class="x">                &lt;option value=""&gt;-- Selecciona --&lt;/option&gt;</span>
+<a id="__codelineno-13-66" name="__codelineno-13-66" href="#__codelineno-13-66"></a><span class="x">                &lt;option value="Básico" </span><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$plan</span> <span class="o">===</span> <span class="s1">'Básico'</span><span class="p">)</span> <span class="p">{</span> <span class="k">echo</span> <span class="s1">'selected'</span><span class="p">;</span> <span class="p">}</span> <span class="cp">?&gt;</span><span class="x">&gt;Básico&lt;/option&gt;</span>
+<a id="__codelineno-13-67" name="__codelineno-13-67" href="#__codelineno-13-67"></a><span class="x">                &lt;option value="Profesional" </span><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$plan</span> <span class="o">===</span> <span class="s1">'Profesional'</span><span class="p">)</span> <span class="p">{</span> <span class="k">echo</span> <span class="s1">'selected'</span><span class="p">;</span> <span class="p">}</span> <span class="cp">?&gt;</span><span class="x">&gt;Profesional&lt;/option&gt;</span>
+<a id="__codelineno-13-68" name="__codelineno-13-68" href="#__codelineno-13-68"></a><span class="x">                &lt;option value="Empresa" </span><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$plan</span> <span class="o">===</span> <span class="s1">'Empresa'</span><span class="p">)</span> <span class="p">{</span> <span class="k">echo</span> <span class="s1">'selected'</span><span class="p">;</span> <span class="p">}</span> <span class="cp">?&gt;</span><span class="x">&gt;Empresa&lt;/option&gt;</span>
+<a id="__codelineno-13-69" name="__codelineno-13-69" href="#__codelineno-13-69"></a><span class="x">            &lt;/select&gt;</span>
+<a id="__codelineno-13-70" name="__codelineno-13-70" href="#__codelineno-13-70"></a><span class="x">        &lt;/label&gt;</span>
+<a id="__codelineno-13-71" name="__codelineno-13-71" href="#__codelineno-13-71"></a><span class="x">        &lt;br&gt;</span>
+<a id="__codelineno-13-72" name="__codelineno-13-72" href="#__codelineno-13-72"></a><span class="x">        &lt;label&gt;</span>
+<a id="__codelineno-13-73" name="__codelineno-13-73" href="#__codelineno-13-73"></a><span class="x">            Meses</span>
+<a id="__codelineno-13-74" name="__codelineno-13-74" href="#__codelineno-13-74"></a><span class="x">            &lt;input type="number" name="meses" min="1" max="24" value="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$meses</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
+<a id="__codelineno-13-75" name="__codelineno-13-75" href="#__codelineno-13-75"></a><span class="x">        &lt;/label&gt;</span>
+<a id="__codelineno-13-76" name="__codelineno-13-76" href="#__codelineno-13-76"></a><span class="x">        &lt;br&gt;        </span>
+<a id="__codelineno-13-77" name="__codelineno-13-77" href="#__codelineno-13-77"></a><span class="x">        &lt;button type="submit"&gt;Enviar&lt;/button&gt;</span>
+<a id="__codelineno-13-78" name="__codelineno-13-78" href="#__codelineno-13-78"></a><span class="x">    &lt;/form&gt;</span>
+<a id="__codelineno-13-79" name="__codelineno-13-79" href="#__codelineno-13-79"></a>
+<a id="__codelineno-13-80" name="__codelineno-13-80" href="#__codelineno-13-80"></a><span class="x">    </span><span class="cp">&lt;?php</span> 
+<a id="__codelineno-13-81" name="__codelineno-13-81" href="#__codelineno-13-81"></a>    <span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'REQUEST_METHOD'</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'POST'</span> <span class="o">&amp;&amp;</span> <span class="k">empty</span><span class="p">(</span><span class="nv">$errores</span><span class="p">))</span> <span class="p">{</span> 
+<a id="__codelineno-13-82" name="__codelineno-13-82" href="#__codelineno-13-82"></a>        <span class="k">echo</span> <span class="s1">'&lt;h2&gt;Resumen&lt;/h2&gt;'</span><span class="p">;</span>
+<a id="__codelineno-13-83" name="__codelineno-13-83" href="#__codelineno-13-83"></a>        <span class="k">echo</span> <span class="s1">'&lt;p&gt;Nombre: '</span> <span class="o">.</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$nombre</span><span class="p">)</span> <span class="o">.</span> <span class="s1">'&lt;/p&gt;'</span><span class="p">;</span>
+<a id="__codelineno-13-84" name="__codelineno-13-84" href="#__codelineno-13-84"></a>        <span class="k">echo</span> <span class="s1">'&lt;p&gt;Correo: '</span> <span class="o">.</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$correo</span><span class="p">)</span> <span class="o">.</span> <span class="s1">'&lt;/p&gt;'</span><span class="p">;</span>
+<a id="__codelineno-13-85" name="__codelineno-13-85" href="#__codelineno-13-85"></a>        <span class="k">echo</span> <span class="s1">'&lt;p&gt;Plan: '</span> <span class="o">.</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$plan</span><span class="p">)</span> <span class="o">.</span> <span class="s1">'&lt;/p&gt;'</span><span class="p">;</span>
+<a id="__codelineno-13-86" name="__codelineno-13-86" href="#__codelineno-13-86"></a>        <span class="k">echo</span> <span class="s1">'&lt;p&gt;Meses: '</span> <span class="o">.</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$meses</span><span class="p">)</span> <span class="o">.</span> <span class="s1">'&lt;/p&gt;'</span><span class="p">;</span>
+<a id="__codelineno-13-87" name="__codelineno-13-87" href="#__codelineno-13-87"></a>    <span class="p">}</span> 
+<a id="__codelineno-13-88" name="__codelineno-13-88" href="#__codelineno-13-88"></a>    <span class="cp">?&gt;</span>
+<a id="__codelineno-13-89" name="__codelineno-13-89" href="#__codelineno-13-89"></a><span class="x">&lt;/body&gt;</span>
+<a id="__codelineno-13-90" name="__codelineno-13-90" href="#__codelineno-13-90"></a><span class="x">&lt;/html&gt;</span>
+</code></pre></div>
+<hr />
+<h2 id="mini-ejercicio-17">Mini ejercicio 17<a class="headerlink" href="#mini-ejercicio-17" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>En la primera visita, <code>$_SESSION['contador']</code> todavía no existe. Se inicializa a <code>0</code> y, justo después, se incrementa a <code>1</code>, por lo que aparece:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Has entrado en esta página 1 veces.
+</code></pre></div>
+<p>Cada pulsación del enlace <strong>Nueva visita</strong> genera otra petición y recupera la misma sesión. Tras seguir el enlace tres veces, el contador mostrará sucesivamente <code>2</code>, <code>3</code> y <code>4</code>. Por tanto, al final aparecerá <code>4</code>.</p>
+</li>
+<li>
+<p>Otra pestaña del mismo navegador normalmente continúa el contador, porque comparte las cookies de sesión con la primera pestaña. Al abrir <code>contador.php</code> desde esa pestaña, PHP recupera el mismo <code>$_SESSION['contador']</code> y vuelve a incrementarlo.</p>
+</li>
+<li>
+<p>Otro navegador, una ventana de incógnito o un perfil distinto suelen crear un contexto de navegación independiente. Al no enviar la misma cookie de sesión, el servidor crea o recupera otra sesión y el contador empieza en <code>1</code> para ese contexto.</p>
+</li>
+<li>
+<p>Al pulsar <strong>Reiniciar contador</strong>, la petición <code>POST</code> contiene <code>reiniciar</code>, por lo que el código asigna primero <code>0</code> a <code>$_SESSION['contador']</code>. Después se ejecuta igualmente esta línea:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">$_SESSION['contador']++;</span>
+</code></pre></div>
+<p>Por eso el valor final de esa misma petición es <code>1</code>, no <code>0</code>.</p>
+</li>
+<li>
+<p>Si se sustituyera la inicialización condicional:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="x">if (!isset($_SESSION['contador'])) {</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="x">     $_SESSION['contador'] = 0;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="x">}</span>
+</code></pre></div>
+<p>por una asignación directa en todas las peticiones:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="x">$_SESSION['contador'] = 0;</span>
+</code></pre></div>
+<p>el valor recuperado de la sesión se borraría antes de incrementarlo. En cada visita pasaría de <code>0</code> a <code>1</code>, por lo que el contador dejaría de acumular visitas. La condición <code>!isset(...)</code> es la que permite inicializar solo la primera vez y conservar el estado en las peticiones posteriores.</p>
+</li>
+</ol>
+<hr />
+<h2 id="ejercicios-guiados-comprender-las-sesiones">Ejercicios guiados: comprender las sesiones<a class="headerlink" href="#ejercicios-guiados-comprender-las-sesiones" title="Permanent link">&para;</a></h2>
+<h3 id="1-sin-sesion">1. Sin sesión<a class="headerlink" href="#1-sin-sesion" title="Permanent link">&para;</a></h3>
+<p>El formulario inicializa <code>$texto</code> con una cadena vacía. El procesamiento obtiene el texto de <code>$_POST</code>, enviado por el formulario. Al seguir el enlace a <code>procesar.php</code>, la nueva petición es GET y no contiene ese POST: vuelve a mostrarse que no se ha recibido texto.</p>
+<p>Al volver al formulario, su variable vuelve a inicializarse. El nombre común <code>$texto</code> no conecta las dos ejecuciones. <code>?? ''</code> aporta una cadena vacía cuando no existe el dato o es nulo.</p>
+<h3 id="2-con-sesion">2. Con sesión<a class="headerlink" href="#2-con-sesion" title="Permanent link">&para;</a></h3>
+<p><code>session_start()</code> inicia o recupera la sesión. La asignación a <code>$_SESSION['textoSesion']</code> conserva el texto entre peticiones. El servidor lo recupera en otra petición del mismo contexto de navegación, aunque esa nueva petición no incluya el texto.</p>
+<p>Un segundo texto sustituye al primero porque se asigna a la misma clave. Un envío vacío produce un aviso y no modifica el anterior.</p>
+<p>Otra pestaña del mismo contexto comparte normalmente la cookie identificadora de sesión. Un navegador o contexto independiente empieza sin esos datos. La sesión no se crea por fichero ni por pestaña.</p>
+<p>No presentar dos ventanas privadas del mismo navegador como dos sesiones independientes: pueden compartir las cookies privadas mientras esas ventanas permanezcan abiertas.</p>
+<h3 id="3-contador">3. Contador<a class="headerlink" href="#3-contador" title="Permanent link">&para;</a></h3>
+<p>En una sesión nueva se muestra 1. Después de tres visitas por enlace se muestra 4; abrir otra pestaña del mismo contexto suma una visita más. El valor exacto cambia si se realizan peticiones adicionales.</p>
+<p>Reiniciar asigna 0 y, después, la misma petición ejecuta el incremento: se muestra 1. Al seguir el enlace posterior se muestra 2.</p>
+<p>Si se asigna 0 en cada petición sin comprobar <code>isset()</code>, siempre se muestra 1. La condición permite inicializar solo cuando el dato aún no existe.</p>
+<h3 id="4-validacion">4. Validación<a class="headerlink" href="#4-validacion" title="Permanent link">&para;</a></h3>
+<p>Suponiendo que se sigue el orden indicado:</p>
+<table>
+<thead>
+<tr>
+<th>Después de…</th>
+<th>Valor del campo</th>
+<th>Error visible</th>
+<th>Última palabra válida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enviar HOLA</td>
+<td>HOLA</td>
+<td>No</td>
+<td>HOLA</td>
+</tr>
+<tr>
+<td>Enviar hola</td>
+<td>hola</td>
+<td>Sí</td>
+<td>HOLA</td>
+</tr>
+<tr>
+<td>Enviar vacío</td>
+<td>Vacío</td>
+<td>Sí</td>
+<td>HOLA</td>
+</tr>
+<tr>
+<td>Enviar ADIOS</td>
+<td>ADIOS</td>
+<td>No</td>
+<td>ADIOS</td>
+</tr>
+<tr>
+<td>Seguir el enlace sin enviar</td>
+<td>Vacío</td>
+<td>No</td>
+<td>ADIOS</td>
+</tr>
+</tbody>
+</table>
+<p>La asignación a la sesión solo se hace en la rama válida. Si se asignara antes de validar, un intento incorrecto sustituiría al último dato válido.</p>
+<p>El error y el contenido del campo pertenecen a la petición actual: no hay redirección ni otra página que necesite recuperarlos. Guardarlos en sesión añadiría estado y obligaría a decidir cuándo limpiarlo. La palabra válida sí debe persistir y por eso se guarda.</p>
+<p>Se mantiene <code>ctype_upper()</code> para no introducir otra técnica de validación. No tratarla como una comprobación Unicode general: las pruebas usan A-Z.</p>
+<h3 id="5-cerrar-sesion">5. Cerrar sesión<a class="headerlink" href="#5-cerrar-sesion" title="Permanent link">&para;</a></h3>
+<p>El usuario pasa de invitado a Ana. Sigue apareciendo tras una petición GET porque se recupera de sesión.</p>
+<p><code>$_SESSION = [];</code> vacía los datos accesibles en la petición actual. <code>session_destroy();</code> destruye los datos de la sesión del servidor. Este ejemplo no elimina explícitamente la cookie identificadora del navegador; la comprobación didáctica consiste en verificar que los datos anteriores ya no se recuperan. Al volver a una página que ejecuta <code>session_start()</code>, PHP puede iniciar de nuevo una sesión sin los datos anteriores.</p>
+<p>El usuario vuelve a invitado, el texto desaparece, la palabra válida desaparece y el contador vuelve a 1 en su siguiente visita.</p>
+<p>Los cinco ejercicios se ejecutan bajo el mismo servidor y configuración habitual de sesión, sin nombres de sesión separados. Sus claves son distintas, pero pertenecen a la misma sesión. Vaciarla afecta a todas esas claves, aunque los archivos estén en carpetas distintas.</p>
+<p>La ampliación con <code>unset($_SESSION['usuario']);</code> elimina solo el nombre. El resto de las claves se conserva.</p>
+<h2 id="preguntas-finales-ideas-que-deben-aparecer">Preguntas finales: ideas que deben aparecer<a class="headerlink" href="#preguntas-finales-ideas-que-deben-aparecer" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Mostrar un dato inmediatamente tras un POST no demuestra persistencia: podría mostrarse directamente desde POST.</li>
+<li>Seguir un enlace GET que no transporte el dato permite comprobar si se recupera de sesión.</li>
+<li>Cada petición ejecuta el PHP de nuevo, también cuando apunta al mismo fichero.</li>
+<li>El campo pertenece al formulario; una variable normal pertenece a la ejecución actual; un dato de sesión puede recuperarse en otras peticiones.</li>
+<li>No todos los errores requieren sesión. En el ejercicio 4 se muestran en la misma respuesta que procesa el formulario.</li>
+</ol>
+<hr />
+<h2 id="mini-ejercicio-18">Mini ejercicio 18<a class="headerlink" href="#mini-ejercicio-18" title="Permanent link">&para;</a></h2>
+<p>Diseña una mini zona privada que guarde en sesión un contador de accesos y el nombre del usuario autenticado.</p>
+<h3 id="solucion-propuesta_14">Solución propuesta<a class="headerlink" href="#solucion-propuesta_14" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nb">session_start</span><span class="p">();</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'usuario'</span><span class="p">]))</span> <span class="p">{</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'usuario'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'ana'</span><span class="p">;</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'nombre'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Ana'</span><span class="p">;</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'contador'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="p">}</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'contador'</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="cp">?&gt;</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="x">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="x">&lt;html lang="es"&gt;</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="x">&lt;head&gt;</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="x">    &lt;meta charset="UTF-8"&gt;</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="x">    &lt;title&gt;Zona privada&lt;/title&gt;</span>
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="x">&lt;/head&gt;</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="x">&lt;body&gt;</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="x">    &lt;h1&gt;Zona privada&lt;/h1&gt;</span>
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="x">    &lt;p&gt;Usuario autenticado: </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'nombre'</span><span class="p">])</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span>
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="x">    &lt;p&gt;Número de accesos al panel: </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'contador'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span>
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="x">&lt;/body&gt;</span>
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="x">&lt;/html&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>En una aplicación más completa, el usuario no se fijaría manualmente, sino a partir de un login previo.</p>
+</blockquote>
+<hr />
+<h2 id="mini-ejercicio-19">Mini ejercicio 19<a class="headerlink" href="#mini-ejercicio-19" title="Permanent link">&para;</a></h2>
+<p>Busca y corrige al menos dos errores en este fragmento:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'REQUEST_METHOD'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'POST'</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    <span class="nv">$nombre</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'nombre'</span><span class="p">];</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    <span class="k">echo</span> <span class="s1">'Hola '</span> <span class="o">.</span> <span class="nv">$nombre</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    <span class="nb">header</span><span class="p">(</span><span class="s1">'Location: final.php'</span><span class="p">);</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="errores-principales">Errores principales<a class="headerlink" href="#errores-principales" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Se usa <code>=</code> en lugar de <code>===</code> al comparar el método HTTP.</li>
+<li>Falta el punto y coma al final de <code>echo 'Hola ' . $nombre</code>.</li>
+<li>Se intenta hacer un <code>header()</code> después de haber enviado salida con <code>echo</code>.</li>
+<li>Se lee <code>$_POST['nombre']</code> sin valor por defecto.</li>
+</ol>
+<h3 id="solucion-propuesta_15">Solución propuesta<a class="headerlink" href="#solucion-propuesta_15" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'REQUEST_METHOD'</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'POST'</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    <span class="nv">$nombre</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'nombre'</span><span class="p">]</span> <span class="o">??</span> <span class="s1">''</span><span class="p">);</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>    <span class="nb">header</span><span class="p">(</span><span class="s1">'Location: final.php?nombre='</span> <span class="o">.</span> <span class="nb">urlencode</span><span class="p">(</span><span class="nv">$nombre</span><span class="p">));</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>    <span class="k">exit</span><span class="p">;</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Otra posibilidad sería no redirigir y mostrar directamente el saludo, pero entonces habría que eliminar <code>header()</code>.</p>
+</blockquote>
+<hr />
+<h2 id="actividades-finales-de-repaso-solucion-orientativa">Actividades finales de repaso (solución orientativa)<a class="headerlink" href="#actividades-finales-de-repaso-solucion-orientativa" title="Permanent link">&para;</a></h2>
+<h3 id="actividad-20">Actividad 20<a class="headerlink" href="#actividad-20" title="Permanent link">&para;</a></h3>
+<p><strong>Explica la diferencia entre una variable normal, una cookie y una sesión.</strong></p>
+<ul>
+<li>Una <strong>variable normal</strong> solo existe durante la ejecución actual del script.</li>
+<li>Una <strong>cookie</strong> es un dato pequeño que el navegador guarda y reenvía al servidor en peticiones posteriores.</li>
+<li>Una <strong>sesión</strong> permite que el servidor mantenga estado asociado a un usuario entre varias peticiones.</li>
+</ul>
+<h3 id="actividad-21">Actividad 21<a class="headerlink" href="#actividad-21" title="Permanent link">&para;</a></h3>
+<p><strong>Describe el flujo completo de un login sencillo con tus palabras.</strong></p>
+<p>El usuario abre <code>login.php</code>, escribe usuario y contraseña y envía el formulario. El navegador manda una petición <code>POST</code> al servidor. PHP comprueba las credenciales. Si son correctas, guarda datos del usuario en <code>$_SESSION</code> y redirige al panel. Si no son correctas, vuelve al login con un error.</p>
+<h3 id="actividad-22">Actividad 22<a class="headerlink" href="#actividad-22" title="Permanent link">&para;</a></h3>
+<p><strong>Indica tres errores típicos que pueden romper una aplicación PHP con formularios.</strong></p>
+<ul>
+<li>Leer <code>$_POST</code> sin comprobar si la clave existe.</li>
+<li>Usar <code>header()</code> después de haber enviado HTML o <code>echo</code>.</li>
+<li>Confiar solo en la validación del navegador y no validar en servidor.</li>
+</ul>
+<h3 id="actividad-23">Actividad 23<a class="headerlink" href="#actividad-23" title="Permanent link">&para;</a></h3>
+<p><strong>Crea una tabla de dos columnas donde compares validación en cliente y validación en servidor.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Validación en cliente</th>
+<th>Validación en servidor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Se ejecuta en el navegador</td>
+<td>Se ejecuta en el servidor</td>
+</tr>
+<tr>
+<td>Mejora la experiencia del usuario</td>
+<td>Garantiza el control real de los datos</td>
+</tr>
+<tr>
+<td>Puede saltarse o manipularse</td>
+<td>Es obligatoria para seguridad y consistencia</td>
+</tr>
+<tr>
+<td>Da feedback rápido</td>
+<td>Decide si la aplicación acepta o rechaza la petición</td>
+</tr>
+</tbody>
+</table>
+<h3 id="actividad-24">Actividad 24<a class="headerlink" href="#actividad-24" title="Permanent link">&para;</a></h3>
+<p><strong>Haz un esquema visual, aunque sea simple, del camino que sigue un formulario desde el navegador hasta la respuesta final.</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Usuario
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>   ↓
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Navegador
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>   ↓  envía formulario HTTP
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>Servidor web
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>   ↓
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>Script PHP
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>   ↓  valida y procesa datos
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>Genera HTML
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>   ↓
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>Respuesta HTTP
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>   ↓
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>Navegador muestra el resultado
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
