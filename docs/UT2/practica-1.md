@@ -122,7 +122,7 @@ Tu aplicación debe:
 
 ## 5. Estructura recomendada
 
-Para esta práctica puedes hacerlo todo en un único archivo:
+Crea la rama correspondiente para esta práctica. La implementación puede ir todo en un único archivo:
 
 ```text
 practica-1/
@@ -323,7 +323,7 @@ Debes entregar:
 - una captura de un resultado correcto;
 - una captura mostrando errores de validación.
 
-
+Recuerda que se valora la evolución del código en el repositorio, por tanto, es conveniente añadir al menos un commit en cada uno de los pasos de la sección Orden recomendado.
 
 ## 10. Ampliaciones opcionales
 
